@@ -71,7 +71,7 @@ namespace ProjetoJe
 
         private void CadastrarPerifericoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            cadastrarPeriferico cp = new cadastrarPeriferico();
+            CadastrarPeriferico cp = new CadastrarPeriferico();
             cp.Show();
             this.Hide();
         }

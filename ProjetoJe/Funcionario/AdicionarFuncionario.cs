@@ -14,7 +14,7 @@ namespace ProjetoJe
 {
     public partial class AdicionarFuncionario : Form
     {
-        DAOMysql.DAOMysql DAO = new DAOMysql.DAOMysql();
+        private DAOMysql.DAOMysql DAO = new DAOMysql.DAOMysql();
 
         public AdicionarFuncionario()
         {

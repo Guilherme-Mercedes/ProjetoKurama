@@ -22,7 +22,7 @@ namespace ProjetoJe
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            cadastrarPeriferico cp = new cadastrarPeriferico();
+            CadastrarPeriferico cp = new CadastrarPeriferico();
             cp.Show();
             this.Hide();
         }

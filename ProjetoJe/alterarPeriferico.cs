@@ -19,7 +19,7 @@ namespace ProjetoJe
         public alterarPeriferico()
         {
             InitializeComponent();
-            dataGridView1.DataSource = DAO.selectPeriferico();
+            dataGridView1.DataSource = DAO.SelectPeriferico();
         }
 
         private void alterarPerifericos()
@@ -28,8 +28,8 @@ namespace ProjetoJe
             {
                 MessageBox.Show("Conexão Ok");
 
-                DAO.sql = "UPDATE perifericos SET nome= @nome, modelo= @modelo, marca= @marca, garantia_venda= @garantia, ano_fabricação= @ano, preço_venda= @venda, preço_aluguel= @aluguel WHERE id_peri = @id";
-                MySqlCommand commS = new MySqlCommand(DAO.sql, DAO.mConn);
+                string query = "UPDATE perifericos SET nome= @nome, modelo= @modelo, marca= @marca, garantia_venda= @garantia, ano_fabricação= @ano, preço_venda= @venda, preço_aluguel= @aluguel WHERE id_peri = @id";
+                MySqlCommand commS = new MySqlCommand(query, DAO.mConn);
                 commS.Parameters.AddWithValue("@id", tbid.Text);
                 commS.Parameters.AddWithValue("@nome", tbtipo.Text);
                 commS.Parameters.AddWithValue("@modelo", tbmodelo.Text);
@@ -54,7 +54,7 @@ namespace ProjetoJe
                         if (retorno == 1)
                         {
                             MessageBox.Show("Cadastrado do Periferico Atualizado");
-                            dataGridView1.DataSource = DAO.selectPeriferico();
+                            dataGridView1.DataSource = DAO.SelectPeriferico();
                         }
                         else
                         {
@@ -74,7 +74,7 @@ namespace ProjetoJe
 
         private void AlterarPerifericoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cadastrarPeriferico cp = new cadastrarPeriferico();
+            CadastrarPeriferico cp = new CadastrarPeriferico();
             cp.Show();
             this.Hide();
         }

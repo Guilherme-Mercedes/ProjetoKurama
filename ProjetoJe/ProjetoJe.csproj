@@ -85,11 +85,11 @@
     <Compile Include="atualizarFuncionario.Designer.cs">
       <DependentUpon>atualizarFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="cadastrarPeriferico.cs">
+    <Compile Include="CadastrarPeriferico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cadastrarPeriferico.Designer.cs">
-      <DependentUpon>cadastrarPeriferico.cs</DependentUpon>
+    <Compile Include="CadastrarPeriferico.Designer.cs">
+      <DependentUpon>CadastrarPeriferico.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -103,10 +103,10 @@
     <Compile Include="FuncMenu.Designer.cs">
       <DependentUpon>FuncMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListaDeFuncionarios.cs">
+    <Compile Include="Funcionario\ListaDeFuncionarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListaDeFuncionarios.Designer.cs">
+    <Compile Include="Funcionario\ListaDeFuncionarios.Designer.cs">
       <DependentUpon>ListaDeFuncionarios.cs</DependentUpon>
     </Compile>
     <Compile Include="listadeperifericoDisponivel.cs">
@@ -186,8 +186,8 @@
     <EmbeddedResource Include="atualizarFuncionario.resx">
       <DependentUpon>atualizarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="cadastrarPeriferico.resx">
-      <DependentUpon>cadastrarPeriferico.cs</DependentUpon>
+    <EmbeddedResource Include="CadastrarPeriferico.resx">
+      <DependentUpon>CadastrarPeriferico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -195,7 +195,7 @@
     <EmbeddedResource Include="FuncMenu.resx">
       <DependentUpon>FuncMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListaDeFuncionarios.resx">
+    <EmbeddedResource Include="Funcionario\ListaDeFuncionarios.resx">
       <DependentUpon>ListaDeFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="listadeperifericoDisponivel.resx">
