@@ -165,6 +165,9 @@
     <Compile Include="TelaUsua.Designer.cs">
       <DependentUpon>TelaUsua.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilitarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vendaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,18 +1,9 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using DAOMysql;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace ProjetoJe
 {
-    public partial class CadastrarPeriferico : Form
+    public partial class CadastrarPeriferico : Utilitarios
     {
         private DAOMysql.DAOMysql DAO = new DAOMysql.DAOMysql();
 
@@ -28,7 +19,7 @@ namespace ProjetoJe
         }
         private void Btenviar_Click(object sender, EventArgs e)
         {
-            CadastrarPeriferico();
+            CadastroDosPerifericos();
         }
         private void VoltarAoMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -64,7 +55,7 @@ namespace ProjetoJe
         private void Label8_Click(object sender, EventArgs e)
         {
         }
-        private void CadastrarPeriferico()
+        private void CadastroDosPerifericos()
         {
             if (string.IsNullOrWhiteSpace(tbtipo.Text) ||
                 string.IsNullOrWhiteSpace(tbmodelo.Text) ||
