@@ -57,7 +57,7 @@ namespace ProjetoJe
 
         private void MostrarCadastrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listadeFuncionarios ifu = new listadeFuncionarios();
+            ListaDeFuncionarios ifu = new ListaDeFuncionarios();
             ifu.Show();
             this.Hide();
         }

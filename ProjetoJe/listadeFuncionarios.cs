@@ -11,63 +11,54 @@ using System.Windows.Forms;
 
 namespace ProjetoJe
 {
-    public partial class listadeFuncionarios : Form
+    public partial class ListaDeFuncionarios : Form
     {
         DAOMysql.DAOMysql DAO = new DAOMysql.DAOMysql();
 
-        public listadeFuncionarios()
+        public ListaDeFuncionarios()
         {
             InitializeComponent();
-            dataGridView1.DataSource = DAO.selectLogin();
-            
         }
 
         private void ListadeFuncionarios_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = DAO.SelectLogin();
         }
-
-        private void PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
+        //botoes de ações
+        //por sinal esses botões poderiam ser feitos com o menu strip, na epoca provavelmente eu achei conceito usar botoes enormes 
+        //a nomeclatura é algo que priorizei, vi que a comunidade usa em botoes o camelCase
+        private void btnAdicionar_Click(object sender, EventArgs e)
         {
             AdicionarFuncionario ad = new AdicionarFuncionario();
             ad.Show();
-            this.Hide();
+            this.Close();
         }
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void btnAlterar_Click(object sender, EventArgs e)
         {
             atualizarFuncionario af = new atualizarFuncionario();
             af.Show();
-            this.Hide();
+            this.Close();
         }
 
-        private void Button3_Click(object sender, EventArgs e)
+        private void btnRemover_Click(object sender, EventArgs e)
         {
             removerCadastro rc = new removerCadastro();
             rc.Show();
-            this.Hide();
+            this.Close();
         }
 
-        private void Button4_Click(object sender, EventArgs e)
+        private void btnVoltarMenu_Click(object sender, EventArgs e)
         {
             FuncMenu fm = new FuncMenu();
             fm.Show();
-            this.Hide();
+            this.Close();
         }
 
-        private void Button5_Click(object sender, EventArgs e)
+        private void btnSair_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
+
     }
 }

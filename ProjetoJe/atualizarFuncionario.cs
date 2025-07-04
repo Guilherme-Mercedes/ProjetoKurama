@@ -130,7 +130,7 @@ namespace ProjetoJe
 
         private void ListaDeFuncionariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listadeFuncionarios lf = new listadeFuncionarios();
+            ListaDeFuncionarios lf = new ListaDeFuncionarios();
             lf.Show();
             this.Hide();
         }

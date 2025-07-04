@@ -103,11 +103,11 @@
     <Compile Include="FuncMenu.Designer.cs">
       <DependentUpon>FuncMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="listadeFuncionarios.cs">
+    <Compile Include="ListaDeFuncionarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="listadeFuncionarios.Designer.cs">
-      <DependentUpon>listadeFuncionarios.cs</DependentUpon>
+    <Compile Include="ListaDeFuncionarios.Designer.cs">
+      <DependentUpon>ListaDeFuncionarios.cs</DependentUpon>
     </Compile>
     <Compile Include="listadeperifericoDisponivel.cs">
       <SubType>Form</SubType>
@@ -195,8 +195,8 @@
     <EmbeddedResource Include="FuncMenu.resx">
       <DependentUpon>FuncMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="listadeFuncionarios.resx">
-      <DependentUpon>listadeFuncionarios.cs</DependentUpon>
+    <EmbeddedResource Include="ListaDeFuncionarios.resx">
+      <DependentUpon>ListaDeFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="listadeperifericoDisponivel.resx">
       <DependentUpon>listadeperifericoDisponivel.cs</DependentUpon>

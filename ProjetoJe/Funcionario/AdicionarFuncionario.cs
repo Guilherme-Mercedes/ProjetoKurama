@@ -20,9 +20,6 @@ namespace ProjetoJe
         {
             InitializeComponent();
         }
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
         private void Btenviar_Click(object sender, EventArgs e)
         {
             AddFuncionario();
@@ -31,7 +28,7 @@ namespace ProjetoJe
         {
             FuncMenu fm = new FuncMenu();
             fm.Show();
-            this.Hide();
+            this.Close();
         }
         private void SairToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -47,19 +44,19 @@ namespace ProjetoJe
         {
             atualizarFuncionario af = new atualizarFuncionario();
             af.Show();
-            this.Hide();
+            this.Close();
         }
         private void RemoverCadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             removerCadastro rc = new removerCadastro();
             rc.Show();
-            this.Hide();
+            this.Close();
         }
         private void ListaDeFuncionariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listadeFuncionarios lf = new listadeFuncionarios();
+            ListaDeFuncionarios lf = new ListaDeFuncionarios();
             lf.Show();
-            this.Hide();
+            this.Close();
         }
         // funcao para adicionar um novo funcionário
         // futuramente posso separar em outra classe

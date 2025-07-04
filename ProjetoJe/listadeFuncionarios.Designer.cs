@@ -1,6 +1,6 @@
 ﻿namespace ProjetoJe
 {
-    partial class listadeFuncionarios
+    partial class ListaDeFuncionarios
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(listadeFuncionarios));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListaDeFuncionarios));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnAdicionar = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnRemover = new System.Windows.Forms.Button();
+            this.btnVoltarMenu = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,103 +56,102 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(862, 444);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
-            // button1
+            // btnAdicionar
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(46, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 78);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Adicionar Funcionario";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.btnAdicionar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAdicionar.BackColor = System.Drawing.Color.White;
+            this.btnAdicionar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAdicionar.FlatAppearance.BorderSize = 2;
+            this.btnAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdicionar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionar.Location = new System.Drawing.Point(46, 12);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(133, 78);
+            this.btnAdicionar.TabIndex = 1;
+            this.btnAdicionar.Text = "Adicionar Funcionario";
+            this.btnAdicionar.UseVisualStyleBackColor = false;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
-            // button2
+            // btnAlterar
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(201, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 78);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Alterar Cadastro ";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.btnAlterar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAlterar.BackColor = System.Drawing.Color.White;
+            this.btnAlterar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAlterar.FlatAppearance.BorderSize = 2;
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.Location = new System.Drawing.Point(201, 12);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(133, 78);
+            this.btnAlterar.TabIndex = 1;
+            this.btnAlterar.Text = "Alterar Cadastro ";
+            this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
-            // button3
+            // btnRemover
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(366, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(133, 78);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Remover Cadastro";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            this.btnRemover.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnRemover.BackColor = System.Drawing.Color.White;
+            this.btnRemover.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRemover.FlatAppearance.BorderSize = 2;
+            this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemover.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemover.Location = new System.Drawing.Point(366, 12);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(133, 78);
+            this.btnRemover.TabIndex = 1;
+            this.btnRemover.Text = "Remover Cadastro";
+            this.btnRemover.UseVisualStyleBackColor = false;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
-            // button4
+            // btnVoltarMenu
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(526, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(133, 78);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Voltar ao Menu";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.Button4_Click);
+            this.btnVoltarMenu.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnVoltarMenu.BackColor = System.Drawing.Color.White;
+            this.btnVoltarMenu.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnVoltarMenu.FlatAppearance.BorderSize = 2;
+            this.btnVoltarMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltarMenu.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltarMenu.Location = new System.Drawing.Point(526, 12);
+            this.btnVoltarMenu.Name = "btnVoltarMenu";
+            this.btnVoltarMenu.Size = new System.Drawing.Size(133, 78);
+            this.btnVoltarMenu.TabIndex = 1;
+            this.btnVoltarMenu.Text = "Voltar ao Menu";
+            this.btnVoltarMenu.UseVisualStyleBackColor = false;
+            this.btnVoltarMenu.Click += new System.EventHandler(this.btnVoltarMenu_Click);
             // 
-            // button5
+            // btnSair
             // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button5.FlatAppearance.BorderSize = 2;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(691, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(133, 78);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Sair";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.Button5_Click);
+            this.btnSair.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSair.BackColor = System.Drawing.Color.White;
+            this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnSair.FlatAppearance.BorderSize = 2;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(691, 12);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(133, 78);
+            this.btnSair.TabIndex = 1;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // listadeFuncionarios
+            // ListaDeFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::ProjetoJe.Properties.Resources.laranjo;
             this.ClientSize = new System.Drawing.Size(886, 564);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnVoltarMenu);
+            this.Controls.Add(this.btnRemover);
+            this.Controls.Add(this.btnAlterar);
+            this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "listadeFuncionarios";
+            this.Name = "ListaDeFuncionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kurama®";
             this.Load += new System.EventHandler(this.ListadeFuncionarios_Load);
@@ -164,10 +163,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnAdicionar;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnRemover;
+        private System.Windows.Forms.Button btnVoltarMenu;
+        private System.Windows.Forms.Button btnSair;
     }
 }
