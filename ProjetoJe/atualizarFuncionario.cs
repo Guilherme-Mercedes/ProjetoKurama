@@ -91,7 +91,7 @@ namespace ProjetoJe
 
         private void AdicionarCadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            adicionarFuncionario af = new adicionarFuncionario();
+            AdicionarFuncionario af = new AdicionarFuncionario();
             af.Show();
             this.Hide();
         }

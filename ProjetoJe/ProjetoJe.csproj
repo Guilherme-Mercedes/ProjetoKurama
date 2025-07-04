@@ -55,11 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="adicionarFuncionario.cs">
+    <Compile Include="AdicionarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="adicionarFuncionario.Designer.cs">
-      <DependentUpon>adicionarFuncionario.cs</DependentUpon>
+    <Compile Include="AdicionarFuncionario.Designer.cs">
+      <DependentUpon>AdicionarFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="alterarPeriferico.cs">
       <SubType>Form</SubType>
@@ -171,8 +171,8 @@
     <Compile Include="vendaUsuario.Designer.cs">
       <DependentUpon>vendaUsuario.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="adicionarFuncionario.resx">
-      <DependentUpon>adicionarFuncionario.cs</DependentUpon>
+    <EmbeddedResource Include="AdicionarFuncionario.resx">
+      <DependentUpon>AdicionarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="alterarPeriferico.resx">
       <DependentUpon>alterarPeriferico.cs</DependentUpon>

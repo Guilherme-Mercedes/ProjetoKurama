@@ -1,6 +1,6 @@
 ﻿namespace ProjetoJe
 {
-    partial class adicionarFuncionario
+    partial class AdicionarFuncionario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adicionarFuncionario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdicionarFuncionario));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tbnome = new System.Windows.Forms.TextBox();
             this.tbcpf = new System.Windows.Forms.TextBox();

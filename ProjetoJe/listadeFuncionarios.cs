@@ -39,7 +39,7 @@ namespace ProjetoJe
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            adicionarFuncionario ad = new adicionarFuncionario();
+            AdicionarFuncionario ad = new AdicionarFuncionario();
             ad.Show();
             this.Hide();
         }
