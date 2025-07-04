@@ -55,10 +55,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdicionarFuncionario.cs">
+    <Compile Include="Funcionario\AdicionarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdicionarFuncionario.Designer.cs">
+    <Compile Include="Funcionario\AdicionarFuncionario.Designer.cs">
       <DependentUpon>AdicionarFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="alterarPeriferico.cs">
@@ -171,7 +171,7 @@
     <Compile Include="vendaUsuario.Designer.cs">
       <DependentUpon>vendaUsuario.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdicionarFuncionario.resx">
+    <EmbeddedResource Include="Funcionario\AdicionarFuncionario.resx">
       <DependentUpon>AdicionarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="alterarPeriferico.resx">
@@ -277,6 +277,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\meajudadeus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
