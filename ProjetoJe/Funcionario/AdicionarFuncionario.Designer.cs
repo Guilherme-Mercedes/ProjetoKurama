@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdicionarFuncionario));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tbnome = new System.Windows.Forms.TextBox();
-            this.tbcpf = new System.Windows.Forms.TextBox();
-            this.tbnascimento = new System.Windows.Forms.TextBox();
-            this.tbsenha = new System.Windows.Forms.TextBox();
-            this.tbusuario = new System.Windows.Forms.TextBox();
-            this.btenviar = new System.Windows.Forms.Button();
-            this.tbsenha2 = new System.Windows.Forms.TextBox();
+            this.tbNome = new System.Windows.Forms.TextBox();
+            this.tbCpf = new System.Windows.Forms.TextBox();
+            this.tbNascimento = new System.Windows.Forms.TextBox();
+            this.tbSenha = new System.Windows.Forms.TextBox();
+            this.tbUsuario = new System.Windows.Forms.TextBox();
+            this.btEnviar = new System.Windows.Forms.Button();
+            this.tbSenha2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,6 +49,7 @@
             this.removerCadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.voltarAoMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -64,71 +65,71 @@
             this.dataGridView1.Size = new System.Drawing.Size(858, 198);
             this.dataGridView1.TabIndex = 0;
             // 
-            // tbnome
+            // tbNome
             // 
-            this.tbnome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbnome.Location = new System.Drawing.Point(270, 109);
-            this.tbnome.Name = "tbnome";
-            this.tbnome.Size = new System.Drawing.Size(168, 20);
-            this.tbnome.TabIndex = 1;
+            this.tbNome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbNome.Location = new System.Drawing.Point(270, 109);
+            this.tbNome.Name = "tbNome";
+            this.tbNome.Size = new System.Drawing.Size(168, 20);
+            this.tbNome.TabIndex = 1;
             // 
-            // tbcpf
+            // tbCpf
             // 
-            this.tbcpf.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbcpf.Location = new System.Drawing.Point(270, 147);
-            this.tbcpf.Name = "tbcpf";
-            this.tbcpf.Size = new System.Drawing.Size(168, 20);
-            this.tbcpf.TabIndex = 2;
+            this.tbCpf.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbCpf.Location = new System.Drawing.Point(270, 147);
+            this.tbCpf.Name = "tbCpf";
+            this.tbCpf.Size = new System.Drawing.Size(168, 20);
+            this.tbCpf.TabIndex = 2;
             // 
-            // tbnascimento
+            // tbNascimento
             // 
-            this.tbnascimento.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbnascimento.Location = new System.Drawing.Point(270, 185);
-            this.tbnascimento.Name = "tbnascimento";
-            this.tbnascimento.Size = new System.Drawing.Size(168, 20);
-            this.tbnascimento.TabIndex = 3;
+            this.tbNascimento.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbNascimento.Location = new System.Drawing.Point(270, 185);
+            this.tbNascimento.Name = "tbNascimento";
+            this.tbNascimento.Size = new System.Drawing.Size(168, 20);
+            this.tbNascimento.TabIndex = 3;
             // 
-            // tbsenha
+            // tbSenha
             // 
-            this.tbsenha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbsenha.Location = new System.Drawing.Point(499, 147);
-            this.tbsenha.Name = "tbsenha";
-            this.tbsenha.Size = new System.Drawing.Size(100, 20);
-            this.tbsenha.TabIndex = 5;
-            this.tbsenha.UseSystemPasswordChar = true;
+            this.tbSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbSenha.Location = new System.Drawing.Point(499, 147);
+            this.tbSenha.Name = "tbSenha";
+            this.tbSenha.Size = new System.Drawing.Size(100, 20);
+            this.tbSenha.TabIndex = 5;
+            this.tbSenha.UseSystemPasswordChar = true;
             // 
-            // tbusuario
+            // tbUsuario
             // 
-            this.tbusuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbusuario.Location = new System.Drawing.Point(499, 109);
-            this.tbusuario.Name = "tbusuario";
-            this.tbusuario.Size = new System.Drawing.Size(100, 20);
-            this.tbusuario.TabIndex = 6;
+            this.tbUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbUsuario.Location = new System.Drawing.Point(499, 109);
+            this.tbUsuario.Name = "tbUsuario";
+            this.tbUsuario.Size = new System.Drawing.Size(100, 20);
+            this.tbUsuario.TabIndex = 6;
             // 
-            // btenviar
+            // btEnviar
             // 
-            this.btenviar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btenviar.BackColor = System.Drawing.Color.White;
-            this.btenviar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btenviar.FlatAppearance.BorderSize = 2;
-            this.btenviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btenviar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btenviar.Location = new System.Drawing.Point(407, 274);
-            this.btenviar.Name = "btenviar";
-            this.btenviar.Size = new System.Drawing.Size(75, 31);
-            this.btenviar.TabIndex = 7;
-            this.btenviar.Text = "Cadastrar";
-            this.btenviar.UseVisualStyleBackColor = false;
-            this.btenviar.Click += new System.EventHandler(this.Btenviar_Click);
+            this.btEnviar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btEnviar.BackColor = System.Drawing.Color.White;
+            this.btEnviar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btEnviar.FlatAppearance.BorderSize = 2;
+            this.btEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEnviar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEnviar.Location = new System.Drawing.Point(407, 274);
+            this.btEnviar.Name = "btEnviar";
+            this.btEnviar.Size = new System.Drawing.Size(75, 31);
+            this.btEnviar.TabIndex = 7;
+            this.btEnviar.Text = "Cadastrar";
+            this.btEnviar.UseVisualStyleBackColor = false;
+            this.btEnviar.Click += new System.EventHandler(this.btEnviar_Click);
             // 
-            // tbsenha2
+            // tbSenha2
             // 
-            this.tbsenha2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbsenha2.Location = new System.Drawing.Point(499, 185);
-            this.tbsenha2.Name = "tbsenha2";
-            this.tbsenha2.Size = new System.Drawing.Size(100, 20);
-            this.tbsenha2.TabIndex = 8;
-            this.tbsenha2.UseSystemPasswordChar = true;
+            this.tbSenha2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbSenha2.Location = new System.Drawing.Point(499, 185);
+            this.tbSenha2.Name = "tbSenha2";
+            this.tbSenha2.Size = new System.Drawing.Size(100, 20);
+            this.tbSenha2.TabIndex = 8;
+            this.tbSenha2.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -260,27 +261,41 @@
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.SairToolStripMenuItem_Click);
             // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Snow;
+            this.label8.Location = new System.Drawing.Point(283, 45);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(321, 29);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "ADICIONAR FUNCIONARIO";
+            // 
             // AdicionarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.BackgroundImage = global::ProjetoJe.Properties.Resources.fundo1;
+            this.BackgroundImage = global::ProjetoJe.Properties.Resources.laranjo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(886, 564);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbsenha2);
-            this.Controls.Add(this.btenviar);
-            this.Controls.Add(this.tbusuario);
-            this.Controls.Add(this.tbsenha);
-            this.Controls.Add(this.tbnascimento);
-            this.Controls.Add(this.tbcpf);
-            this.Controls.Add(this.tbnome);
+            this.Controls.Add(this.tbSenha2);
+            this.Controls.Add(this.btEnviar);
+            this.Controls.Add(this.tbUsuario);
+            this.Controls.Add(this.tbSenha);
+            this.Controls.Add(this.tbNascimento);
+            this.Controls.Add(this.tbCpf);
+            this.Controls.Add(this.tbNome);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -300,13 +315,13 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox tbnome;
-        private System.Windows.Forms.TextBox tbcpf;
-        private System.Windows.Forms.TextBox tbnascimento;
-        private System.Windows.Forms.TextBox tbsenha;
-        private System.Windows.Forms.TextBox tbusuario;
-        private System.Windows.Forms.Button btenviar;
-        private System.Windows.Forms.TextBox tbsenha2;
+        private System.Windows.Forms.TextBox tbNome;
+        private System.Windows.Forms.TextBox tbCpf;
+        private System.Windows.Forms.TextBox tbNascimento;
+        private System.Windows.Forms.TextBox tbSenha;
+        private System.Windows.Forms.TextBox tbUsuario;
+        private System.Windows.Forms.Button btEnviar;
+        private System.Windows.Forms.TextBox tbSenha2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -319,5 +334,6 @@
         private System.Windows.Forms.ToolStripMenuItem atualizarCadastroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removerCadastroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaDeFuncionariosToolStripMenuItem;
+        private System.Windows.Forms.Label label8;
     }
 }

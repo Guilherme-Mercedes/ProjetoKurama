@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
 
+
 namespace ProjetoJe
 {
-    public partial class CadastrarPeriferico : Utilitarios
+    public partial class CadastrarPeriferico : Form
     {
         private DAOMysql.DAOMysql DAO = new DAOMysql.DAOMysql();
 
@@ -17,7 +18,7 @@ namespace ProjetoJe
         private void Label7_Click(object sender, EventArgs e)
         {
         }
-        private void Btenviar_Click(object sender, EventArgs e)
+        private void btEnviar_Click(object sender, EventArgs e)
         {
             CadastroDosPerifericos();
         }
@@ -25,7 +26,7 @@ namespace ProjetoJe
         {
             FuncMenu fm = new FuncMenu();
             fm.Show();
-            this.Hide();
+            this.Close();
         }
         private void SairToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -33,7 +34,7 @@ namespace ProjetoJe
         }
         private void AlterarPerifericoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            alterarPeriferico ap = new alterarPeriferico();
+            AlterarPeriferico ap = new AlterarPeriferico();
             ap.Show();
             this.Hide();
         }
@@ -41,13 +42,13 @@ namespace ProjetoJe
         {
             mostrarPerifericos mp = new mostrarPerifericos();
             mp.Show();
-            this.Hide();
+            this.Close();
         }
         private void RemoverPerifericoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             removerPeriferico rp = new removerPeriferico();
             rp.Show();
-            this.Hide();
+            this.Close();
         }
         private void CadastrarPeriferico_Load(object sender, EventArgs e)
         {
@@ -58,19 +59,19 @@ namespace ProjetoJe
         private void CadastroDosPerifericos()
         {
             if (string.IsNullOrWhiteSpace(tbtipo.Text) ||
-                string.IsNullOrWhiteSpace(tbmodelo.Text) ||
-                string.IsNullOrWhiteSpace(tbmarca.Text) ||
-                string.IsNullOrWhiteSpace(tbgarantia.Text) ||
-                string.IsNullOrWhiteSpace(tbfabricação.Text) ||
-                string.IsNullOrWhiteSpace(tbvvenda.Text) ||
-                string.IsNullOrWhiteSpace(tbvaluguel.Text))
+                string.IsNullOrWhiteSpace(tbModelo.Text) ||
+                string.IsNullOrWhiteSpace(tbMarca.Text) ||
+                string.IsNullOrWhiteSpace(tbGarantia.Text) ||
+                string.IsNullOrWhiteSpace(tbFabricação.Text) ||
+                string.IsNullOrWhiteSpace(tbValorVenda.Text) ||
+                string.IsNullOrWhiteSpace(tbValorAluguel.Text))
             {
                 MessageBox.Show("Preencha todos os campos antes de continuar.");
                 return;
             }
             // Verifica se os valores de venda e aluguel são números válidos, algo superficial mas resolve.
             // Eu nao quero o valor de volta entao uso o out _ para ignorar o retorno do TryParse.
-            if (!decimal.TryParse(tbvvenda.Text, out _) || !decimal.TryParse(tbvaluguel.Text, out _))
+            if (!decimal.TryParse(tbValorVenda.Text, out _) || !decimal.TryParse(tbValorAluguel.Text, out _))
             {
                 MessageBox.Show("Preencha os campos de valor com números válidos.");
                 return;
@@ -78,12 +79,13 @@ namespace ProjetoJe
 
             try
             {
-                bool sucesso = DAO.InserirPeriferico(tbtipo.Text, tbmodelo.Text, tbmarca.Text, tbgarantia.Text, tbfabricação.Text, tbvvenda.Text, tbvaluguel.Text);
+                bool sucesso = DAO.InserirPeriferico(tbtipo.Text, tbModelo.Text, tbMarca.Text, tbGarantia.Text, tbFabricação.Text, tbValorVenda.Text, tbValorAluguel.Text);
 
                 if (sucesso)
                 {
                     MessageBox.Show("Periférico cadastrado com sucesso!");
                     dataGridView1.DataSource = DAO.SelectPeriferico();
+                    Utilitarios.LimparTodosTextBox(this); // Limpa todos os TextBoxes do formulário após o cadastro
 
                 }
                 else
@@ -96,6 +98,8 @@ namespace ProjetoJe
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
+
+
     }
 }
 

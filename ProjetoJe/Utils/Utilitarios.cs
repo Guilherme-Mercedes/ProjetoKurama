@@ -2,16 +2,13 @@
 
 namespace ProjetoJe
 {
-    public class Utilitarios : Form
+    public static class Utilitarios
     {
         //Se tem algo que aprendi é usar o conceito de DRY (Don't Repeat Yourself)
         //Então criei esse método para limpar todos os TextBoxes de um Form ou de um controle específico
-        //Por ser um metodo simples eu uso como heranca, herdando o form e passando para as outras classes que herdar essa classe
-        protected void LimparTodosTextBox(Control controlePai = null)
+        //Eu tentei usar como heranca porem como outras classes não herdam o Form dessa classe, acabei optando por um método estático
+        public static void LimparTodosTextBox(Control controlePai = null)
         {
-            if (controlePai == null)
-                controlePai = this;
-
             foreach (Control controle in controlePai.Controls)
             {
                 if (controle is TextBox tb)
@@ -20,7 +17,7 @@ namespace ProjetoJe
                 }
                 else if (controle.HasChildren)
                 {
-                    //Recursivamente limpa os TextBoxes dentro de GroupBoxes, Panels, etc.
+                    //limpa os TextBoxes dentro de GroupBoxes, Panels, etc.
                     LimparTodosTextBox(controle);
                 }
             }

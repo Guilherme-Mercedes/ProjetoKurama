@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿//ALTERAR
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,7 +84,7 @@ namespace ProjetoJe
 
         private void AlterarPerifericoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            alterarPeriferico ap = new alterarPeriferico();
+            AlterarPeriferico ap = new AlterarPeriferico();
             ap.Show();
             this.Hide();
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿//ALTERAR
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,7 +30,7 @@ namespace ProjetoJe
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            alterarPeriferico ap = new alterarPeriferico();
+            AlterarPeriferico ap = new AlterarPeriferico();
             ap.Show();
             this.Hide();
         }
@@ -54,6 +55,11 @@ namespace ProjetoJe
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void mostrarPerifericos_Load(object sender, EventArgs e)
         {
 
         }

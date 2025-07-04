@@ -61,11 +61,11 @@
     <Compile Include="Funcionario\AdicionarFuncionario.Designer.cs">
       <DependentUpon>AdicionarFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="alterarPeriferico.cs">
+    <Compile Include="AlterarPeriferico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="alterarPeriferico.Designer.cs">
-      <DependentUpon>alterarPeriferico.cs</DependentUpon>
+    <Compile Include="AlterarPeriferico.Designer.cs">
+      <DependentUpon>AlterarPeriferico.cs</DependentUpon>
     </Compile>
     <Compile Include="alugueiVendas.cs">
       <SubType>Form</SubType>
@@ -85,10 +85,10 @@
     <Compile Include="atualizarFuncionario.Designer.cs">
       <DependentUpon>atualizarFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="CadastrarPeriferico.cs">
+    <Compile Include="Periferico\CadastrarPeriferico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadastrarPeriferico.Designer.cs">
+    <Compile Include="Periferico\CadastrarPeriferico.Designer.cs">
       <DependentUpon>CadastrarPeriferico.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -165,9 +165,7 @@
     <Compile Include="TelaUsua.Designer.cs">
       <DependentUpon>TelaUsua.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utilitarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Utils\Utilitarios.cs" />
     <Compile Include="vendaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,8 +175,8 @@
     <EmbeddedResource Include="Funcionario\AdicionarFuncionario.resx">
       <DependentUpon>AdicionarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="alterarPeriferico.resx">
-      <DependentUpon>alterarPeriferico.cs</DependentUpon>
+    <EmbeddedResource Include="AlterarPeriferico.resx">
+      <DependentUpon>AlterarPeriferico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="alugueiVendas.resx">
       <DependentUpon>alugueiVendas.cs</DependentUpon>
@@ -189,7 +187,7 @@
     <EmbeddedResource Include="atualizarFuncionario.resx">
       <DependentUpon>atualizarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CadastrarPeriferico.resx">
+    <EmbeddedResource Include="Periferico\CadastrarPeriferico.resx">
       <DependentUpon>CadastrarPeriferico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">

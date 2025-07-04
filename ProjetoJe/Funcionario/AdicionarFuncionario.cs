@@ -1,13 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using DAOMysql;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace ProjetoJe
@@ -20,7 +11,7 @@ namespace ProjetoJe
         {
             InitializeComponent();
         }
-        private void Btenviar_Click(object sender, EventArgs e)
+        private void btEnviar_Click(object sender, EventArgs e)
         {
             AddFuncionario();
         }
@@ -62,23 +53,23 @@ namespace ProjetoJe
         // futuramente posso separar em outra classe
         private void AddFuncionario()
         {
-            if (tbsenha.Text != tbsenha2.Text)
+            if (tbSenha.Text != tbSenha2.Text)
             {
                 MessageBox.Show("As senhas digitadas são diferentes");
-                tbsenha2.Clear();
-                tbsenha.Clear();
+                Utilitarios.LimparTodosTextBox(this); // Limpa todos os TextBoxes do formulário após o cadastro
+                tbSenha.Focus(); // Foca no campo de senha para o usuário corrigir
                 return;
             }
-            if (string.IsNullOrWhiteSpace(tbnome.Text) || string.IsNullOrWhiteSpace(tbcpf.Text) ||
-                string.IsNullOrWhiteSpace(tbnascimento.Text) || string.IsNullOrWhiteSpace(tbusuario.Text) ||
-                string.IsNullOrWhiteSpace(tbsenha.Text))
+            if (string.IsNullOrWhiteSpace(tbNome.Text) || string.IsNullOrWhiteSpace(tbCpf.Text) ||
+                string.IsNullOrWhiteSpace(tbNascimento.Text) || string.IsNullOrWhiteSpace(tbUsuario.Text) ||
+                string.IsNullOrWhiteSpace(tbSenha.Text))
             {
                 MessageBox.Show("Não deixe nenhum espaço em branco!");
                 return;
             }
             try
             {
-                bool sucesso = DAO.InserirFuncionario(tbnome.Text, tbcpf.Text, tbnascimento.Text, tbusuario.Text, tbsenha.Text);
+                bool sucesso = DAO.InserirFuncionario(tbNome.Text, tbCpf.Text, tbNascimento.Text, tbUsuario.Text, tbSenha.Text);
 
                 if (sucesso)
                 {
@@ -89,16 +80,12 @@ namespace ProjetoJe
                 {
                     MessageBox.Show("Erro ao cadastrar. Tente novamente.");
                 }
-                // Limpa os campos
-                tbsenha2.Clear();
-                tbusuario.Clear();
-                tbsenha.Clear();
+                Utilitarios.LimparTodosTextBox(this); // Limpa todos os TextBoxes do formulário após o cadastro
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
-
     }
 }
