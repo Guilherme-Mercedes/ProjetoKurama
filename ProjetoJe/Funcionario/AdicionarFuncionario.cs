@@ -56,8 +56,8 @@ namespace ProjetoJe
             if (tbSenha.Text != tbSenha2.Text)
             {
                 MessageBox.Show("As senhas digitadas são diferentes");
-                Utilitarios.LimparTodosTextBox(this); // Limpa todos os TextBoxes do formulário após o cadastro
-                tbSenha.Focus(); // Foca no campo de senha para o usuário corrigir
+                tbSenha2.Clear(); // Limpa o campo de confirmação de senha apenas
+                tbSenha2.Focus(); // Foca no campo de confirmacao de senha para o usuário corrigir
                 return;
             }
             if (string.IsNullOrWhiteSpace(tbNome.Text) || string.IsNullOrWhiteSpace(tbCpf.Text) ||
@@ -75,12 +75,14 @@ namespace ProjetoJe
                 {
                     MessageBox.Show("Funcionário cadastrado!");
                     dataGridView1.DataSource = DAO.SelectLogin();
+                    Utilitarios.LimparTodosTextBox(this); // Limpa todos os TextBoxes do formulário após o cadastro
+                    tbNome.Focus(); // Foca no campo de nome
                 }
                 else
                 {
                     MessageBox.Show("Erro ao cadastrar. Tente novamente.");
                 }
-                Utilitarios.LimparTodosTextBox(this); // Limpa todos os TextBoxes do formulário após o cadastro
+
             }
             catch (Exception ex)
             {

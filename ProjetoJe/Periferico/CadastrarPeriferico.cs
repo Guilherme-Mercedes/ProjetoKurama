@@ -86,6 +86,7 @@ namespace ProjetoJe
                     MessageBox.Show("Periférico cadastrado com sucesso!");
                     dataGridView1.DataSource = DAO.SelectPeriferico();
                     Utilitarios.LimparTodosTextBox(this); // Limpa todos os TextBoxes do formulário após o cadastro
+                    tbtipo.Focus(); // Foca no campo Tipo após o cadastro
 
                 }
                 else

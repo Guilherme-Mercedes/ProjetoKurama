@@ -36,16 +36,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbvaluguel = new System.Windows.Forms.TextBox();
-            this.tbvvenda = new System.Windows.Forms.TextBox();
-            this.btenviar = new System.Windows.Forms.Button();
-            this.tbgarantia = new System.Windows.Forms.TextBox();
-            this.tbfabricação = new System.Windows.Forms.TextBox();
-            this.tbmarca = new System.Windows.Forms.TextBox();
-            this.tbmodelo = new System.Windows.Forms.TextBox();
-            this.tbtipo = new System.Windows.Forms.TextBox();
+            this.tbValorAluguel = new System.Windows.Forms.TextBox();
+            this.tbValorVenda = new System.Windows.Forms.TextBox();
+            this.btCadastrar = new System.Windows.Forms.Button();
+            this.tbGarantia = new System.Windows.Forms.TextBox();
+            this.tbFabricação = new System.Windows.Forms.TextBox();
+            this.tbMarca = new System.Windows.Forms.TextBox();
+            this.tbModelo = new System.Windows.Forms.TextBox();
+            this.tbTipoPeriferico = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tbid = new System.Windows.Forms.TextBox();
+            this.tbId = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.alterarPerifericoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,7 +66,7 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(496, 212);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 16);
+            this.label7.Size = new System.Drawing.Size(140, 16);
             this.label7.TabIndex = 33;
             this.label7.Text = "PREÇO DO ALUGUEL";
             // 
@@ -79,7 +79,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(496, 169);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 16);
+            this.label6.Size = new System.Drawing.Size(121, 16);
             this.label6.TabIndex = 34;
             this.label6.Text = "PREÇO DE VENDA";
             // 
@@ -92,7 +92,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(496, 131);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 16);
+            this.label5.Size = new System.Drawing.Size(145, 16);
             this.label5.TabIndex = 35;
             this.label5.Text = "ANO DA FABRICAÇÃO";
             // 
@@ -105,7 +105,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(496, 93);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 16);
+            this.label4.Size = new System.Drawing.Size(164, 16);
             this.label4.TabIndex = 36;
             this.label4.Text = "DURAÇÃO DA GARANTIA";
             // 
@@ -118,7 +118,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(266, 212);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 16);
+            this.label3.Size = new System.Drawing.Size(54, 16);
             this.label3.TabIndex = 37;
             this.label3.Text = "MARCA";
             // 
@@ -131,7 +131,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(266, 174);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 16);
+            this.label2.Size = new System.Drawing.Size(63, 16);
             this.label2.TabIndex = 38;
             this.label2.Text = "MODELO";
             // 
@@ -144,82 +144,82 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(266, 136);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 16);
+            this.label1.Size = new System.Drawing.Size(141, 16);
             this.label1.TabIndex = 39;
             this.label1.Text = "TIPO DE PERIFERICO";
             // 
-            // tbvaluguel
+            // tbValorAluguel
             // 
-            this.tbvaluguel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbvaluguel.Location = new System.Drawing.Point(499, 228);
-            this.tbvaluguel.Name = "tbvaluguel";
-            this.tbvaluguel.Size = new System.Drawing.Size(133, 20);
-            this.tbvaluguel.TabIndex = 31;
+            this.tbValorAluguel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbValorAluguel.Location = new System.Drawing.Point(499, 228);
+            this.tbValorAluguel.Name = "tbValorAluguel";
+            this.tbValorAluguel.Size = new System.Drawing.Size(133, 20);
+            this.tbValorAluguel.TabIndex = 31;
             // 
-            // tbvvenda
+            // tbValorVenda
             // 
-            this.tbvvenda.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbvvenda.Location = new System.Drawing.Point(499, 185);
-            this.tbvvenda.Name = "tbvvenda";
-            this.tbvvenda.Size = new System.Drawing.Size(133, 20);
-            this.tbvvenda.TabIndex = 32;
+            this.tbValorVenda.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbValorVenda.Location = new System.Drawing.Point(499, 185);
+            this.tbValorVenda.Name = "tbValorVenda";
+            this.tbValorVenda.Size = new System.Drawing.Size(133, 20);
+            this.tbValorVenda.TabIndex = 32;
             // 
-            // btenviar
+            // btCadastrar
             // 
-            this.btenviar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btenviar.BackColor = System.Drawing.Color.White;
-            this.btenviar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btenviar.FlatAppearance.BorderSize = 2;
-            this.btenviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btenviar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btenviar.ForeColor = System.Drawing.Color.Black;
-            this.btenviar.Location = new System.Drawing.Point(407, 275);
-            this.btenviar.Name = "btenviar";
-            this.btenviar.Size = new System.Drawing.Size(75, 30);
-            this.btenviar.TabIndex = 30;
-            this.btenviar.Text = "Cadastrar";
-            this.btenviar.UseVisualStyleBackColor = false;
-            this.btenviar.Click += new System.EventHandler(this.Btenviar_Click);
+            this.btCadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btCadastrar.BackColor = System.Drawing.Color.White;
+            this.btCadastrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btCadastrar.FlatAppearance.BorderSize = 2;
+            this.btCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCadastrar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCadastrar.ForeColor = System.Drawing.Color.Black;
+            this.btCadastrar.Location = new System.Drawing.Point(407, 275);
+            this.btCadastrar.Name = "btCadastrar";
+            this.btCadastrar.Size = new System.Drawing.Size(75, 30);
+            this.btCadastrar.TabIndex = 30;
+            this.btCadastrar.Text = "Cadastrar";
+            this.btCadastrar.UseVisualStyleBackColor = false;
+            this.btCadastrar.Click += new System.EventHandler(this.btCadastrar_Click);
             // 
-            // tbgarantia
+            // tbGarantia
             // 
-            this.tbgarantia.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbgarantia.Location = new System.Drawing.Point(499, 109);
-            this.tbgarantia.Name = "tbgarantia";
-            this.tbgarantia.Size = new System.Drawing.Size(133, 20);
-            this.tbgarantia.TabIndex = 29;
+            this.tbGarantia.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbGarantia.Location = new System.Drawing.Point(499, 109);
+            this.tbGarantia.Name = "tbGarantia";
+            this.tbGarantia.Size = new System.Drawing.Size(133, 20);
+            this.tbGarantia.TabIndex = 29;
             // 
-            // tbfabricação
+            // tbFabricação
             // 
-            this.tbfabricação.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbfabricação.Location = new System.Drawing.Point(499, 147);
-            this.tbfabricação.Name = "tbfabricação";
-            this.tbfabricação.Size = new System.Drawing.Size(133, 20);
-            this.tbfabricação.TabIndex = 28;
+            this.tbFabricação.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbFabricação.Location = new System.Drawing.Point(499, 147);
+            this.tbFabricação.Name = "tbFabricação";
+            this.tbFabricação.Size = new System.Drawing.Size(133, 20);
+            this.tbFabricação.TabIndex = 28;
             // 
-            // tbmarca
+            // tbMarca
             // 
-            this.tbmarca.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbmarca.Location = new System.Drawing.Point(269, 228);
-            this.tbmarca.Name = "tbmarca";
-            this.tbmarca.Size = new System.Drawing.Size(168, 20);
-            this.tbmarca.TabIndex = 27;
+            this.tbMarca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbMarca.Location = new System.Drawing.Point(269, 228);
+            this.tbMarca.Name = "tbMarca";
+            this.tbMarca.Size = new System.Drawing.Size(168, 20);
+            this.tbMarca.TabIndex = 27;
             // 
-            // tbmodelo
+            // tbModelo
             // 
-            this.tbmodelo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbmodelo.Location = new System.Drawing.Point(269, 190);
-            this.tbmodelo.Name = "tbmodelo";
-            this.tbmodelo.Size = new System.Drawing.Size(168, 20);
-            this.tbmodelo.TabIndex = 26;
+            this.tbModelo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbModelo.Location = new System.Drawing.Point(269, 190);
+            this.tbModelo.Name = "tbModelo";
+            this.tbModelo.Size = new System.Drawing.Size(168, 20);
+            this.tbModelo.TabIndex = 26;
             // 
-            // tbtipo
+            // tbTipoPeriferico
             // 
-            this.tbtipo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbtipo.Location = new System.Drawing.Point(269, 152);
-            this.tbtipo.Name = "tbtipo";
-            this.tbtipo.Size = new System.Drawing.Size(168, 20);
-            this.tbtipo.TabIndex = 25;
+            this.tbTipoPeriferico.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbTipoPeriferico.Location = new System.Drawing.Point(269, 152);
+            this.tbTipoPeriferico.Name = "tbTipoPeriferico";
+            this.tbTipoPeriferico.Size = new System.Drawing.Size(168, 20);
+            this.tbTipoPeriferico.TabIndex = 25;
             // 
             // dataGridView1
             // 
@@ -233,13 +233,13 @@
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
-            // tbid
+            // tbId
             // 
-            this.tbid.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbid.Location = new System.Drawing.Point(269, 109);
-            this.tbid.Name = "tbid";
-            this.tbid.Size = new System.Drawing.Size(168, 20);
-            this.tbid.TabIndex = 27;
+            this.tbId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbId.Location = new System.Drawing.Point(269, 109);
+            this.tbId.Name = "tbId";
+            this.tbId.Size = new System.Drawing.Size(168, 20);
+            this.tbId.TabIndex = 27;
             // 
             // label8
             // 
@@ -250,7 +250,7 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(266, 93);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 16);
+            this.label8.Size = new System.Drawing.Size(20, 16);
             this.label8.TabIndex = 37;
             this.label8.Text = "ID";
             // 
@@ -305,7 +305,7 @@
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.SairToolStripMenuItem_Click);
             // 
-            // alterarPeriferico
+            // AlterarPeriferico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -320,18 +320,18 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbvaluguel);
-            this.Controls.Add(this.tbvvenda);
-            this.Controls.Add(this.btenviar);
-            this.Controls.Add(this.tbgarantia);
-            this.Controls.Add(this.tbfabricação);
-            this.Controls.Add(this.tbid);
-            this.Controls.Add(this.tbmarca);
-            this.Controls.Add(this.tbmodelo);
-            this.Controls.Add(this.tbtipo);
+            this.Controls.Add(this.tbValorAluguel);
+            this.Controls.Add(this.tbValorVenda);
+            this.Controls.Add(this.btCadastrar);
+            this.Controls.Add(this.tbGarantia);
+            this.Controls.Add(this.tbFabricação);
+            this.Controls.Add(this.tbId);
+            this.Controls.Add(this.tbMarca);
+            this.Controls.Add(this.tbModelo);
+            this.Controls.Add(this.tbTipoPeriferico);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "alterarPeriferico";
+            this.Name = "AlterarPeriferico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kurama®";
             this.Load += new System.EventHandler(this.AlterarPeriferico_Load);
@@ -352,16 +352,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbvaluguel;
-        private System.Windows.Forms.TextBox tbvvenda;
-        private System.Windows.Forms.Button btenviar;
-        private System.Windows.Forms.TextBox tbgarantia;
-        private System.Windows.Forms.TextBox tbfabricação;
-        private System.Windows.Forms.TextBox tbmarca;
-        private System.Windows.Forms.TextBox tbmodelo;
-        private System.Windows.Forms.TextBox tbtipo;
+        private System.Windows.Forms.TextBox tbValorAluguel;
+        private System.Windows.Forms.TextBox tbValorVenda;
+        private System.Windows.Forms.Button btCadastrar;
+        private System.Windows.Forms.TextBox tbGarantia;
+        private System.Windows.Forms.TextBox tbFabricação;
+        private System.Windows.Forms.TextBox tbMarca;
+        private System.Windows.Forms.TextBox tbModelo;
+        private System.Windows.Forms.TextBox tbTipoPeriferico;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox tbid;
+        private System.Windows.Forms.TextBox tbId;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem alterarPerifericoToolStripMenuItem;

@@ -61,10 +61,10 @@
     <Compile Include="Funcionario\AdicionarFuncionario.Designer.cs">
       <DependentUpon>AdicionarFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="AlterarPeriferico.cs">
+    <Compile Include="Periferico\AlterarPeriferico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AlterarPeriferico.Designer.cs">
+    <Compile Include="Periferico\AlterarPeriferico.Designer.cs">
       <DependentUpon>AlterarPeriferico.cs</DependentUpon>
     </Compile>
     <Compile Include="alugueiVendas.cs">
@@ -175,7 +175,7 @@
     <EmbeddedResource Include="Funcionario\AdicionarFuncionario.resx">
       <DependentUpon>AdicionarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AlterarPeriferico.resx">
+    <EmbeddedResource Include="Periferico\AlterarPeriferico.resx">
       <DependentUpon>AlterarPeriferico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="alugueiVendas.resx">
