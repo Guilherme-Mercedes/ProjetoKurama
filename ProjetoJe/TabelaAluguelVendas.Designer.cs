@@ -40,8 +40,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.sair = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.alterarPerifericoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaDePerifericosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.voltarAoMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button5
@@ -187,12 +193,55 @@
             this.sair.UseVisualStyleBackColor = false;
             this.sair.Click += new System.EventHandler(this.Sair_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackgroundImage = global::ProjetoJe.Properties.Resources.laranjo;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.alterarPerifericoToolStripMenuItem,
+            this.listaDePerifericosToolStripMenuItem,
+            this.voltarAoMenuToolStripMenuItem,
+            this.sairToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(886, 28);
+            this.menuStrip1.TabIndex = 26;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // alterarPerifericoToolStripMenuItem
+            // 
+            this.alterarPerifericoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alterarPerifericoToolStripMenuItem.Name = "alterarPerifericoToolStripMenuItem";
+            this.alterarPerifericoToolStripMenuItem.Size = new System.Drawing.Size(130, 24);
+            this.alterarPerifericoToolStripMenuItem.Text = "Realizar aluguel";
+            // 
+            // listaDePerifericosToolStripMenuItem
+            // 
+            this.listaDePerifericosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listaDePerifericosToolStripMenuItem.Name = "listaDePerifericosToolStripMenuItem";
+            this.listaDePerifericosToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
+            this.listaDePerifericosToolStripMenuItem.Text = "Comprar periferico";
+            // 
+            // voltarAoMenuToolStripMenuItem
+            // 
+            this.voltarAoMenuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voltarAoMenuToolStripMenuItem.Name = "voltarAoMenuToolStripMenuItem";
+            this.voltarAoMenuToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
+            this.voltarAoMenuToolStripMenuItem.Text = "Voltar ao Menu";
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
+            this.sairToolStripMenuItem.Text = "Sair";
+            // 
             // TabelaAluguelVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProjetoJe.Properties.Resources.laranjo;
             this.ClientSize = new System.Drawing.Size(886, 564);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.sair);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -208,6 +257,8 @@
             this.Text = "Kurama®";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +275,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button sair;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem alterarPerifericoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listaDePerifericosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem voltarAoMenuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
     }
 }

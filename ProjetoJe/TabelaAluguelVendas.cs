@@ -1,4 +1,5 @@
 ﻿//ALTERAR
+//Finalizar o Strip menu e remover os botões
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
