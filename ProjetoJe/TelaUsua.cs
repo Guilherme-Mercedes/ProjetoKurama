@@ -58,7 +58,7 @@ namespace ProjetoJe
 
         private void Btmostperif_Click(object sender, EventArgs e)
         {
-            listadeperifericoDisponivel lpd = new listadeperifericoDisponivel();
+            ListaPerifericoDisponivel lpd = new ListaPerifericoDisponivel();
             lpd.Show();
             this.Hide();
         }

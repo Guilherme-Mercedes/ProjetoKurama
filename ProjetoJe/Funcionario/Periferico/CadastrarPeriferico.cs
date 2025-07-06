@@ -36,7 +36,7 @@ namespace ProjetoJe
         {
             AlterarPeriferico ap = new AlterarPeriferico();
             ap.Show();
-            this.Hide();
+            this.Close();
         }
         private void ListaDePerifericosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -99,8 +99,6 @@ namespace ProjetoJe
                 MessageBox.Show("Erro: " + ex.Message);
             }
         }
-
-
     }
 }
 

@@ -47,9 +47,9 @@ namespace ProjetoJe
         }
         private void btCadastrar_Click(object sender, EventArgs e)
         {
-            AlterarPerifericos();
+            AlterPerifericos();
         }
-        private void AlterarPerifericos()
+        private void AlterPerifericos()
         {
             //o famoso "PREENCHA TODAS AS INFORMAÇÕES" - Guilherme Souza Mercedes 2019 
             //comentario acima de alguem que em 2019 quebrou a cabeça para fazer esse código funcionar
@@ -78,7 +78,7 @@ namespace ProjetoJe
                 if (sucesso)
                 {
                     MessageBox.Show("Periférico alterado com sucesso!");
-                    dataGridView1.DataSource = DAO.SelectPeriferico();
+                    dataGridView1.DataSource = DAO.SelectPeriferico(); // Atualiza o DataGridView com os dados mais recentes
                     Utilitarios.LimparTodosTextBox(this); // Limpa todos os TextBoxes do formulário após o cadastro
                     tbId.Focus(); // Foca no campo ID após a alteração
                 }

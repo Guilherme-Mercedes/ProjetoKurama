@@ -91,7 +91,7 @@ namespace ProjetoJe
 
         private void RemoverAluguelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            alugueiVendas av = new alugueiVendas();
+            TabelaAluguelVendas av = new TabelaAluguelVendas();
             av.Show();
             this.Hide();
         }

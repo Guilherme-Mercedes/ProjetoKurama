@@ -28,14 +28,14 @@ namespace ProjetoJe
         {
             TelaFunc tf = new TelaFunc();
             tf.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             TelaUsua tu = new TelaUsua();
             tu.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)

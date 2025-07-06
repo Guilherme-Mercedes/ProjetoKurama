@@ -61,17 +61,17 @@
     <Compile Include="Funcionario\AdicionarFuncionario.Designer.cs">
       <DependentUpon>AdicionarFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Periferico\AlterarPeriferico.cs">
+    <Compile Include="Funcionario\Periferico\AlterarPeriferico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Periferico\AlterarPeriferico.Designer.cs">
+    <Compile Include="Funcionario\Periferico\AlterarPeriferico.Designer.cs">
       <DependentUpon>AlterarPeriferico.cs</DependentUpon>
     </Compile>
-    <Compile Include="alugueiVendas.cs">
+    <Compile Include="TabelaAluguelVendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="alugueiVendas.Designer.cs">
-      <DependentUpon>alugueiVendas.cs</DependentUpon>
+    <Compile Include="TabelaAluguelVendas.Designer.cs">
+      <DependentUpon>TabelaAluguelVendas.cs</DependentUpon>
     </Compile>
     <Compile Include="aluguelUsuario.cs">
       <SubType>Form</SubType>
@@ -85,10 +85,10 @@
     <Compile Include="atualizarFuncionario.Designer.cs">
       <DependentUpon>atualizarFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Periferico\CadastrarPeriferico.cs">
+    <Compile Include="Funcionario\Periferico\CadastrarPeriferico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Periferico\CadastrarPeriferico.Designer.cs">
+    <Compile Include="Funcionario\Periferico\CadastrarPeriferico.Designer.cs">
       <DependentUpon>CadastrarPeriferico.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -109,11 +109,11 @@
     <Compile Include="Funcionario\ListaDeFuncionarios.Designer.cs">
       <DependentUpon>ListaDeFuncionarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="listadeperifericoDisponivel.cs">
+    <Compile Include="Usuario\ListaPerifericoDisponivel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="listadeperifericoDisponivel.Designer.cs">
-      <DependentUpon>listadeperifericoDisponivel.cs</DependentUpon>
+    <Compile Include="Usuario\ListaPerifericoDisponivel.Designer.cs">
+      <DependentUpon>ListaPerifericoDisponivel.cs</DependentUpon>
     </Compile>
     <Compile Include="mostrarPerifericos.cs">
       <SubType>Form</SubType>
@@ -175,11 +175,11 @@
     <EmbeddedResource Include="Funcionario\AdicionarFuncionario.resx">
       <DependentUpon>AdicionarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Periferico\AlterarPeriferico.resx">
+    <EmbeddedResource Include="Funcionario\Periferico\AlterarPeriferico.resx">
       <DependentUpon>AlterarPeriferico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="alugueiVendas.resx">
-      <DependentUpon>alugueiVendas.cs</DependentUpon>
+    <EmbeddedResource Include="TabelaAluguelVendas.resx">
+      <DependentUpon>TabelaAluguelVendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="aluguelUsuario.resx">
       <DependentUpon>aluguelUsuario.cs</DependentUpon>
@@ -187,7 +187,7 @@
     <EmbeddedResource Include="atualizarFuncionario.resx">
       <DependentUpon>atualizarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Periferico\CadastrarPeriferico.resx">
+    <EmbeddedResource Include="Funcionario\Periferico\CadastrarPeriferico.resx">
       <DependentUpon>CadastrarPeriferico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
@@ -199,8 +199,8 @@
     <EmbeddedResource Include="Funcionario\ListaDeFuncionarios.resx">
       <DependentUpon>ListaDeFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="listadeperifericoDisponivel.resx">
-      <DependentUpon>listadeperifericoDisponivel.cs</DependentUpon>
+    <EmbeddedResource Include="Usuario\ListaPerifericoDisponivel.resx">
+      <DependentUpon>ListaPerifericoDisponivel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mostrarPerifericos.resx">
       <DependentUpon>mostrarPerifericos.cs</DependentUpon>

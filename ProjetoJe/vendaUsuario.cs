@@ -176,7 +176,7 @@ namespace ProjetoJe
 
         private void RemoverAluguelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listadeperifericoDisponivel lpd = new listadeperifericoDisponivel();
+            ListaPerifericoDisponivel lpd = new ListaPerifericoDisponivel();
             lpd.Show();
             this.Hide();
         }
