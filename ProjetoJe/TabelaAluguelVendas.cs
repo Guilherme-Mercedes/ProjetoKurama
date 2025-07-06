@@ -25,40 +25,37 @@ namespace ProjetoJe
             dataGridView2.DataSource = DAO.SelectAlugueis();// Carrega os dados de Alugueis no DataGridView2
             dataGridView1.DataSource = DAO.SelectVendas();// Carrega os dados de Vendas no DataGridView1
         }
-        private void Sair_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-        }
-        private void label2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnAluguel_Click(object sender, EventArgs e)
+        //Novas funções para os botões de realizar aluguel e venda
+        private void realizarAluguel_Click(object sender, EventArgs e)
         {
             realizarAluguel ra = new realizarAluguel();
             ra.Show();
             this.Close();
         }
-
-        private void btnVenda_Click(object sender, EventArgs e)
+        private void realizarVenda_Click(object sender, EventArgs e)
         {
             realizarVenda rv = new realizarVenda();
             rv.Show();
             this.Close();
         }
 
-        private void btnRemoverAluguel_Click(object sender, EventArgs e)
+        private void removerAluguel_Click(object sender, EventArgs e)
         {
             removerAluguel ra = new removerAluguel();
             ra.Show();
             this.Close();
         }
 
-        private void btnVoltarMenu_Click(object sender, EventArgs e)
+        private void voltarAoMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FuncMenu fm = new FuncMenu();
             fm.Show();
             this.Close();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
