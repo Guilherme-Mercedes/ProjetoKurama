@@ -35,7 +35,7 @@ namespace ProjetoJe
 
         private void btnRemoverAluguelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            removerAluguel ra = new removerAluguel();
+            RemoverAluguel ra = new RemoverAluguel();
             ra.Show();
             this.Close();
         }

@@ -41,7 +41,7 @@ namespace ProjetoJe
 
         private void btnVoltarMenu_Click(object sender, EventArgs e)
         {
-            TelaUsua tu = new TelaUsua();
+            TelaUsuario tu = new TelaUsuario();
             tu.Show();
             this.Close();
         }

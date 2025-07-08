@@ -135,17 +135,17 @@
     <Compile Include="Funcionario\Periferico\RealizarVenda.Designer.cs">
       <DependentUpon>RealizarVenda.cs</DependentUpon>
     </Compile>
-    <Compile Include="removerAluguel.cs">
+    <Compile Include="Funcionario\Periferico\RemoverAluguel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="removerAluguel.Designer.cs">
-      <DependentUpon>removerAluguel.cs</DependentUpon>
+    <Compile Include="Funcionario\Periferico\RemoverAluguel.Designer.cs">
+      <DependentUpon>RemoverAluguel.cs</DependentUpon>
     </Compile>
-    <Compile Include="removerCadastro.cs">
+    <Compile Include="RemoverCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="removerCadastro.Designer.cs">
-      <DependentUpon>removerCadastro.cs</DependentUpon>
+    <Compile Include="RemoverCadastro.Designer.cs">
+      <DependentUpon>RemoverCadastro.cs</DependentUpon>
     </Compile>
     <Compile Include="removerPeriferico.cs">
       <SubType>Form</SubType>
@@ -153,17 +153,17 @@
     <Compile Include="removerPeriferico.Designer.cs">
       <DependentUpon>removerPeriferico.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaInicialFuncionario.cs">
+    <Compile Include="Funcionario\TelaInicialFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaInicialFuncionario.Designer.cs">
+    <Compile Include="Funcionario\TelaInicialFuncionario.Designer.cs">
       <DependentUpon>TelaInicialFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaUsua.cs">
+    <Compile Include="Usuario\TelaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaUsua.Designer.cs">
-      <DependentUpon>TelaUsua.cs</DependentUpon>
+    <Compile Include="Usuario\TelaUsuario.Designer.cs">
+      <DependentUpon>TelaUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Utilitarios.cs" />
     <Compile Include="Usuario\VendaPerifericoUsuario.cs">
@@ -221,20 +221,20 @@
     <EmbeddedResource Include="Funcionario\Periferico\RealizarVenda.resx">
       <DependentUpon>RealizarVenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="removerAluguel.resx">
-      <DependentUpon>removerAluguel.cs</DependentUpon>
+    <EmbeddedResource Include="Funcionario\Periferico\RemoverAluguel.resx">
+      <DependentUpon>RemoverAluguel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="removerCadastro.resx">
-      <DependentUpon>removerCadastro.cs</DependentUpon>
+    <EmbeddedResource Include="RemoverCadastro.resx">
+      <DependentUpon>RemoverCadastro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="removerPeriferico.resx">
       <DependentUpon>removerPeriferico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaInicialFuncionario.resx">
+    <EmbeddedResource Include="Funcionario\TelaInicialFuncionario.resx">
       <DependentUpon>TelaInicialFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaUsua.resx">
-      <DependentUpon>TelaUsua.cs</DependentUpon>
+    <EmbeddedResource Include="Usuario\TelaUsuario.resx">
+      <DependentUpon>TelaUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario\VendaPerifericoUsuario.resx">
       <DependentUpon>VendaPerifericoUsuario.cs</DependentUpon>

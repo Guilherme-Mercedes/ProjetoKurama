@@ -13,53 +13,41 @@ using System.Windows.Forms;
 
 namespace ProjetoJe
 {
-    public partial class removerCadastro : Form
+    public partial class RemoverCadastro : Form
     {
         DAOMysql.DAOMysql DAO = new DAOMysql.DAOMysql();
-        public removerCadastro()
+        public RemoverCadastro()
         {
             InitializeComponent();
-            dataGridView1.DataSource = DAO.selectLogin();
+
         }
 
         private void removerFuncionrio()
         {
-            if (tbid != null)
+            string id = tbid.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(id))
             {
-                if (DAO.mConn.State == ConnectionState.Open)
+                MessageBox.Show("O campo ID está em branco. Por favor, preencha.");
+                return;
+            }
+
+            try
+            {
+                bool sucesso = DAO.RemoverFuncionarioPorId(id);
+                if (sucesso)
                 {
-                    DAO.sql = "delete from loginfuncionario where id_func= @id;";
-                    MySqlCommand commS = new MySqlCommand(DAO.sql, DAO.mConn);
-                    commS.Parameters.AddWithValue("@id", tbid.Text);
-
-                    try
-                    {
-                        var retorno = commS.ExecuteNonQuery();
-                        if (retorno == 1)
-                        {
-                            MessageBox.Show("Funcionario Removido");
-                            dataGridView1.DataSource = DAO.selectLogin();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Erro, tente novamente...");
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Erro" + ex.Message.ToString());
-                    }
-
-
+                    MessageBox.Show("Funcionário removido com sucesso.");
+                    dataGridView1.DataSource = DAO.SelectLogin();
                 }
                 else
                 {
-                    MessageBox.Show("erro");
+                    MessageBox.Show("Nenhum funcionário foi removido. Verifique o ID informado.");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("A id está em branco, por favor preencha o campo");
+                MessageBox.Show("Erro ao remover funcionário: " + ex.Message);
             }
         }
 

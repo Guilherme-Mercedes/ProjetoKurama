@@ -1,6 +1,6 @@
 ﻿namespace ProjetoJe
 {
-    partial class removerAluguel
+    partial class RemoverAluguel
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(removerAluguel));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemoverAluguel));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.tbid = new System.Windows.Forms.TextBox();
+            this.tbId = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mostrarAlugueisEVendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reaalizarVendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,21 +55,21 @@
             this.dataGridView1.Size = new System.Drawing.Size(862, 296);
             this.dataGridView1.TabIndex = 41;
             // 
-            // button1
+            // btnExcluir
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(396, 189);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 28);
-            this.button1.TabIndex = 40;
-            this.button1.Text = "EXCLUIR";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.btnExcluir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnExcluir.BackColor = System.Drawing.Color.White;
+            this.btnExcluir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnExcluir.FlatAppearance.BorderSize = 2;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Location = new System.Drawing.Point(396, 189);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 28);
+            this.btnExcluir.TabIndex = 40;
+            this.btnExcluir.Text = "EXCLUIR";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // label7
             // 
@@ -94,7 +94,7 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(384, 135);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 16);
+            this.label8.Size = new System.Drawing.Size(20, 16);
             this.label8.TabIndex = 37;
             this.label8.Text = "ID";
             // 
@@ -107,18 +107,18 @@
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(287, 89);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(297, 16);
+            this.label9.Size = new System.Drawing.Size(296, 16);
             this.label9.TabIndex = 38;
             this.label9.Text = "insira a id do aluguel que você deseja remover";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tbid
+            // tbId
             // 
-            this.tbid.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbid.Location = new System.Drawing.Point(413, 135);
-            this.tbid.Name = "tbid";
-            this.tbid.Size = new System.Drawing.Size(43, 20);
-            this.tbid.TabIndex = 36;
+            this.tbId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbId.Location = new System.Drawing.Point(413, 135);
+            this.tbId.Name = "tbId";
+            this.tbId.Size = new System.Drawing.Size(43, 20);
+            this.tbId.TabIndex = 36;
             // 
             // menuStrip1
             // 
@@ -141,37 +141,37 @@
             this.mostrarAlugueisEVendasToolStripMenuItem.Name = "mostrarAlugueisEVendasToolStripMenuItem";
             this.mostrarAlugueisEVendasToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
             this.mostrarAlugueisEVendasToolStripMenuItem.Text = "Realizar Aluguel";
-            this.mostrarAlugueisEVendasToolStripMenuItem.Click += new System.EventHandler(this.MostrarAlugueisEVendasToolStripMenuItem_Click);
+            this.mostrarAlugueisEVendasToolStripMenuItem.Click += new System.EventHandler(this.btnRealizarAlugueis_Click);
             // 
             // reaalizarVendaToolStripMenuItem
             // 
             this.reaalizarVendaToolStripMenuItem.Name = "reaalizarVendaToolStripMenuItem";
             this.reaalizarVendaToolStripMenuItem.Size = new System.Drawing.Size(122, 24);
             this.reaalizarVendaToolStripMenuItem.Text = "Realizar Venda";
-            this.reaalizarVendaToolStripMenuItem.Click += new System.EventHandler(this.ReaalizarVendaToolStripMenuItem_Click);
+            this.reaalizarVendaToolStripMenuItem.Click += new System.EventHandler(this.btnRealizarVenda_Click);
             // 
             // removerAluguelToolStripMenuItem
             // 
             this.removerAluguelToolStripMenuItem.Name = "removerAluguelToolStripMenuItem";
             this.removerAluguelToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
             this.removerAluguelToolStripMenuItem.Text = "Mostrar Alugueis e Vendas";
-            this.removerAluguelToolStripMenuItem.Click += new System.EventHandler(this.RemoverAluguelToolStripMenuItem_Click);
+            this.removerAluguelToolStripMenuItem.Click += new System.EventHandler(this.btnMostrarAluguelVenda_Click);
             // 
             // voltarmenusuario
             // 
             this.voltarmenusuario.Name = "voltarmenusuario";
             this.voltarmenusuario.Size = new System.Drawing.Size(127, 24);
             this.voltarmenusuario.Text = "Voltar ao Menu";
-            this.voltarmenusuario.Click += new System.EventHandler(this.Voltarmenusuario_Click);
+            this.voltarmenusuario.Click += new System.EventHandler(this.btnVoltarMenu_Click);
             // 
             // sairusuario
             // 
             this.sairusuario.Name = "sairusuario";
             this.sairusuario.Size = new System.Drawing.Size(47, 24);
             this.sairusuario.Text = "Sair";
-            this.sairusuario.Click += new System.EventHandler(this.Sairusuario_Click);
+            this.sairusuario.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // removerAluguel
+            // RemoverAluguel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -180,13 +180,13 @@
             this.ClientSize = new System.Drawing.Size(886, 564);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.tbid);
+            this.Controls.Add(this.tbId);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "removerAluguel";
+            this.Name = "RemoverAluguel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kurama®";
             this.Load += new System.EventHandler(this.RemoverAluguel_Load);
@@ -201,11 +201,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox tbid;
+        private System.Windows.Forms.TextBox tbId;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mostrarAlugueisEVendasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reaalizarVendaToolStripMenuItem;

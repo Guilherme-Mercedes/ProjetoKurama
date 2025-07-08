@@ -35,7 +35,7 @@ namespace ProjetoJe
         }
         private void removerCadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            removerCadastro rc = new removerCadastro();
+            RemoverCadastro rc = new RemoverCadastro();
             rc.Show();
             this.Close();
         }

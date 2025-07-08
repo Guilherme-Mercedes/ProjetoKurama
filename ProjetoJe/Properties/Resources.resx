@@ -124,9 +124,6 @@
   <data name="cinza1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cinza.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="meajudadeus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\meajudadeus.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="zueikkkk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zueikkkk.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,6 +139,12 @@
   <data name="fundofunc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fundofunc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cinza" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cinza.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fundo12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fundo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fundo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fundo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,10 +157,10 @@
   <data name="zueikk1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zueikk1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cinza" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cinza.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="meajudadeus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\meajudadeus.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fundo12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="fundo13" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fundo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

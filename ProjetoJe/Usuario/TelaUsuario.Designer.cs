@@ -1,6 +1,6 @@
 ﻿namespace ProjetoJe
 {
-    partial class TelaUsua
+    partial class TelaUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaUsua));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaUsuario));
             this.btmostperif = new System.Windows.Forms.Button();
             this.btcomprarperif = new System.Windows.Forms.Button();
             this.btalugarperif = new System.Windows.Forms.Button();
@@ -52,7 +52,7 @@
             this.btmostperif.TabIndex = 2;
             this.btmostperif.Text = "Mostrar Periféricos";
             this.btmostperif.UseVisualStyleBackColor = false;
-            this.btmostperif.Click += new System.EventHandler(this.Btmostperif_Click);
+            this.btmostperif.Click += new System.EventHandler(this.btnMostrarPerifericos_Click);
             // 
             // btcomprarperif
             // 
@@ -68,7 +68,7 @@
             this.btcomprarperif.TabIndex = 3;
             this.btcomprarperif.Text = "Comprar";
             this.btcomprarperif.UseVisualStyleBackColor = false;
-            this.btcomprarperif.Click += new System.EventHandler(this.btcomprarperif_Click);
+            this.btcomprarperif.Click += new System.EventHandler(this.btComprarPeriferico_Click);
             // 
             // btalugarperif
             // 
@@ -84,11 +84,12 @@
             this.btalugarperif.TabIndex = 4;
             this.btalugarperif.Text = "Alugar";
             this.btalugarperif.UseVisualStyleBackColor = false;
-            this.btalugarperif.Click += new System.EventHandler(this.button2_Click);
+            this.btalugarperif.Click += new System.EventHandler(this.btnAlugar_Click);
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackgroundImage = global::ProjetoJe.Properties.Resources.laranjo;
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.BackgroundImage = global::ProjetoJe.Properties.Resources.cinza;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.voltarmenusuario,
@@ -104,21 +105,21 @@
             this.voltarmenusuario.Name = "voltarmenusuario";
             this.voltarmenusuario.Size = new System.Drawing.Size(124, 24);
             this.voltarmenusuario.Text = "Voltar ao Ínicio";
-            this.voltarmenusuario.Click += new System.EventHandler(this.voltarmenusuario_Click);
+            this.voltarmenusuario.Click += new System.EventHandler(this.btnVoltarInicio_Click);
             // 
             // sairusuario
             // 
             this.sairusuario.Name = "sairusuario";
             this.sairusuario.Size = new System.Drawing.Size(47, 24);
             this.sairusuario.Text = "Sair";
-            this.sairusuario.Click += new System.EventHandler(this.sairusuario_Click);
+            this.sairusuario.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // TelaUsua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Orange;
-            this.BackgroundImage = global::ProjetoJe.Properties.Resources.meajudadeus;
+            this.BackColor = System.Drawing.Color.Linen;
+            this.BackgroundImage = global::ProjetoJe.Properties.Resources.fundo13;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(886, 564);
             this.Controls.Add(this.btalugarperif);
