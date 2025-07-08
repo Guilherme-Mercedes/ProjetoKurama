@@ -79,7 +79,7 @@ namespace ProjetoJe
         }
         private void btAlugar_Click(object sender, EventArgs e)
         {
-            realizarAluguel ra = new realizarAluguel();
+            RealizarAluguel ra = new RealizarAluguel();
             ra.Show();
             this.Close();
         }

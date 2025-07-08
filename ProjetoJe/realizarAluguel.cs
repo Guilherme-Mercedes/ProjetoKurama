@@ -1,329 +1,197 @@
-﻿//ALTERAR
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using DAOMysql;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoJe
 {
 
-    public partial class realizarAluguel : Form
+    public partial class RealizarAluguel : Form
     {
-        DAOMysql.DAOMysql DAO = new DAOMysql.DAOMysql();
+        private DAOMysql.DAOMysql DAO = new DAOMysql.DAOMysql();
 
-
-
-        private int b = 0;
-        private double a = 0, c = 0;
-        private string dd, dm;
-
-
-
-        public realizarAluguel()
+        public RealizarAluguel()
         {
             InitializeComponent();
-            dataGridView1.DataSource = DAO.selectPeriferico();
-            dataGridView2.DataSource = DAO.selectAlugueis();
-
-
         }
-
-        private void Conta()
-        {
-
-
-
-            if (tbdaluguel.Text == "")
-            {
-
-                label8.Text = "";
-
-
-            }
-            else
-            {
-                //pega o valor de aluguel do banco de dados
-                DAO.sql = "select preço_aluguel from perifericos where id_peri = @id";
-                MySqlCommand ler = new MySqlCommand(DAO.sql, DAO.mConn);
-                ler.Parameters.AddWithValue("@id", tbidperiferico.Text);
-                MySqlDataReader rdrrr = ler.ExecuteReader();
-                rdrrr.Read();
-
-
-
-                if (rdrrr.HasRows)
-                {
-                    a = double.Parse(rdrrr.GetValue(0).ToString());
-                    b = int.Parse(tbdaluguel.Text);
-
-                    c = b * a;
-
-                    rdrrr.Close();
-
-
-                }
-                else
-                {
-                    rdrrr.Close();
-                    tbidperiferico.Text = "";
-                }
-
-                label8.Text = "VALOR TOTAL DO ALUGUEL: R$" + c;
-
-            }
-
-            if (tbdaluguel.Text == "")
-            {
-                btdata.Text = "";
-            }
-            else
-            {
-
-
-
-
-                DateTime data = DateTime.Now.Date;
-                DateTime dias = data.AddDays(Convert.ToInt32(tbdaluguel.Text));
-                dd = String.Format("{0:dd/MM/yyyy}", dias);
-
-                btdata.Text = "DATA DE DEVOLUÇÃO: " + dd;
-            }
-
-        }
-
-        private void realizaAluguel()
-        {
-
-            if (DAO.mConn.State == ConnectionState.Open)
-            {
-                MessageBox.Show("Conexão Ok");
-
-
-
-
-
-
-
-
-                dm = DateTime.Now.ToString();
-
-                //Vai armazenar as informações no banco 
-                DAO.sql = "insert into aluguel (Nome, cpf, telefone, data_nascimento, dias_aluguel, valor_total, data_devolução, horario_e_dia_do_aluguel, id_periferico ) values (@nome, @cpf, @telefone, @datan, @dias, @valortotal, @data_devolução, @horario_e_dia, @id)";
-                MySqlCommand commS = new MySqlCommand(DAO.sql, DAO.mConn);
-                commS.Parameters.AddWithValue("@nome", tbnome.Text);
-                commS.Parameters.AddWithValue("@cpf", tbcpf.Text);
-                commS.Parameters.AddWithValue("@telefone", tbtelefone.Text);
-                commS.Parameters.AddWithValue("@datan", tbnascimento.Text);
-                commS.Parameters.AddWithValue("@dias", tbdaluguel.Text);
-                commS.Parameters.AddWithValue("@valortotal", c);
-                commS.Parameters.AddWithValue("@data_devolução", dd);
-                commS.Parameters.AddWithValue("@horario_e_dia", dm);
-                commS.Parameters.AddWithValue("@id", tbidperiferico.Text);
-
-
-
-
-                //o famoso "PREENCHA TODAS AS INFORMAÇÕES"
-                if ((tbnome.Text == "") || (tbcpf.Text == "") || (tbtelefone.Text == "") || (tbnascimento.Text == "") || (tbdaluguel.Text == "") || (c == 0) || (tbidperiferico.Text == ""))
-                {
-                    MessageBox.Show("Não deixe nenhum espaço em branco!");
-
-
-
-
-
-                }
-                else
-                {
-
-                    //UM ANO PRA ARRUMAR ISSO, MAS NO FINAAL VALEU A PENA (COMANDO PRA IMPEDIR QUE PEGUE UM PERIFERICO QUE JÁ FOI ALUGADO)
-                    DAO.sql = "select status from perifericos where id_peri = @idd";
-                    MySqlCommand commmS = new MySqlCommand(DAO.sql, DAO.mConn);
-                    commmS.Parameters.AddWithValue("@idd", tbidperiferico.Text);
-                    MySqlDataReader rdr = commmS.ExecuteReader();
-                    rdr.Read();
-                    string aa = rdr.GetValue(0).ToString();
-                    rdr.Close();
-
-
-                    if (aa == "Indisponivel")
-                    {
-                        MessageBox.Show("Periferico Indisponivel ");
-                        rdr.Close();
-                    }
-                    else
-                    {
-
-
-                        //Atualiza o status do periferico para Indisponivel
-                        DAO.sql = "update perifericos set status='Indisponivel' where id_peri = @idd";
-                        MySqlCommand commsS = new MySqlCommand(DAO.sql, DAO.mConn);
-                        commsS.Parameters.AddWithValue("@idd", tbidperiferico.Text);
-
-                        try
-                        {
-
-                            var retorno = commS.ExecuteNonQuery();
-                            var retorn = commsS.ExecuteNonQuery();
-
-                            if (retorno == 1 && retorn == 1)
-                            {
-                                MessageBox.Show("Aluguel Realizado com Sucesso");
-                                dataGridView1.DataSource = DAO.selectPeriferico();
-                                dataGridView2.DataSource = DAO.selectAlugueis();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Ocorreu um erro oa inserir, tente novamente...");
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Erro" + ex.Message.ToString());
-                        }
-
-
-                    }
-
-
-                }
-
-
-            }
-            else
-            {
-                MessageBox.Show("erro");
-            }
-        }
-
         private void RealizarAluguel_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void Btenviar_Click(object sender, EventArgs e)
-        {
-            realizaAluguel();
-        }
-
-        private void Label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Tbvaluguel_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Tbidperiferico_TextChanged(object sender, EventArgs e)
-        {
-
-
-
-        }
-
-        private void Tbnome_TextChanged(object sender, EventArgs e)
-        {
-
-
-
-        }
-
-        private void Tbcpf_TextChanged(object sender, EventArgs e)
-        {
-
-
-
-
-        }
-
-        private void Tbtelefone_TextChanged(object sender, EventArgs e)
-        {
-
-
-
-
-        }
-
         private void Tbnascimento_TextChanged(object sender, EventArgs e)
         {
-
-
-
-
-
         }
-
         private void Btdata_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Tbdaluguel_ControlRemoved(object sender, ControlEventArgs e)
+        private void tbIdPeriferico_TextChanged(object sender, EventArgs e)
         {
-
+            AtualizarResumoAluguel();
         }
 
-        private void Tbdaluguel_MouseMove(object sender, MouseEventArgs e)
+        private void tbDiaAluguel_TextChanged(object sender, EventArgs e)
         {
-
+            AtualizarResumoAluguel();
         }
 
-        private void RealizarAluguel_MouseMove(object sender, MouseEventArgs e)
+        private void btEnviar_Click(object sender, EventArgs e)
         {
-            Conta();
+            AlugarPeriferico();
+        }
+        private void btnRealizarVendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            realizarVenda rv = new realizarVenda();
+            rv.Show();
+            this.Close();
+        }
+        private void btnMostrarAlugueisEVendasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TabelaAluguelVendas av = new TabelaAluguelVendas();
+            av.Show();
+            this.Close();
         }
 
-        private void Voltarmenusuario_Click(object sender, EventArgs e)
+        private void btnRemoverAluguelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            removerAluguel ra = new removerAluguel();
+            ra.Show();
+            this.Close();
+        }
+
+        private void btnVoltarMenu_Click(object sender, EventArgs e)
         {
             MenuFuncionario fm = new MenuFuncionario();
             fm.Show();
             this.Hide();
         }
 
-        private void ReaalizarVendaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            realizarVenda rv = new realizarVenda();
-            rv.Show();
-            this.Hide();
-        }
-
-        private void MostrarAlugueisEVendasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TabelaAluguelVendas av = new TabelaAluguelVendas();
-            av.Show();
-            this.Hide();
-        }
-
-        private void RemoverAluguelToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            removerAluguel ra = new removerAluguel();
-            ra.Show();
-            this.Hide();
-        }
-
-        private void Sairusuario_Click(object sender, EventArgs e)
+        private void btnSair_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
 
-        private void Tbdaluguel_TextChanged(object sender, EventArgs e)
+        //Funcoes
+        private (double valorTotal, string dataDevolucao) CalcularValorAluguel(int dias, double precoDiario)
         {
-
-
-
-
-
-
+            double total = dias * precoDiario;
+            string data = DateTime.Now.AddDays(dias).ToString("dd/MM/yyyy");
+            return (total, data);
         }
 
+        //Evento para atualizar o resumo do aluguel quando o usuário digita o número de dias ou o ID do periférico
+        private void AtualizarResumoAluguel()
+        {
+            if (string.IsNullOrWhiteSpace(tbDiaAluguel.Text) || string.IsNullOrWhiteSpace(tbIdPeriferico.Text))
+            {
+                labelResposta.Text = "";
+                return;
+            }
+            if (!int.TryParse(tbDiaAluguel.Text, out int dias) || dias <= 0)
+            {
+                labelResposta.Text = "Informe um número válido de dias.";
+                return;
+            }
+            try
+            {
+                string query = "SELECT preço_aluguel FROM perifericos WHERE id_peri = @id";
+                using (MySqlCommand cmd = new MySqlCommand(query, DAO.mConn))
+                {
+                    cmd.Parameters.AddWithValue("@id", tbIdPeriferico.Text);
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            double precoDiario = Convert.ToDouble(reader["preço_aluguel"]);
+                            var (valorTotal, dataDevolucao) = CalcularValorAluguel(dias, precoDiario);
+
+                            labelResposta.Text = $"Valor total: R$ {valorTotal:F2} | Devolução: {dataDevolucao}";
+                        }
+                        else
+                        {
+                            labelResposta.Text = "Periférico não encontrado.";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                labelResposta.Text = "Erro: " + ex.Message;
+            }
+        }
+
+        //esse funcao eu posso colocar no utils ou em uma classe separada, já que é uma função usada em outra classe
+        private void AlugarPeriferico()
+        {
+            // Validação dos campos
+            if (string.IsNullOrWhiteSpace(tbNome.Text) ||
+                string.IsNullOrWhiteSpace(tbCpf.Text) ||
+                string.IsNullOrWhiteSpace(tbTelefone.Text) ||
+                string.IsNullOrWhiteSpace(tbDataNascimento.Text) ||
+                string.IsNullOrWhiteSpace(tbDiaAluguel.Text) ||
+                string.IsNullOrWhiteSpace(tbIdPeriferico.Text))
+            {
+                MessageBox.Show("Preencha todos os campos antes de continuar.");
+                return;
+            }
+
+            try
+            {
+                //Buscar o preço do aluguel do periférico
+                string query = "SELECT preço_aluguel, status FROM perifericos WHERE id_peri = @id";
+                using (MySqlCommand cmd = new MySqlCommand(query, DAO.mConn))
+                {
+                    cmd.Parameters.AddWithValue("@id", tbIdPeriferico.Text);
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (!reader.Read())
+                        {
+                            MessageBox.Show("Periférico não encontrado.");
+                            return;
+                        }
+
+                        string status = reader["status"].ToString();
+                        if (status == "Indisponivel")
+                        {
+                            MessageBox.Show("Este periférico está indisponível.");
+                            return;
+                        }
+
+                        double precoDiario = Convert.ToDouble(reader["preço_aluguel"]);
+                        reader.Close();
+
+                        //Calcular valor total e data de devolução
+                        int dias = int.Parse(tbDiaAluguel.Text);
+                        var (valorTotal, dataDevolucao) = CalcularValorAluguel(dias, precoDiario);
+                        string horarioAgora = DateTime.Now.ToString();
+
+                        //Realizar o aluguel
+                        bool sucesso = DAO.AlugarPeriferico(tbNome.Text, tbCpf.Text, tbTelefone.Text, tbDataNascimento.Text, tbDiaAluguel.Text,
+                                                            valorTotal.ToString("F2"), dataDevolucao, horarioAgora, tbIdPeriferico.Text);
+
+                        //Atualizar status e exibir resultado
+                        if (sucesso)
+                        {
+                            DAO.AtualizarStatusPeriferico(tbIdPeriferico.Text, "Indisponivel");
+                            MessageBox.Show("Aluguel realizado com sucesso!");
+
+                            dataGridView1.DataSource = DAO.SelectPeriferico();
+                            dataGridView2.DataSource = DAO.AlugueisUsuario();
+
+                            Utilitarios.LimparTodosTextBox(this);
+                            tbNome.Focus();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erro ao realizar o aluguel.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao alugar o periférico. Tente novamente: " + ex.Message);
+            }
+        }
     }
 }

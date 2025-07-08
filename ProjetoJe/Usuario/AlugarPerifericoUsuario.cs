@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿//Essa classe o usuario conseguia ver informaões de alugueis realizados, informacoes que nao poderia ter acesso
+using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
 
@@ -158,7 +159,6 @@ namespace ProjetoJe
                             MessageBox.Show("Aluguel realizado com sucesso!");
 
                             dataGridView1.DataSource = DAO.SelectPeriferico();
-                            dataGridView2.DataSource = DAO.AlugueisUsuario();
 
                             Utilitarios.LimparTodosTextBox(this);
                             tbNome.Focus();

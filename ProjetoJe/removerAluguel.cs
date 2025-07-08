@@ -77,7 +77,7 @@ namespace ProjetoJe
 
         private void MostrarAlugueisEVendasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            realizarAluguel ra = new realizarAluguel();
+            RealizarAluguel ra = new RealizarAluguel();
             ra.Show();
             this.Hide();
         }

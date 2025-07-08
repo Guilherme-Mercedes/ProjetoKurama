@@ -17,7 +17,7 @@ namespace ProjetoJe
         //Novas funções para os botões de realizar aluguel e venda
         private void realizarAluguel_Click(object sender, EventArgs e)
         {
-            realizarAluguel ra = new realizarAluguel();
+            RealizarAluguel ra = new RealizarAluguel();
             ra.Show();
             this.Close();
         }

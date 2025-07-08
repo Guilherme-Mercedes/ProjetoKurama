@@ -31,14 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlugarPerifericoUsuario));
             this.btdata = new System.Windows.Forms.Label();
             this.labelResposta = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbIdPeriferico = new System.Windows.Forms.TextBox();
@@ -53,7 +51,6 @@
             this.removerAluguelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.voltarmenusuario = new System.Windows.Forms.ToolStripMenuItem();
             this.sairusuario = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +62,7 @@
             this.btdata.BackColor = System.Drawing.Color.Transparent;
             this.btdata.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btdata.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btdata.Location = new System.Drawing.Point(65, 387);
+            this.btdata.Location = new System.Drawing.Point(65, 456);
             this.btdata.Name = "btdata";
             this.btdata.Size = new System.Drawing.Size(0, 16);
             this.btdata.TabIndex = 46;
@@ -82,17 +79,6 @@
             this.labelResposta.Size = new System.Drawing.Size(0, 16);
             this.labelResposta.TabIndex = 45;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(345, 319);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(529, 221);
-            this.dataGridView2.TabIndex = 44;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -102,7 +88,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(345, 67);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(529, 206);
+            this.dataGridView1.Size = new System.Drawing.Size(529, 464);
             this.dataGridView1.TabIndex = 43;
             // 
             // label7
@@ -112,7 +98,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(81, 260);
+            this.label7.Location = new System.Drawing.Point(81, 329);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(125, 16);
             this.label7.TabIndex = 34;
@@ -125,7 +111,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(81, 216);
+            this.label6.Location = new System.Drawing.Point(81, 285);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(124, 16);
             this.label6.TabIndex = 35;
@@ -138,7 +124,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(81, 134);
+            this.label4.Location = new System.Drawing.Point(81, 203);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 16);
             this.label4.TabIndex = 37;
@@ -151,7 +137,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(81, 173);
+            this.label3.Location = new System.Drawing.Point(81, 242);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(151, 16);
             this.label3.TabIndex = 38;
@@ -164,25 +150,11 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(81, 95);
+            this.label2.Location = new System.Drawing.Point(81, 164);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 16);
             this.label2.TabIndex = 39;
             this.label2.Text = "CPF";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(482, 298);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(240, 18);
-            this.label10.TabIndex = 40;
-            this.label10.Text = "LISTA DE ALUGUEIS RELIZADOS";
             // 
             // label9
             // 
@@ -205,7 +177,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(81, 56);
+            this.label1.Location = new System.Drawing.Point(81, 125);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 16);
             this.label1.TabIndex = 42;
@@ -214,7 +186,7 @@
             // tbIdPeriferico
             // 
             this.tbIdPeriferico.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tbIdPeriferico.Location = new System.Drawing.Point(84, 276);
+            this.tbIdPeriferico.Location = new System.Drawing.Point(84, 345);
             this.tbIdPeriferico.Name = "tbIdPeriferico";
             this.tbIdPeriferico.Size = new System.Drawing.Size(100, 20);
             this.tbIdPeriferico.TabIndex = 33;
@@ -223,7 +195,7 @@
             // tbDiaAluguel
             // 
             this.tbDiaAluguel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tbDiaAluguel.Location = new System.Drawing.Point(84, 232);
+            this.tbDiaAluguel.Location = new System.Drawing.Point(84, 301);
             this.tbDiaAluguel.Name = "tbDiaAluguel";
             this.tbDiaAluguel.Size = new System.Drawing.Size(100, 20);
             this.tbDiaAluguel.TabIndex = 32;
@@ -237,7 +209,7 @@
             this.btEnviar.FlatAppearance.BorderSize = 2;
             this.btEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEnviar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btEnviar.Location = new System.Drawing.Point(109, 319);
+            this.btEnviar.Location = new System.Drawing.Point(109, 388);
             this.btEnviar.Name = "btEnviar";
             this.btEnviar.Size = new System.Drawing.Size(75, 33);
             this.btEnviar.TabIndex = 31;
@@ -248,7 +220,7 @@
             // tbTelefone
             // 
             this.tbTelefone.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tbTelefone.Location = new System.Drawing.Point(84, 150);
+            this.tbTelefone.Location = new System.Drawing.Point(84, 219);
             this.tbTelefone.Name = "tbTelefone";
             this.tbTelefone.Size = new System.Drawing.Size(168, 20);
             this.tbTelefone.TabIndex = 30;
@@ -256,7 +228,7 @@
             // tbDataNascimento
             // 
             this.tbDataNascimento.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tbDataNascimento.Location = new System.Drawing.Point(84, 189);
+            this.tbDataNascimento.Location = new System.Drawing.Point(84, 258);
             this.tbDataNascimento.Name = "tbDataNascimento";
             this.tbDataNascimento.Size = new System.Drawing.Size(168, 20);
             this.tbDataNascimento.TabIndex = 28;
@@ -264,7 +236,7 @@
             // tbCpf
             // 
             this.tbCpf.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tbCpf.Location = new System.Drawing.Point(84, 111);
+            this.tbCpf.Location = new System.Drawing.Point(84, 180);
             this.tbCpf.Name = "tbCpf";
             this.tbCpf.Size = new System.Drawing.Size(168, 20);
             this.tbCpf.TabIndex = 27;
@@ -272,7 +244,7 @@
             // tbNome
             // 
             this.tbNome.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tbNome.Location = new System.Drawing.Point(84, 72);
+            this.tbNome.Location = new System.Drawing.Point(84, 141);
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(168, 20);
             this.tbNome.TabIndex = 26;
@@ -334,14 +306,12 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btdata);
             this.Controls.Add(this.labelResposta);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbIdPeriferico);
@@ -356,7 +326,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kurama®";
             this.Load += new System.EventHandler(this.AluguelUsuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -369,14 +338,12 @@
 
         private System.Windows.Forms.Label btdata;
         private System.Windows.Forms.Label labelResposta;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbIdPeriferico;
