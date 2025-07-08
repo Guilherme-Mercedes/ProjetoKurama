@@ -115,11 +115,11 @@
     <Compile Include="Usuario\ListaPerifericoDisponivel.Designer.cs">
       <DependentUpon>ListaPerifericoDisponivel.cs</DependentUpon>
     </Compile>
-    <Compile Include="mostrarPerifericos.cs">
+    <Compile Include="Funcionario\Periferico\ListaPerifericosFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mostrarPerifericos.Designer.cs">
-      <DependentUpon>mostrarPerifericos.cs</DependentUpon>
+    <Compile Include="Funcionario\Periferico\ListaPerifericosFuncionario.Designer.cs">
+      <DependentUpon>ListaPerifericosFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -202,8 +202,8 @@
     <EmbeddedResource Include="Usuario\ListaPerifericoDisponivel.resx">
       <DependentUpon>ListaPerifericoDisponivel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mostrarPerifericos.resx">
-      <DependentUpon>mostrarPerifericos.cs</DependentUpon>
+    <EmbeddedResource Include="Funcionario\Periferico\ListaPerifericosFuncionario.resx">
+      <DependentUpon>ListaPerifericosFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

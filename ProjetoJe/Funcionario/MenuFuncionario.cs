@@ -62,7 +62,7 @@ namespace ProjetoJe
 
         private void MostrarPerifericosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            mostrarPerifericos mp = new mostrarPerifericos();
+            ListaPerifericosFuncionario mp = new ListaPerifericosFuncionario();
             mp.Show();
             this.Close();
         }
