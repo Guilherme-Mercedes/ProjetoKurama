@@ -1,6 +1,6 @@
 ﻿namespace ProjetoJe
 {
-    partial class removerPeriferico
+    partial class RemoverPeriferico
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(removerPeriferico));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemoverPeriferico));
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.tbid = new System.Windows.Forms.TextBox();
+            this.tbIdPeriferico = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.CadastrarPerifericoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarPerifericoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,7 +59,7 @@
             this.button1.TabIndex = 33;
             this.button1.Text = "EXCLUIR";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // label7
             // 
@@ -85,7 +85,7 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(404, 134);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 16);
+            this.label8.Size = new System.Drawing.Size(20, 16);
             this.label8.TabIndex = 30;
             this.label8.Text = "ID";
             // 
@@ -98,18 +98,17 @@
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(286, 89);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(310, 16);
+            this.label9.Size = new System.Drawing.Size(309, 16);
             this.label9.TabIndex = 31;
             this.label9.Text = "insira a id do periferico que você deseja remover";
             // 
-            // tbid
+            // tbIdPeriferico
             // 
-            this.tbid.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbid.Location = new System.Drawing.Point(431, 134);
-            this.tbid.Name = "tbid";
-            this.tbid.Size = new System.Drawing.Size(43, 20);
-            this.tbid.TabIndex = 29;
-            this.tbid.TextChanged += new System.EventHandler(this.Tbid_TextChanged);
+            this.tbIdPeriferico.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbIdPeriferico.Location = new System.Drawing.Point(431, 134);
+            this.tbIdPeriferico.Name = "tbIdPeriferico";
+            this.tbIdPeriferico.Size = new System.Drawing.Size(43, 20);
+            this.tbIdPeriferico.TabIndex = 29;
             // 
             // menuStrip1
             // 
@@ -132,35 +131,35 @@
             this.CadastrarPerifericoToolStripMenuItem.Name = "CadastrarPerifericoToolStripMenuItem";
             this.CadastrarPerifericoToolStripMenuItem.Size = new System.Drawing.Size(155, 24);
             this.CadastrarPerifericoToolStripMenuItem.Text = "Cadastrar Periferico";
-            this.CadastrarPerifericoToolStripMenuItem.Click += new System.EventHandler(this.CadastrarPerifericoToolStripMenuItem_Click);
+            this.CadastrarPerifericoToolStripMenuItem.Click += new System.EventHandler(this.btnCadastrarPeriferico_Click);
             // 
             // alterarPerifericoToolStripMenuItem
             // 
             this.alterarPerifericoToolStripMenuItem.Name = "alterarPerifericoToolStripMenuItem";
             this.alterarPerifericoToolStripMenuItem.Size = new System.Drawing.Size(137, 24);
             this.alterarPerifericoToolStripMenuItem.Text = "Alterar Periferico";
-            this.alterarPerifericoToolStripMenuItem.Click += new System.EventHandler(this.AlterarPerifericoToolStripMenuItem_Click);
+            this.alterarPerifericoToolStripMenuItem.Click += new System.EventHandler(this.btnAlterarPeriferico_Click);
             // 
             // listaDePerifericosToolStripMenuItem
             // 
             this.listaDePerifericosToolStripMenuItem.Name = "listaDePerifericosToolStripMenuItem";
             this.listaDePerifericosToolStripMenuItem.Size = new System.Drawing.Size(147, 24);
             this.listaDePerifericosToolStripMenuItem.Text = "Lista de Perifericos";
-            this.listaDePerifericosToolStripMenuItem.Click += new System.EventHandler(this.ListaDePerifericosToolStripMenuItem_Click);
+            this.listaDePerifericosToolStripMenuItem.Click += new System.EventHandler(this.btnListaPeriferico_Click);
             // 
             // voltarAoMenuToolStripMenuItem
             // 
             this.voltarAoMenuToolStripMenuItem.Name = "voltarAoMenuToolStripMenuItem";
             this.voltarAoMenuToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
             this.voltarAoMenuToolStripMenuItem.Text = "Voltar ao Menu";
-            this.voltarAoMenuToolStripMenuItem.Click += new System.EventHandler(this.VoltarAoMenuToolStripMenuItem_Click);
+            this.voltarAoMenuToolStripMenuItem.Click += new System.EventHandler(this.btnVoltarMenu_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
             this.sairToolStripMenuItem.Text = "Sair";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.SairToolStripMenuItem_Click);
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // dataGridView1
             // 
@@ -171,9 +170,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(862, 296);
             this.dataGridView1.TabIndex = 35;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
-            // removerPeriferico
+            // RemoverPeriferico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -186,9 +184,9 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.tbid);
+            this.Controls.Add(this.tbIdPeriferico);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "removerPeriferico";
+            this.Name = "RemoverPeriferico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kurama®";
             this.Load += new System.EventHandler(this.RemoverPeriferico_Load);
@@ -206,7 +204,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox tbid;
+        private System.Windows.Forms.TextBox tbIdPeriferico;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem CadastrarPerifericoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alterarPerifericoToolStripMenuItem;

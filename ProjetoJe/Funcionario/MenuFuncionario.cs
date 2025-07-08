@@ -41,7 +41,7 @@ namespace ProjetoJe
 
         private void RemoverCadastrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RemoverCadastro rc = new RemoverCadastro();
+            RemoverCadastroFuncionario rc = new RemoverCadastroFuncionario();
             rc.Show();
             this.Close();
         }
@@ -69,7 +69,7 @@ namespace ProjetoJe
 
         private void RemoverPerifericoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            removerPeriferico rp = new removerPeriferico();
+            RemoverPeriferico rp = new RemoverPeriferico();
             rp.Show();
             this.Close();
         }

@@ -32,7 +32,7 @@ namespace ProjetoJe
 
         private void btnRemoverPeriferico_Click(object sender, EventArgs e)
         {
-            removerPeriferico rp = new removerPeriferico();
+            RemoverPeriferico rp = new RemoverPeriferico();
             rp.Show();
             this.Close();
         }

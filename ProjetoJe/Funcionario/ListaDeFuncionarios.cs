@@ -43,7 +43,7 @@ namespace ProjetoJe
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
-            RemoverCadastro rc = new RemoverCadastro();
+            RemoverCadastroFuncionario rc = new RemoverCadastroFuncionario();
             rc.Show();
             this.Close();
         }

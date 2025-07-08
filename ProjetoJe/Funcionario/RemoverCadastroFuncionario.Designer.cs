@@ -1,6 +1,6 @@
 ﻿namespace ProjetoJe
 {
-    partial class RemoverCadastro
+    partial class RemoverCadastroFuncionario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemoverCadastro));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemoverCadastroFuncionario));
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -68,7 +68,7 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(394, 139);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 16);
+            this.label8.Size = new System.Drawing.Size(20, 16);
             this.label8.TabIndex = 24;
             this.label8.Text = "ID";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -82,7 +82,7 @@
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(296, 92);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(288, 16);
+            this.label9.Size = new System.Drawing.Size(287, 16);
             this.label9.TabIndex = 25;
             this.label9.Text = "insira a id do usuario que você deseja apagar";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -104,7 +104,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(862, 296);
             this.dataGridView1.TabIndex = 27;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // button1
             // 
@@ -120,7 +119,7 @@
             this.button1.TabIndex = 28;
             this.button1.Text = "EXCLUIR";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // menuStrip1
             // 
@@ -143,37 +142,37 @@
             this.adicionarCadastroToolStripMenuItem.Name = "adicionarCadastroToolStripMenuItem";
             this.adicionarCadastroToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
             this.adicionarCadastroToolStripMenuItem.Text = "Adicionar Cadastro";
-            this.adicionarCadastroToolStripMenuItem.Click += new System.EventHandler(this.AdicionarCadastroToolStripMenuItem_Click);
+            this.adicionarCadastroToolStripMenuItem.Click += new System.EventHandler(this.btnAdicionarCadastro_Click);
             // 
             // removerCadastroToolStripMenuItem
             // 
             this.removerCadastroToolStripMenuItem.Name = "removerCadastroToolStripMenuItem";
             this.removerCadastroToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
             this.removerCadastroToolStripMenuItem.Text = "Alterar Cadastro";
-            this.removerCadastroToolStripMenuItem.Click += new System.EventHandler(this.RemoverCadastroToolStripMenuItem_Click);
+            this.removerCadastroToolStripMenuItem.Click += new System.EventHandler(this.btnAlterarCadastro_Click);
             // 
             // listaDeFuncionariosToolStripMenuItem
             // 
             this.listaDeFuncionariosToolStripMenuItem.Name = "listaDeFuncionariosToolStripMenuItem";
             this.listaDeFuncionariosToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
             this.listaDeFuncionariosToolStripMenuItem.Text = "Lista de Funcionarios";
-            this.listaDeFuncionariosToolStripMenuItem.Click += new System.EventHandler(this.ListaDeFuncionariosToolStripMenuItem_Click);
+            this.listaDeFuncionariosToolStripMenuItem.Click += new System.EventHandler(this.btnListaFuncionarios_Click);
             // 
             // voltarAoMenuToolStripMenuItem
             // 
             this.voltarAoMenuToolStripMenuItem.Name = "voltarAoMenuToolStripMenuItem";
             this.voltarAoMenuToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
             this.voltarAoMenuToolStripMenuItem.Text = "Voltar ao Menu ";
-            this.voltarAoMenuToolStripMenuItem.Click += new System.EventHandler(this.VoltarAoMenuToolStripMenuItem_Click);
+            this.voltarAoMenuToolStripMenuItem.Click += new System.EventHandler(this.btnVoltarMenu_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
             this.sairToolStripMenuItem.Text = "Sair";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.SairToolStripMenuItem_Click);
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // removerCadastro
+            // RemoverCadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -189,7 +188,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.tbid);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "removerCadastro";
+            this.Name = "RemoverCadastroFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kurama®";
             this.Load += new System.EventHandler(this.RemoverCadastro_Load);

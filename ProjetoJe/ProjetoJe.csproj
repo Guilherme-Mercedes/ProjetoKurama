@@ -141,17 +141,17 @@
     <Compile Include="Funcionario\Periferico\RemoverAluguel.Designer.cs">
       <DependentUpon>RemoverAluguel.cs</DependentUpon>
     </Compile>
-    <Compile Include="RemoverCadastro.cs">
+    <Compile Include="Funcionario\RemoverCadastroFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RemoverCadastro.Designer.cs">
-      <DependentUpon>RemoverCadastro.cs</DependentUpon>
+    <Compile Include="Funcionario\RemoverCadastroFuncionario.Designer.cs">
+      <DependentUpon>RemoverCadastroFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="removerPeriferico.cs">
+    <Compile Include="Funcionario\Periferico\RemoverPeriferico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="removerPeriferico.Designer.cs">
-      <DependentUpon>removerPeriferico.cs</DependentUpon>
+    <Compile Include="Funcionario\Periferico\RemoverPeriferico.Designer.cs">
+      <DependentUpon>RemoverPeriferico.cs</DependentUpon>
     </Compile>
     <Compile Include="Funcionario\TelaInicialFuncionario.cs">
       <SubType>Form</SubType>
@@ -224,11 +224,11 @@
     <EmbeddedResource Include="Funcionario\Periferico\RemoverAluguel.resx">
       <DependentUpon>RemoverAluguel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RemoverCadastro.resx">
-      <DependentUpon>RemoverCadastro.cs</DependentUpon>
+    <EmbeddedResource Include="Funcionario\RemoverCadastroFuncionario.resx">
+      <DependentUpon>RemoverCadastroFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="removerPeriferico.resx">
-      <DependentUpon>removerPeriferico.cs</DependentUpon>
+    <EmbeddedResource Include="Funcionario\Periferico\RemoverPeriferico.resx">
+      <DependentUpon>RemoverPeriferico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Funcionario\TelaInicialFuncionario.resx">
       <DependentUpon>TelaInicialFuncionario.cs</DependentUpon>
