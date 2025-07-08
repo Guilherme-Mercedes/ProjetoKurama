@@ -66,6 +66,7 @@ namespace ProjetoJe
             }
             try
             {
+
                 bool sucesso = DAO.AlterarFuncionario(tbId.Text, tbNome.Text, tbCpf.Text, tbNascimento.Text, tbUsuario.Text, tbSenha.Text);
 
                 if (sucesso)

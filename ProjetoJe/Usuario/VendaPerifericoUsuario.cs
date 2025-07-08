@@ -116,7 +116,7 @@ namespace ProjetoJe
 
                         string dataVenda = DateTime.Now.ToString();
 
-                        bool sucesso = DAO.VenderPeriferico(tbNome.Text, tbCpf.Text, tbTelefone.Text, tbDataNascimento.Text, precoVenda.ToString("F2"), dataVenda, tbIdPeriferico.Text);
+                        bool sucesso = DAO.VenderPeriferico(tbNome.Text, tbCpf.Text, tbTelefone.Text, tbDataNascimento.Text, precoVenda, dataVenda, tbIdPeriferico.Text);
 
                         if (sucesso)
                         {

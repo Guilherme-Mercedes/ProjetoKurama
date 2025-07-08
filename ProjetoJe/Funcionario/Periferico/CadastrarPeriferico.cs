@@ -69,7 +69,7 @@ namespace ProjetoJe
             {
                 decimal precoVenda = decimal.Parse(tbValorVenda.Text);//Converte o valor de venda para decimal
                 decimal precoAluguel = decimal.Parse(tbValorAluguel.Text);//Converte o aluguel de venda para decimal
-                bool sucesso = DAO.CadastrarPeriferico(tbTipo.Text, tbModelo.Text, tbMarca.Text, tbGarantia.Text, tbFabricacao.Text, precoVenda.ToString("F2"), precoAluguel.ToString("F2"), "Disponivel");
+                bool sucesso = DAO.CadastrarPeriferico(tbTipo.Text, tbModelo.Text, tbMarca.Text, tbGarantia.Text, tbFabricacao.Text, precoVenda, precoAluguel, "Disponivel");
 
                 if (sucesso)
                 {
