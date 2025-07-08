@@ -15,7 +15,7 @@ namespace ProjetoJe
         }
         private void btnFuncionario_Click(object sender, EventArgs e)
         {
-            TelaFunc tf = new TelaFunc();
+            TelaInicialFuncionario tf = new TelaInicialFuncionario();
             tf.Show();
             this.Close();
         }

@@ -33,7 +33,7 @@ namespace ProjetoJe
         }
         private void comprarPeriferico_Click(object sender, EventArgs e)
         {
-            vendaUsuario vu = new vendaUsuario();
+            VendaPerifericoUsuario vu = new VendaPerifericoUsuario();
             vu.Show();
             this.Close();
         }

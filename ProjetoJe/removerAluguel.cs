@@ -84,7 +84,7 @@ namespace ProjetoJe
 
         private void ReaalizarVendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            realizarVenda rv = new realizarVenda();
+            RealizarVenda rv = new RealizarVenda();
             rv.Show();
             this.Hide();
         }

@@ -113,6 +113,16 @@ namespace ProjetoJe.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fundo12 {
+            get {
+                object obj = ResourceManager.GetObject("fundo12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fundo2 {
             get {
                 object obj = ResourceManager.GetObject("fundo2", resourceCulture);

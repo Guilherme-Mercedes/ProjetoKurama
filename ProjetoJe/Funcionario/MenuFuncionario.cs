@@ -85,7 +85,7 @@ namespace ProjetoJe
         }
         private void btVender_Click(object sender, EventArgs e)
         {
-            realizarVenda rv = new realizarVenda();
+            RealizarVenda rv = new RealizarVenda();
             rv.Show();
             this.Close();
         }
