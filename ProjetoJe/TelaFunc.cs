@@ -55,7 +55,7 @@ namespace ProjetoJe
                     if (rdr["usuario".ToLower()].ToString().Equals(loginfunc.Text.ToLower()) && rdr["senha".ToLower()].ToString().Equals(senhafunc.Text.ToLower()))
                     {
                         MessageBox.Show("Funcionario Logado");
-                        FuncMenu fm = new FuncMenu();
+                        MenuFuncionario fm = new MenuFuncionario();
                         fm.Show();
                         this.Hide();
 

@@ -97,11 +97,11 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FuncMenu.cs">
+    <Compile Include="Funcionario\MenuFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FuncMenu.Designer.cs">
-      <DependentUpon>FuncMenu.cs</DependentUpon>
+    <Compile Include="Funcionario\MenuFuncionario.Designer.cs">
+      <DependentUpon>MenuFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="Funcionario\ListaDeFuncionarios.cs">
       <SubType>Form</SubType>
@@ -193,8 +193,8 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FuncMenu.resx">
-      <DependentUpon>FuncMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Funcionario\MenuFuncionario.resx">
+      <DependentUpon>MenuFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Funcionario\ListaDeFuncionarios.resx">
       <DependentUpon>ListaDeFuncionarios.cs</DependentUpon>

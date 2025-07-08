@@ -98,7 +98,7 @@ namespace ProjetoJe
 
         private void VoltarAoMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FuncMenu fm = new FuncMenu();
+            MenuFuncionario fm = new MenuFuncionario();
             fm.Show();
             this.Hide();
         }

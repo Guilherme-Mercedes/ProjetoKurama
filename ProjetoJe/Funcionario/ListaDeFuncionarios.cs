@@ -50,7 +50,7 @@ namespace ProjetoJe
 
         private void btnVoltarMenu_Click(object sender, EventArgs e)
         {
-            FuncMenu fm = new FuncMenu();
+            MenuFuncionario fm = new MenuFuncionario();
             fm.Show();
             this.Close();
         }
