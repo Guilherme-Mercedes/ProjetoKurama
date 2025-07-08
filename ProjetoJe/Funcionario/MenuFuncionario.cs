@@ -1,4 +1,5 @@
-﻿using System;
+﻿//OK
+using System;
 using System.Windows.Forms;
 
 namespace ProjetoJe
@@ -14,63 +15,53 @@ namespace ProjetoJe
         }
         private void btvoltarmenu_Click(object sender, EventArgs e)
         {
-            MainForm f = new MainForm();
-            f.Show();
+            new MainForm().Show();
             this.Close();
         }
-
         private void AdicionarCadastroToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            AdicionarFuncionario af = new AdicionarFuncionario();
-            af.Show();
+            new AdicionarFuncionario().Show();
             this.Close();
         }
         private void AlterarCadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AlterarFuncionario af = new AlterarFuncionario();
-            af.Show();
+            new AlterarFuncionario().Show();
             this.Close();
         }
 
         private void MostrarCadastrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ListaDeFuncionarios ifu = new ListaDeFuncionarios();
-            ifu.Show();
+            new ListaDeFuncionarios().Show();
             this.Close();
         }
 
         private void RemoverCadastrosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RemoverCadastroFuncionario rc = new RemoverCadastroFuncionario();
-            rc.Show();
+            new RemoverCadastroFuncionario().Show();
             this.Close();
         }
 
         private void CadastrarPerifericoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            CadastrarPeriferico cp = new CadastrarPeriferico();
-            cp.Show();
+            new CadastrarPeriferico().Show();
             this.Close();
         }
 
         private void AlterarPerifericoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AlterarPeriferico ap = new AlterarPeriferico();
-            ap.Show();
+            new AlterarPeriferico().Show();
             this.Close();
         }
 
         private void MostrarPerifericosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ListaPerifericosFuncionario mp = new ListaPerifericosFuncionario();
-            mp.Show();
+            new ListaPerifericosFuncionario().Show();
             this.Close();
         }
 
         private void RemoverPerifericoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RemoverPeriferico rp = new RemoverPeriferico();
-            rp.Show();
+            new RemoverPeriferico().Show();
             this.Close();
         }
         private void CadastroFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -79,27 +70,23 @@ namespace ProjetoJe
         }
         private void btAlugar_Click(object sender, EventArgs e)
         {
-            RealizarAluguel ra = new RealizarAluguel();
-            ra.Show();
+            new RealizarAluguel().Show();
             this.Close();
         }
         private void btVender_Click(object sender, EventArgs e)
         {
-            RealizarVenda rv = new RealizarVenda();
-            rv.Show();
+            new RealizarVenda().Show();
             this.Close();
         }
         private void btMostrarAluguelVenda_Click(object sender, EventArgs e)
         {
-            TabelaAluguelVendas av = new TabelaAluguelVendas();
-            av.Show();
+            new TabelaAluguelVendas().Show();
             this.Close();
         }
 
         private void btRemoverAluguel_Click(object sender, EventArgs e)
         {
-            RemoverAluguel ra = new RemoverAluguel();
-            ra.Show();
+            new RemoverAluguel().Show();
             this.Close();
         }
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -107,5 +94,9 @@ namespace ProjetoJe
             Environment.Exit(0);
         }
 
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

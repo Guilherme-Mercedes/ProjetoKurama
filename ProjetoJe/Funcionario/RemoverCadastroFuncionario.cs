@@ -1,73 +1,63 @@
-﻿//ALTERAR
-using MySql.Data.MySqlClient;
+﻿//ok
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using DAOMysql;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoJe
 {
     public partial class RemoverCadastroFuncionario : Form
     {
-        DAOMysql.DAOMysql DAO = new DAOMysql.DAOMysql();
+        private DAOMysql.DAOMysql DAO = new DAOMysql.DAOMysql();
         public RemoverCadastroFuncionario()
         {
             InitializeComponent();
-
         }
         private void RemoverCadastro_Load(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = DAO.SelectLogin();
         }
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             RemoverFuncionario();
         }
+        private void tbIdRemoverCadastro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Se o caractere não for número nem tecla de controle (como backspace), bloqueia
+            Utilitarios.BloquearCaractere(e);
+        }
         private void btnAdicionarCadastro_Click(object sender, EventArgs e)
         {
-            AdicionarFuncionario ad = new AdicionarFuncionario();
-            ad.Show();
+            new AdicionarFuncionario().Show();
             this.Close();
         }
         private void btnAlterarCadastro_Click(object sender, EventArgs e)
         {
-            AlterarFuncionario af = new AlterarFuncionario();
-            af.Show();
+            new AlterarFuncionario().Show();
             this.Close();
         }
 
         private void btnListaFuncionarios_Click(object sender, EventArgs e)
         {
-            ListaDeFuncionarios lf = new ListaDeFuncionarios();
-            lf.Show();
+            new ListaDeFuncionarios().Show();
             this.Close();
         }
         private void btnVoltarMenu_Click(object sender, EventArgs e)
         {
-            MenuFuncionario fm = new MenuFuncionario();
-            fm.Show();
+            new MenuFuncionario().Show();
             this.Close();
         }
         private void btnSair_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
-
         private void RemoverFuncionario()
         {
             string id = tbid.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(id))
+            if (!Utilitarios.CampoPreenchido(id))
             {
                 MessageBox.Show("O campo ID está em branco. Por favor, preencha.");
                 return;
             }
-
             try
             {
                 bool sucesso = DAO.RemoverFuncionarioPorId(id);

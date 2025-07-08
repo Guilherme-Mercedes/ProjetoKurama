@@ -1,4 +1,4 @@
-﻿
+﻿//ok
 using System;
 using System.Windows.Forms;
 
@@ -10,44 +10,33 @@ namespace ProjetoJe
         public ListaPerifericosFuncionario()
         {
             InitializeComponent();
-            dataGridView1.DataSource = DAO.SelectPeriferico();
         }
-
         private void mostrarPerifericos_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = DAO.SelectPeriferico();
         }
-
         private void btnSair_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
-
         private void btnVoltarMenu_Click(object sender, EventArgs e)
         {
-            MenuFuncionario fm = new MenuFuncionario();
-            fm.Show();
+            new MenuFuncionario().Show();
             this.Close();
         }
-
         private void btnRemoverPeriferico_Click(object sender, EventArgs e)
         {
-            RemoverPeriferico rp = new RemoverPeriferico();
-            rp.Show();
+            new RemoverPeriferico().Show();
             this.Close();
         }
-
         private void btnAlterarPeriferico_Click(object sender, EventArgs e)
         {
-            AlterarPeriferico ap = new AlterarPeriferico();
-            ap.Show();
+            new AlterarPeriferico().Show();
             this.Close();
         }
-
         private void btnCadastrarPeriferico_Click(object sender, EventArgs e)
         {
-            CadastrarPeriferico cp = new CadastrarPeriferico();
-            cp.Show();
+            new CadastrarPeriferico().Show();
             this.Close();
         }
     }

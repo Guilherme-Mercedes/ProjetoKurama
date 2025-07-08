@@ -52,9 +52,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 108);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 81);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(862, 444);
+            this.dataGridView1.Size = new System.Drawing.Size(862, 471);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnAdicionar
@@ -67,7 +67,7 @@
             this.btnAdicionar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionar.Location = new System.Drawing.Point(46, 12);
             this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(133, 78);
+            this.btnAdicionar.Size = new System.Drawing.Size(133, 48);
             this.btnAdicionar.TabIndex = 1;
             this.btnAdicionar.Text = "Adicionar Funcionario";
             this.btnAdicionar.UseVisualStyleBackColor = false;
@@ -83,7 +83,7 @@
             this.btnAlterar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.Location = new System.Drawing.Point(201, 12);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(133, 78);
+            this.btnAlterar.Size = new System.Drawing.Size(133, 48);
             this.btnAlterar.TabIndex = 1;
             this.btnAlterar.Text = "Alterar Cadastro ";
             this.btnAlterar.UseVisualStyleBackColor = false;
@@ -99,7 +99,7 @@
             this.btnRemover.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemover.Location = new System.Drawing.Point(366, 12);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(133, 78);
+            this.btnRemover.Size = new System.Drawing.Size(133, 48);
             this.btnRemover.TabIndex = 1;
             this.btnRemover.Text = "Remover Cadastro";
             this.btnRemover.UseVisualStyleBackColor = false;
@@ -115,7 +115,7 @@
             this.btnVoltarMenu.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltarMenu.Location = new System.Drawing.Point(526, 12);
             this.btnVoltarMenu.Name = "btnVoltarMenu";
-            this.btnVoltarMenu.Size = new System.Drawing.Size(133, 78);
+            this.btnVoltarMenu.Size = new System.Drawing.Size(133, 48);
             this.btnVoltarMenu.TabIndex = 1;
             this.btnVoltarMenu.Text = "Voltar ao Menu";
             this.btnVoltarMenu.UseVisualStyleBackColor = false;
@@ -131,7 +131,7 @@
             this.btnSair.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.Location = new System.Drawing.Point(691, 12);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(133, 78);
+            this.btnSair.Size = new System.Drawing.Size(133, 48);
             this.btnSair.TabIndex = 1;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
@@ -141,8 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::ProjetoJe.Properties.Resources.laranjo;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(886, 564);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnVoltarMenu);

@@ -38,10 +38,10 @@
             this.tbValorVenda = new System.Windows.Forms.TextBox();
             this.btEnviar = new System.Windows.Forms.Button();
             this.tbGarantia = new System.Windows.Forms.TextBox();
-            this.tbFabricação = new System.Windows.Forms.TextBox();
+            this.tbFabricacao = new System.Windows.Forms.TextBox();
             this.tbMarca = new System.Windows.Forms.TextBox();
             this.tbModelo = new System.Windows.Forms.TextBox();
-            this.tbtipo = new System.Windows.Forms.TextBox();
+            this.tbTipo = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.alterarPerifericoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -167,13 +167,13 @@
             this.tbGarantia.Size = new System.Drawing.Size(133, 20);
             this.tbGarantia.TabIndex = 15;
             // 
-            // tbFabricação
+            // tbFabricacao
             // 
-            this.tbFabricação.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbFabricação.Location = new System.Drawing.Point(499, 147);
-            this.tbFabricação.Name = "tbFabricação";
-            this.tbFabricação.Size = new System.Drawing.Size(133, 20);
-            this.tbFabricação.TabIndex = 14;
+            this.tbFabricacao.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbFabricacao.Location = new System.Drawing.Point(499, 147);
+            this.tbFabricacao.Name = "tbFabricacao";
+            this.tbFabricacao.Size = new System.Drawing.Size(133, 20);
+            this.tbFabricacao.TabIndex = 14;
             // 
             // tbMarca
             // 
@@ -191,13 +191,13 @@
             this.tbModelo.Size = new System.Drawing.Size(168, 20);
             this.tbModelo.TabIndex = 12;
             // 
-            // tbtipo
+            // tbTipo
             // 
-            this.tbtipo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbtipo.Location = new System.Drawing.Point(270, 109);
-            this.tbtipo.Name = "tbtipo";
-            this.tbtipo.Size = new System.Drawing.Size(168, 20);
-            this.tbtipo.TabIndex = 11;
+            this.tbTipo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbTipo.Location = new System.Drawing.Point(270, 109);
+            this.tbTipo.Name = "tbTipo";
+            this.tbTipo.Size = new System.Drawing.Size(168, 20);
+            this.tbTipo.TabIndex = 11;
             // 
             // dataGridView1
             // 
@@ -212,7 +212,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackgroundImage = global::ProjetoJe.Properties.Resources.laranjo;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.alterarPerifericoToolStripMenuItem,
             this.listaDePerifericosToolStripMenuItem,
@@ -305,7 +305,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ProjetoJe.Properties.Resources.laranjo;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(886, 564);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.menuStrip1);
@@ -320,10 +320,10 @@
             this.Controls.Add(this.tbValorVenda);
             this.Controls.Add(this.btEnviar);
             this.Controls.Add(this.tbGarantia);
-            this.Controls.Add(this.tbFabricação);
+            this.Controls.Add(this.tbFabricacao);
             this.Controls.Add(this.tbMarca);
             this.Controls.Add(this.tbModelo);
-            this.Controls.Add(this.tbtipo);
+            this.Controls.Add(this.tbTipo);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadastrarPeriferico";
@@ -349,10 +349,10 @@
         private System.Windows.Forms.TextBox tbValorVenda;
         private System.Windows.Forms.Button btEnviar;
         private System.Windows.Forms.TextBox tbGarantia;
-        private System.Windows.Forms.TextBox tbFabricação;
+        private System.Windows.Forms.TextBox tbFabricacao;
         private System.Windows.Forms.TextBox tbMarca;
         private System.Windows.Forms.TextBox tbModelo;
-        private System.Windows.Forms.TextBox tbtipo;
+        private System.Windows.Forms.TextBox tbTipo;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem alterarPerifericoToolStripMenuItem;

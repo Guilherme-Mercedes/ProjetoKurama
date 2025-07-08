@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace ProjetoJe
@@ -12,36 +11,27 @@ namespace ProjetoJe
         }
         private void TelaUsua_Load(object sender, EventArgs e)
         {
-            
         }
         private void btnVoltarInicio_Click(object sender, EventArgs e)
         {
-            MainForm sair = new MainForm();
-            sair.Show();
+            new MainForm().Show();
             this.Close();
         }
-
         private void btnMostrarPerifericos_Click(object sender, EventArgs e)
         {
-            ListaPerifericoDisponivel lpd = new ListaPerifericoDisponivel();
-            lpd.Show();
+            new ListaPerifericoDisponivel().Show();
             this.Close();
         }
-
         private void btnAlugar_Click(object sender, EventArgs e)
         {
-            AlugarPerifericoUsuario au = new AlugarPerifericoUsuario();
-            au.Show();
+            new AlugarPerifericoUsuario().Show();
             this.Close();
         }
-
         private void btComprarPeriferico_Click(object sender, EventArgs e)
         {
-            VendaPerifericoUsuario vu = new VendaPerifericoUsuario();
-            vu.Show();
+            new VendaPerifericoUsuario().Show();
             this.Close();
         }
-
         private void btnSair_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);

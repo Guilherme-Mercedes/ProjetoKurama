@@ -1,38 +1,42 @@
-﻿using System;
+﻿//ok
+using System;
 using System.Windows.Forms;
 
 namespace ProjetoJe
 {
     public partial class AlterarPeriferico : Form
     {
-        DAOMysql.DAOMysql DAO = new DAOMysql.DAOMysql();
+        private DAOMysql.DAOMysql DAO = new DAOMysql.DAOMysql();
 
         public AlterarPeriferico()
         {
             InitializeComponent();
         }
+        private void tbId_TextChanged(object sender, EventArgs e)
+        {
+        }
+        private void tbId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilitarios.BloquearCaractere(e);
+        }
         private void AlterarPerifericoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadastrarPeriferico cp = new CadastrarPeriferico();
-            cp.Show();
+            new CadastrarPeriferico().Show();
             this.Close();
         }
         private void ListaDePerifericosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ListaPerifericosFuncionario mp = new ListaPerifericosFuncionario();
-            mp.Show();
+            new ListaPerifericosFuncionario().Show();
             this.Close();
         }
         private void RemoverPerifericoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RemoverPeriferico rp = new RemoverPeriferico();
-            rp.Show();
+            new RemoverPeriferico().Show();
             this.Close();
         }
         private void VoltarAoMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MenuFuncionario fm = new MenuFuncionario();
-            fm.Show();
+            new MenuFuncionario().Show();
             this.Close();
         }
         private void SairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -44,6 +48,7 @@ namespace ProjetoJe
         }
         private void AlterarPeriferico_Load(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = DAO.SelectPeriferico();
         }
         private void btCadastrar_Click(object sender, EventArgs e)
         {
@@ -51,29 +56,25 @@ namespace ProjetoJe
         }
         private void AlterPerifericos()
         {
-            //o famoso "PREENCHA TODAS AS INFORMAÇÕES" - Guilherme Souza Mercedes 2019 
-            //comentario acima de alguem que em 2019 quebrou a cabeça para fazer esse código funcionar
+            //O famoso "PREENCHA TODAS AS INFORMAÇÕES" - Guilherme Souza Mercedes 2019 
+            //Comentario acima de alguem que em 2019 quebrou a cabeça para fazer esse código funcionar
             //e conseguiu, mas tem maneiras melhores de fazer isso
-            if (string.IsNullOrWhiteSpace(tbId.Text) ||
-                string.IsNullOrWhiteSpace(tbTipoPeriferico.Text) ||
-                string.IsNullOrWhiteSpace(tbModelo.Text) ||
-                string.IsNullOrWhiteSpace(tbMarca.Text) ||
-                string.IsNullOrWhiteSpace(tbGarantia.Text) ||
-                string.IsNullOrWhiteSpace(tbFabricação.Text) ||
-                string.IsNullOrWhiteSpace(tbValorVenda.Text) ||
-                string.IsNullOrWhiteSpace(tbValorAluguel.Text))
+            //Consegui adicionar o método Utilitarios.TodosPreenchidos para verificar se todos os campos estão preenchidos
+            if (!Utilitarios.TodosPreenchidos(tbId.Text, tbTipoPeriferico.Text, tbModelo.Text, tbMarca.Text, tbGarantia.Text, tbFabricacao.Text, tbValorVenda.Text, tbValorAluguel.Text))
             {
                 MessageBox.Show("Preencha todos os campos antes de continuar.");
                 return;
             }
-            if (!decimal.TryParse(tbValorVenda.Text, out _) || !decimal.TryParse(tbValorAluguel.Text, out _))
+            if (!Utilitarios.CampoDecimalValido(tbValorVenda.Text) || !Utilitarios.CampoDecimalValido(tbValorAluguel.Text))
             {
-                MessageBox.Show("Preencha os campos de valor com números válidos.");
+                MessageBox.Show("Preencha os campos de valor com números válidos. exemplo: 200.50");
                 return;
             }
             try
             {
-                bool sucesso = DAO.AlterarPeriferico(tbId.Text, tbTipoPeriferico.Text, tbModelo.Text, tbMarca.Text, tbGarantia.Text, tbFabricação.Text, tbValorVenda.Text, tbValorAluguel.Text);
+                decimal precoVenda = decimal.Parse(tbValorVenda.Text);//Converte o valor de venda para decimal
+                decimal precoAluguel = decimal.Parse(tbValorAluguel.Text);//Converte o aluguel de venda para decimal
+                bool sucesso = DAO.AlterarPeriferico(tbId.Text, tbTipoPeriferico.Text, tbModelo.Text, tbMarca.Text, tbGarantia.Text, tbFabricacao.Text, precoVenda.ToString("F2"),precoAluguel.ToString("F2"));
 
                 if (sucesso)
                 {
@@ -93,5 +94,6 @@ namespace ProjetoJe
             }
 
         }
+
     }
 }

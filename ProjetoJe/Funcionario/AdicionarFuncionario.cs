@@ -1,4 +1,5 @@
-﻿using System;
+﻿//OK
+using System;
 using System.Windows.Forms;
 
 namespace ProjetoJe
@@ -17,8 +18,7 @@ namespace ProjetoJe
         }
         private void VoltarAoMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MenuFuncionario fm = new MenuFuncionario();
-            fm.Show();
+            new MenuFuncionario().Show();
             this.Close();
         }
         private void SairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -30,23 +30,21 @@ namespace ProjetoJe
         }
         private void AdicionarFuncionario_Load(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = DAO.SelectLogin();
         }
         private void AtualizarCadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AlterarFuncionario af = new AlterarFuncionario();
-            af.Show();
+            new AlterarFuncionario().Show();
             this.Close();
         }
         private void RemoverCadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RemoverCadastroFuncionario rc = new RemoverCadastroFuncionario();
-            rc.Show();
+            new RemoverCadastroFuncionario().Show();
             this.Close();
         }
         private void ListaDeFuncionariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ListaDeFuncionarios lf = new ListaDeFuncionarios();
-            lf.Show();
+            new ListaDeFuncionarios().Show();
             this.Close();
         }
         // funcao para adicionar um novo funcionário
@@ -60,9 +58,7 @@ namespace ProjetoJe
                 tbSenha2.Focus(); // Foca no campo de confirmacao de senha para o usuário corrigir
                 return;
             }
-            if (string.IsNullOrWhiteSpace(tbNome.Text) || string.IsNullOrWhiteSpace(tbCpf.Text) ||
-                string.IsNullOrWhiteSpace(tbNascimento.Text) || string.IsNullOrWhiteSpace(tbUsuario.Text) ||
-                string.IsNullOrWhiteSpace(tbSenha.Text))
+            if (!Utilitarios.TodosPreenchidos(tbNome.Text, tbCpf.Text, tbNascimento.Text, tbUsuario.Text, tbSenha.Text))
             {
                 MessageBox.Show("Não deixe nenhum espaço em branco!");
                 return;
@@ -88,6 +84,10 @@ namespace ProjetoJe
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
+        }
+        private void tbCpf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilitarios.BloquearCaractere(e);
         }
     }
 }

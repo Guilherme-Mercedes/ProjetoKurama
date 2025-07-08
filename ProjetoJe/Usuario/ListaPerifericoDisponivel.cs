@@ -1,13 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using DAOMysql;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace ProjetoJe
@@ -19,28 +10,25 @@ namespace ProjetoJe
         public ListaPerifericoDisponivel()
         {
             InitializeComponent();
-            dataGridView1.DataSource = DAO.SelectPeriferico();
         }
         private void listadeperifericoDisponivel_Load(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = DAO.SelectPeriferico();
         }
         //nova tela de aluguel de perifericos
         private void alugarPeriferico_Click(object sender, EventArgs e)
         {
-            AlugarPerifericoUsuario au = new AlugarPerifericoUsuario();
-            au.Show();
+            new AlugarPerifericoUsuario().Show();
             this.Close();
         }
         private void comprarPeriferico_Click(object sender, EventArgs e)
         {
-            VendaPerifericoUsuario vu = new VendaPerifericoUsuario();
-            vu.Show();
+            new VendaPerifericoUsuario().Show();
             this.Close();
         }
         private void voltarMenu_Click(object sender, EventArgs e)
         {
-            TelaUsuario tu = new TelaUsuario();
-            tu.Show();
+            new TelaUsuario().Show();
             this.Close();
         }
         private void sair_Click(object sender, EventArgs e)

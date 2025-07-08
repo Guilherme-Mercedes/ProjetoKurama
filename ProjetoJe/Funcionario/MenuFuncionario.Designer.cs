@@ -51,24 +51,26 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
             this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroFuncionarioToolStripMenuItem,
             this.cadastrarPerifericoToolStripMenuItem,
             this.btVoltarMenu,
             this.sairToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(-6, -2);
+            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(505, 28);
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(886, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // cadastroFuncionarioToolStripMenuItem
             // 
-            this.cadastroFuncionarioToolStripMenuItem.BackColor = System.Drawing.Color.Black;
-            this.cadastroFuncionarioToolStripMenuItem.BackgroundImage = global::ProjetoJe.Properties.Resources.laranjo;
+            this.cadastroFuncionarioToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.cadastroFuncionarioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adicionarCadastroToolStripMenuItem,
             this.alterarCadastroToolStripMenuItem,
@@ -110,8 +112,7 @@
             // 
             // cadastrarPerifericoToolStripMenuItem
             // 
-            this.cadastrarPerifericoToolStripMenuItem.BackColor = System.Drawing.Color.White;
-            this.cadastrarPerifericoToolStripMenuItem.BackgroundImage = global::ProjetoJe.Properties.Resources.laranjo;
+            this.cadastrarPerifericoToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.cadastrarPerifericoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrarPerifericoToolStripMenuItem1,
             this.alterarPerifericoToolStripMenuItem,
@@ -152,8 +153,7 @@
             // 
             // btVoltarMenu
             // 
-            this.btVoltarMenu.BackColor = System.Drawing.Color.White;
-            this.btVoltarMenu.BackgroundImage = global::ProjetoJe.Properties.Resources.laranjo;
+            this.btVoltarMenu.BackColor = System.Drawing.Color.Transparent;
             this.btVoltarMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btVoltarMenu.Name = "btVoltarMenu";
             this.btVoltarMenu.Size = new System.Drawing.Size(124, 24);
@@ -162,8 +162,7 @@
             // 
             // sairToolStripMenuItem
             // 
-            this.sairToolStripMenuItem.BackColor = System.Drawing.Color.White;
-            this.sairToolStripMenuItem.BackgroundImage = global::ProjetoJe.Properties.Resources.laranjo;
+            this.sairToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.sairToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
@@ -239,8 +238,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.BackgroundImage = global::ProjetoJe.Properties.Resources.fundo11;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(886, 564);
             this.Controls.Add(this.btVender);

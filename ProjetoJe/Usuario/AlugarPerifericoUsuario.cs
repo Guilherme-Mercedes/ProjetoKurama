@@ -1,4 +1,5 @@
 ﻿//Essa classe o usuario conseguia ver informaões de alugueis realizados, informacoes que nao poderia ter acesso
+//ok
 using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
@@ -12,9 +13,9 @@ namespace ProjetoJe
         {
             InitializeComponent();
         }
-
         private void AluguelUsuario_Load(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = DAO.SelectPeriferico();
         }
         private void tbDiaAluguel_TextChanged(object sender, EventArgs e)
         {
@@ -29,14 +30,12 @@ namespace ProjetoJe
         }
         private void btComprarPeriferico_Click(object sender, EventArgs e)
         {
-            VendaPerifericoUsuario cm = new VendaPerifericoUsuario();
-            cm.Show();
+            new VendaPerifericoUsuario().Show();
             this.Close();
         }
         private void btnMostrarPeriferico_Click(object sender, EventArgs e)
         {
-            ListaPerifericoDisponivel lpd = new ListaPerifericoDisponivel();
-            lpd.Show();
+            new ListaPerifericoDisponivel().Show();
             this.Close();
         }
         private void btnSair_Click(object sender, EventArgs e)
@@ -46,19 +45,17 @@ namespace ProjetoJe
 
         private void btnVoltarMenu_Click(object sender, EventArgs e)
         {
-            TelaUsuario tu = new TelaUsuario();
-            tu.Show();
+            new TelaUsuario().Show();
             this.Close();
         }
         private void btEnviar_Click(object sender, EventArgs e)
         {
             AlugarUsuario();
         }
-
         //Funcoes
-        private (double valorTotal, string dataDevolucao) CalcularValorAluguel(int dias, double precoDiario)
+        private (decimal valorTotal, string dataDevolucao) CalcularValorAluguel(int dias, decimal precoDiario)
         {
-            double total = dias * precoDiario;
+            decimal total = dias * precoDiario;
             string data = DateTime.Now.AddDays(dias).ToString("dd/MM/yyyy");
             return (total, data);
         }
@@ -66,19 +63,20 @@ namespace ProjetoJe
         //Evento para atualizar o resumo do aluguel quando o usuário digita o número de dias ou o ID do periférico
         private void AtualizarResumoAluguel()
         {
-            if (string.IsNullOrWhiteSpace(tbDiaAluguel.Text) || string.IsNullOrWhiteSpace(tbIdPeriferico.Text))
+            if (!Utilitarios.TodosPreenchidos(tbDiaAluguel.Text, tbIdPeriferico.Text))
             {
                 labelResposta.Text = "";
                 return;
             }
-            if (!int.TryParse(tbDiaAluguel.Text, out int dias) || dias <= 0)
+            if (!Utilitarios.CampoInteiroValido(tbDiaAluguel.Text) || int.Parse(tbDiaAluguel.Text) <= 0)
             {
                 labelResposta.Text = "Informe um número válido de dias.";
                 return;
             }
             try
             {
-                string query = "SELECT preço_aluguel FROM perifericos WHERE id_peri = @id";
+                int dias = int.Parse(tbDiaAluguel.Text);
+                string query = "SELECT preco_aluguel FROM perifericos WHERE id_perifericos = @id";
                 using (MySqlCommand cmd = new MySqlCommand(query, DAO.mConn))
                 {
                     cmd.Parameters.AddWithValue("@id", tbIdPeriferico.Text);
@@ -86,7 +84,7 @@ namespace ProjetoJe
                     {
                         if (reader.Read())
                         {
-                            double precoDiario = Convert.ToDouble(reader["preço_aluguel"]);
+                            decimal precoDiario = Convert.ToDecimal(reader["preco_aluguel"]);
                             var (valorTotal, dataDevolucao) = CalcularValorAluguel(dias, precoDiario);
 
                             labelResposta.Text = $"Valor total: R$ {valorTotal:F2} | Devolução: {dataDevolucao}";
@@ -103,25 +101,18 @@ namespace ProjetoJe
                 labelResposta.Text = "Erro: " + ex.Message;
             }
         }
-
         private void AlugarUsuario()
         {
             // Validação dos campos
-            if (string.IsNullOrWhiteSpace(tbNome.Text) ||
-                string.IsNullOrWhiteSpace(tbCpf.Text) ||
-                string.IsNullOrWhiteSpace(tbTelefone.Text) ||
-                string.IsNullOrWhiteSpace(tbDataNascimento.Text) ||
-                string.IsNullOrWhiteSpace(tbDiaAluguel.Text) ||
-                string.IsNullOrWhiteSpace(tbIdPeriferico.Text))
+            if (!Utilitarios.TodosPreenchidos(tbNome.Text, tbCpf.Text, tbTelefone.Text, tbDataNascimento.Text, tbDiaAluguel.Text, tbIdPeriferico.Text))
             {
                 MessageBox.Show("Preencha todos os campos antes de continuar.");
                 return;
             }
-
             try
             {
                 //Buscar o preço do aluguel do periférico
-                string query = "SELECT preço_aluguel, status FROM perifericos WHERE id_peri = @id";
+                string query = "SELECT preco_aluguel, status FROM perifericos WHERE id_periferico = @id";
                 using (MySqlCommand cmd = new MySqlCommand(query, DAO.mConn))
                 {
                     cmd.Parameters.AddWithValue("@id", tbIdPeriferico.Text);
@@ -132,15 +123,13 @@ namespace ProjetoJe
                             MessageBox.Show("Periférico não encontrado.");
                             return;
                         }
-
                         string status = reader["status"].ToString();
                         if (status == "Indisponivel")
                         {
                             MessageBox.Show("Este periférico está indisponível.");
                             return;
                         }
-
-                        double precoDiario = Convert.ToDouble(reader["preço_aluguel"]);
+                        decimal precoDiario = Convert.ToDecimal(reader["preco_aluguel"]);
                         reader.Close();
 
                         //Calcular valor total e data de devolução
@@ -174,6 +163,14 @@ namespace ProjetoJe
             {
                 MessageBox.Show("Erro ao alugar o periférico. Tente novamente: " + ex.Message);
             }
+        }
+        private void tbCpf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilitarios.BloquearCaractere(e);
+        }
+        private void tbIdPeriferico_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilitarios.BloquearCaractere(e);
         }
     }
 }

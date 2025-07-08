@@ -1,4 +1,5 @@
-﻿using System;
+﻿//ok
+using System;
 using System.Windows.Forms;
 
 namespace ProjetoJe
@@ -6,7 +7,7 @@ namespace ProjetoJe
     public partial class TabelaAluguelVendas : Form
     {
 
-        DAOMysql.DAOMysql DAO = new DAOMysql.DAOMysql();
+        private DAOMysql.DAOMysql DAO = new DAOMysql.DAOMysql();
 
         public TabelaAluguelVendas()
         {
@@ -17,34 +18,35 @@ namespace ProjetoJe
         //Novas funções para os botões de realizar aluguel e venda
         private void realizarAluguel_Click(object sender, EventArgs e)
         {
-            RealizarAluguel ra = new RealizarAluguel();
-            ra.Show();
+            new RealizarAluguel().Show();
             this.Close();
         }
         private void realizarVenda_Click(object sender, EventArgs e)
         {
-            RealizarVenda rv = new RealizarVenda();
-            rv.Show();
+            new RealizarVenda().Show();
             this.Close();
         }
 
         private void removerAluguel_Click(object sender, EventArgs e)
         {
-            RemoverAluguel ra = new RemoverAluguel();
-            ra.Show();
+            new RemoverAluguel().Show();
             this.Close();
         }
 
         private void voltarAoMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MenuFuncionario fm = new MenuFuncionario();
-            fm.Show();
+            new MenuFuncionario().Show();
             this.Close();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void TabelaAluguelVendas_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

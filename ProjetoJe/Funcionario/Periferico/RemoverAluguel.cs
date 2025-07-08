@@ -1,19 +1,9 @@
-﻿using MySql.Data.MySqlClient;
+﻿//ok
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using DAOMysql;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoJe
 {
-
-
     public partial class RemoverAluguel : Form
     {
         private DAOMysql.DAOMysql DAO = new DAOMysql.DAOMysql();
@@ -24,56 +14,45 @@ namespace ProjetoJe
         }
         private void RemoverAluguel_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = DAO.SelectAlugueis();
         }
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             RemoveAluguel();
         }
-
         private void btnRealizarVenda_Click(object sender, EventArgs e)
         {
-            RealizarVenda rv = new RealizarVenda();
-            rv.Show();
+            new RealizarVenda().Show();
             this.Close();
         }
-
         private void btnMostrarAluguelVenda_Click(object sender, EventArgs e)
         {
-            TabelaAluguelVendas av = new TabelaAluguelVendas();
-            av.Show();
+            new TabelaAluguelVendas().Show();
             this.Close();
         }
-
         private void btnVoltarMenu_Click(object sender, EventArgs e)
         {
-            MenuFuncionario fm = new MenuFuncionario();
-            fm.Show();
+            new MenuFuncionario().Show();
             this.Close();
         }
-
         private void btnSair_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
-
         private void btnRealizarAlugueis_Click(object sender, EventArgs e)
         {
-            RealizarAluguel ra = new RealizarAluguel();
-            ra.Show();
+            new RealizarAluguel().Show();
             this.Close();
         }
-
         private void RemoveAluguel()
         {
             string id = tbId.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(id))
+            if (!Utilitarios.CampoPreenchido(id))
             {
                 MessageBox.Show("O campo ID está em branco. Por favor, preencha.");
                 return;
             }
-
             try
             {
                 bool sucesso = DAO.RemoverAluguelPorId(id);
@@ -91,6 +70,12 @@ namespace ProjetoJe
             {
                 MessageBox.Show("Erro ao remover aluguel: " + ex.Message);
             }
+        }
+
+        private void tbIdRemoverAluguel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Se o caractere não for número nem tecla de controle (como backspace), bloqueia
+            Utilitarios.BloquearCaractere(e);
         }
     }
 }

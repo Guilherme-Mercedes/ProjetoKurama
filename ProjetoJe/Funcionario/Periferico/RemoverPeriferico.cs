@@ -1,6 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿//ok
 using System;
-using System.Data;
 using System.Windows.Forms;
 
 namespace ProjetoJe
@@ -15,12 +14,11 @@ namespace ProjetoJe
         }
         private void RemoverPeriferico_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = DAO.SelectPeriferico();
         }
         private void btnListaPeriferico_Click(object sender, EventArgs e)
         {
-            ListaPerifericosFuncionario mp = new ListaPerifericosFuncionario();
-            mp.Show();
+            new ListaPerifericosFuncionario().Show();
             this.Hide();
         }
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -29,20 +27,17 @@ namespace ProjetoJe
         }
         private void btnCadastrarPeriferico_Click(object sender, EventArgs e)
         {
-            CadastrarPeriferico cp = new CadastrarPeriferico();
-            cp.Show();
+            new CadastrarPeriferico().Show();
             this.Hide();
         }
         private void btnAlterarPeriferico_Click(object sender, EventArgs e)
         {
-            AlterarPeriferico ap = new AlterarPeriferico();
-            ap.Show();
+            new AlterarPeriferico().Show();
             this.Hide();
         }
         private void btnVoltarMenu_Click(object sender, EventArgs e)
         {
-            MenuFuncionario fm = new MenuFuncionario();
-            fm.Show();
+            new MenuFuncionario().Show();
             this.Close();
         }
         private void btnSair_Click(object sender, EventArgs e)
@@ -53,12 +48,11 @@ namespace ProjetoJe
         {
             string id = tbIdPeriferico.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(id))
+            if (!Utilitarios.CampoPreenchido(id))
             {
                 MessageBox.Show("O campo ID está em branco. Por favor, preencha.");
                 return;
             }
-
             try
             {
                 bool sucesso = DAO.RemoverPerifericoPorId(id);
@@ -77,6 +71,9 @@ namespace ProjetoJe
                 MessageBox.Show("Erro ao remover periférico: " + ex.Message);
             }
         }
-
+        private void tbIdPeriferico_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilitarios.BloquearCaractere(e);
+        }
     }
 }

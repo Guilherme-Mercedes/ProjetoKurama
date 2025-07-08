@@ -164,6 +164,7 @@
             this.tbIdPeriferico.Size = new System.Drawing.Size(100, 20);
             this.tbIdPeriferico.TabIndex = 48;
             this.tbIdPeriferico.TextChanged += new System.EventHandler(this.tbIdPeriferico_TextChanged);
+            this.tbIdPeriferico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbIdPeriferico_KeyPress);
             // 
             // btenviar
             // 
@@ -188,6 +189,7 @@
             this.tbTelefone.Name = "tbTelefone";
             this.tbTelefone.Size = new System.Drawing.Size(168, 20);
             this.tbTelefone.TabIndex = 46;
+            this.tbTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbTelefone_KeyPress);
             // 
             // tbDataNascimento
             // 
@@ -204,6 +206,7 @@
             this.tbCpf.Name = "tbCpf";
             this.tbCpf.Size = new System.Drawing.Size(168, 20);
             this.tbCpf.TabIndex = 44;
+            this.tbCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCpf_KeyPress);
             // 
             // tbNome
             // 

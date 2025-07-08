@@ -191,6 +191,7 @@
             this.tbIdPeriferico.Size = new System.Drawing.Size(100, 20);
             this.tbIdPeriferico.TabIndex = 33;
             this.tbIdPeriferico.TextChanged += new System.EventHandler(this.tbIdPeriferico_TextChanged);
+            this.tbIdPeriferico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbIdPeriferico_KeyPress);
             // 
             // tbDiaAluguel
             // 
@@ -240,6 +241,7 @@
             this.tbCpf.Name = "tbCpf";
             this.tbCpf.Size = new System.Drawing.Size(168, 20);
             this.tbCpf.TabIndex = 27;
+            this.tbCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCpf_KeyPress);
             // 
             // tbNome
             // 
@@ -251,7 +253,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackgroundImage = global::ProjetoJe.Properties.Resources.laranjo;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reaalizarVendaToolStripMenuItem,
@@ -301,7 +303,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ProjetoJe.Properties.Resources.laranjo;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(886, 564);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btdata);

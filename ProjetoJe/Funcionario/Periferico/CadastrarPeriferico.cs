@@ -1,7 +1,6 @@
-﻿using System;
+﻿//ok
+using System;
 using System.Windows.Forms;
-
-
 namespace ProjetoJe
 {
     public partial class CadastrarPeriferico : Form
@@ -24,8 +23,7 @@ namespace ProjetoJe
         }
         private void VoltarAoMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MenuFuncionario fm = new MenuFuncionario();
-            fm.Show();
+            new MenuFuncionario().Show();
             this.Close();
         }
         private void SairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -34,60 +32,51 @@ namespace ProjetoJe
         }
         private void AlterarPerifericoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AlterarPeriferico ap = new AlterarPeriferico();
-            ap.Show();
+            new AlterarPeriferico().Show();
             this.Close();
         }
         private void ListaDePerifericosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ListaPerifericosFuncionario mp = new ListaPerifericosFuncionario();
-            mp.Show();
+            new ListaPerifericosFuncionario().Show();
             this.Close();
         }
         private void RemoverPerifericoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RemoverPeriferico rp = new RemoverPeriferico();
-            rp.Show();
+            new RemoverPeriferico().Show();
             this.Close();
         }
         private void CadastrarPeriferico_Load(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = DAO.SelectPeriferico();
         }
         private void Label8_Click(object sender, EventArgs e)
         {
         }
         private void CadastroDosPerifericos()
         {
-            if (string.IsNullOrWhiteSpace(tbtipo.Text) ||
-                string.IsNullOrWhiteSpace(tbModelo.Text) ||
-                string.IsNullOrWhiteSpace(tbMarca.Text) ||
-                string.IsNullOrWhiteSpace(tbGarantia.Text) ||
-                string.IsNullOrWhiteSpace(tbFabricação.Text) ||
-                string.IsNullOrWhiteSpace(tbValorVenda.Text) ||
-                string.IsNullOrWhiteSpace(tbValorAluguel.Text))
+            if (!Utilitarios.TodosPreenchidos(tbTipo.Text, tbModelo.Text, tbMarca.Text, tbGarantia.Text, tbFabricacao.Text, tbValorVenda.Text, tbValorAluguel.Text))
             {
                 MessageBox.Show("Preencha todos os campos antes de continuar.");
                 return;
             }
             // Verifica se os valores de venda e aluguel são números válidos, algo superficial mas resolve.
-            // Eu nao quero o valor de volta entao uso o out _ para ignorar o retorno do TryParse.
-            if (!decimal.TryParse(tbValorVenda.Text, out _) || !decimal.TryParse(tbValorAluguel.Text, out _))
+            if (!Utilitarios.CampoDecimalValido(tbValorVenda.Text) || !Utilitarios.CampoDecimalValido(tbValorAluguel.Text))
             {
-                MessageBox.Show("Preencha os campos de valor com números válidos.");
+                MessageBox.Show("Preencha os campos de valor com números válidos. exemplo: 200.50");
                 return;
             }
-
             try
             {
-                bool sucesso = DAO.CadastrarPeriferico(tbtipo.Text, tbModelo.Text, tbMarca.Text, tbGarantia.Text, tbFabricação.Text, tbValorVenda.Text, tbValorAluguel.Text, "Disponivel");
+                decimal precoVenda = decimal.Parse(tbValorVenda.Text);//Converte o valor de venda para decimal
+                decimal precoAluguel = decimal.Parse(tbValorAluguel.Text);//Converte o aluguel de venda para decimal
+                bool sucesso = DAO.CadastrarPeriferico(tbTipo.Text, tbModelo.Text, tbMarca.Text, tbGarantia.Text, tbFabricacao.Text, precoVenda.ToString("F2"), precoAluguel.ToString("F2"), "Disponivel");
 
                 if (sucesso)
                 {
                     MessageBox.Show("Periférico cadastrado com sucesso!");
                     dataGridView1.DataSource = DAO.SelectPeriferico();
                     Utilitarios.LimparTodosTextBox(this); // Limpa todos os TextBoxes do formulário após o cadastro
-                    tbtipo.Focus(); // Foca no campo Tipo após o cadastro
-
+                    tbTipo.Focus(); // Foca no campo Tipo após o cadastro
                 }
                 else
                 {

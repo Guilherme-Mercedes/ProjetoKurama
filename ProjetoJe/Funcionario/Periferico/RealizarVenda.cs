@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿//ok
+using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
 
@@ -18,39 +19,34 @@ namespace ProjetoJe
         }
         private void RealizarVenda_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = DAO.SelectPeriferico();
+            dataGridView2.DataSource = DAO.SelectVendas();
         }
-
         private void btEnviar_Click(object sender, EventArgs e)
         {
             RealizaVenda();
         }
-
         private void btnRealizarVendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RealizarAluguel ra = new RealizarAluguel();
-            ra.Show();
+            new RealizarAluguel().Show();
             this.Close();
         }
 
         private void btnRemoverAluguelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RemoverAluguel ra = new RemoverAluguel();
-            ra.Show();
+            new RemoverAluguel().Show();
             this.Close();
         }
 
         private void btnMostrarAlugueisEVendasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TabelaAluguelVendas av = new TabelaAluguelVendas();
-            av.Show();
+            new TabelaAluguelVendas().Show();
             this.Close();
         }
 
         private void btnVoltarMenu_Click(object sender, EventArgs e)
         {
-            MenuFuncionario fm = new MenuFuncionario();
-            fm.Show();
+            new MenuFuncionario().Show();
             this.Close();
         }
 
@@ -60,14 +56,14 @@ namespace ProjetoJe
         }
         private void AtualizarValorVenda()
         {
-            if (string.IsNullOrWhiteSpace(tbIdPeriferico.Text))
+            if (!Utilitarios.CampoInteiroValido(tbIdPeriferico.Text))
             {
                 txtVenda.Text = "";
                 return;
             }
             try
             {
-                string query = "SELECT preço_venda, status FROM perifericos WHERE id_peri = @id";
+                string query = "SELECT preco_venda, status FROM perifericos WHERE id_periferico = @id";
                 using (MySqlCommand cmd = new MySqlCommand(query, DAO.mConn))
                 {
                     cmd.Parameters.AddWithValue("@id", tbIdPeriferico.Text);
@@ -82,7 +78,7 @@ namespace ProjetoJe
                                 return;
                             }
 
-                            double preco = Convert.ToDouble(reader["preço_venda"]);
+                            decimal preco = Convert.ToDecimal(reader["preço_venda"]);
                             txtVenda.Text = $"Valor de venda: R$ {preco:F2}";
                         }
                         else
@@ -99,19 +95,14 @@ namespace ProjetoJe
         }
         private void RealizaVenda()
         {
-            if (string.IsNullOrWhiteSpace(tbNome.Text) ||
-                string.IsNullOrWhiteSpace(tbCpf.Text) ||
-                string.IsNullOrWhiteSpace(tbTelefone.Text) ||
-                string.IsNullOrWhiteSpace(tbDataNascimento.Text) ||
-                string.IsNullOrWhiteSpace(tbIdPeriferico.Text))
+            if (!Utilitarios.TodosPreenchidos(tbNome.Text, tbCpf.Text, tbTelefone.Text, tbDataNascimento.Text, tbIdPeriferico.Text))
             {
                 MessageBox.Show("Preencha todos os campos antes de continuar.");
                 return;
             }
-
             try
             {
-                string query = "SELECT preço_venda, status FROM perifericos WHERE id_peri = @id";
+                string query = "SELECT preco_venda, status FROM perifericos WHERE id_periferico = @id";
                 using (MySqlCommand cmd = new MySqlCommand(query, DAO.mConn))
                 {
                     cmd.Parameters.AddWithValue("@id", tbIdPeriferico.Text);
@@ -130,7 +121,7 @@ namespace ProjetoJe
                             return;
                         }
 
-                        double precoVenda = Convert.ToDouble(reader["preço_venda"]);
+                        decimal precoVenda = Convert.ToDecimal(reader["preco_venda"]);
                         reader.Close();
 
                         string dataVenda = DateTime.Now.ToString();
@@ -159,6 +150,21 @@ namespace ProjetoJe
             {
                 MessageBox.Show("Erro ao realizar a venda: " + ex.Message);
             }
+        }
+
+        private void tbIdPeriferico_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilitarios.BloquearCaractere(e);
+        }
+
+        private void tbCpf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilitarios.BloquearCaractere(e);
+        }
+
+        private void tbTelefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilitarios.BloquearCaractere(e);
         }
     }
 }

@@ -40,7 +40,7 @@
             this.tbValorVenda = new System.Windows.Forms.TextBox();
             this.btCadastrar = new System.Windows.Forms.Button();
             this.tbGarantia = new System.Windows.Forms.TextBox();
-            this.tbFabricação = new System.Windows.Forms.TextBox();
+            this.tbFabricacao = new System.Windows.Forms.TextBox();
             this.tbMarca = new System.Windows.Forms.TextBox();
             this.tbModelo = new System.Windows.Forms.TextBox();
             this.tbTipoPeriferico = new System.Windows.Forms.TextBox();
@@ -189,13 +189,13 @@
             this.tbGarantia.Size = new System.Drawing.Size(133, 20);
             this.tbGarantia.TabIndex = 29;
             // 
-            // tbFabricação
+            // tbFabricacao
             // 
-            this.tbFabricação.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbFabricação.Location = new System.Drawing.Point(499, 147);
-            this.tbFabricação.Name = "tbFabricação";
-            this.tbFabricação.Size = new System.Drawing.Size(133, 20);
-            this.tbFabricação.TabIndex = 28;
+            this.tbFabricacao.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbFabricacao.Location = new System.Drawing.Point(499, 147);
+            this.tbFabricacao.Name = "tbFabricacao";
+            this.tbFabricacao.Size = new System.Drawing.Size(133, 20);
+            this.tbFabricacao.TabIndex = 28;
             // 
             // tbMarca
             // 
@@ -240,6 +240,8 @@
             this.tbId.Name = "tbId";
             this.tbId.Size = new System.Drawing.Size(168, 20);
             this.tbId.TabIndex = 27;
+            this.tbId.TextChanged += new System.EventHandler(this.tbId_TextChanged);
+            this.tbId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbId_KeyPress);
             // 
             // label8
             // 
@@ -256,7 +258,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackgroundImage = global::ProjetoJe.Properties.Resources.laranjo;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.alterarPerifericoToolStripMenuItem,
@@ -309,7 +311,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ProjetoJe.Properties.Resources.laranjo;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(886, 564);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label7);
@@ -324,7 +326,7 @@
             this.Controls.Add(this.tbValorVenda);
             this.Controls.Add(this.btCadastrar);
             this.Controls.Add(this.tbGarantia);
-            this.Controls.Add(this.tbFabricação);
+            this.Controls.Add(this.tbFabricacao);
             this.Controls.Add(this.tbId);
             this.Controls.Add(this.tbMarca);
             this.Controls.Add(this.tbModelo);
@@ -356,7 +358,7 @@
         private System.Windows.Forms.TextBox tbValorVenda;
         private System.Windows.Forms.Button btCadastrar;
         private System.Windows.Forms.TextBox tbGarantia;
-        private System.Windows.Forms.TextBox tbFabricação;
+        private System.Windows.Forms.TextBox tbFabricacao;
         private System.Windows.Forms.TextBox tbMarca;
         private System.Windows.Forms.TextBox tbModelo;
         private System.Windows.Forms.TextBox tbTipoPeriferico;

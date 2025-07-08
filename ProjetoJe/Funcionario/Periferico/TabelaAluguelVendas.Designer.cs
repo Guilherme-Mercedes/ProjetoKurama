@@ -38,9 +38,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.alterarPerifericoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDePerifericosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.voltarAoMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -109,7 +109,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackgroundImage = global::ProjetoJe.Properties.Resources.laranjo;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Window;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.alterarPerifericoToolStripMenuItem,
             this.listaDePerifericosToolStripMenuItem,
@@ -138,6 +138,14 @@
             this.listaDePerifericosToolStripMenuItem.Text = "Realizar a venda";
             this.listaDePerifericosToolStripMenuItem.Click += new System.EventHandler(this.realizarVenda_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(137, 24);
+            this.toolStripMenuItem1.Text = "Remover aluguel";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.removerAluguel_Click);
+            // 
             // voltarAoMenuToolStripMenuItem
             // 
             this.voltarAoMenuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -154,19 +162,11 @@
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(137, 24);
-            this.toolStripMenuItem1.Text = "Remover aluguel";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.removerAluguel_Click);
-            // 
             // TabelaAluguelVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ProjetoJe.Properties.Resources.laranjo;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(886, 564);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label2);
@@ -177,6 +177,7 @@
             this.Name = "TabelaAluguelVendas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kurama®";
+            this.Load += new System.EventHandler(this.TabelaAluguelVendas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.menuStrip1.ResumeLayout(false);
