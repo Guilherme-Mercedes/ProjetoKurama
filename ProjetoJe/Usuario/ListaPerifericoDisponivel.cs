@@ -27,7 +27,7 @@ namespace ProjetoJe
         //nova tela de aluguel de perifericos
         private void alugarPeriferico_Click(object sender, EventArgs e)
         {
-            aluguelUsuario au = new aluguelUsuario();
+            AlugarPerifericoUsuario au = new AlugarPerifericoUsuario();
             au.Show();
             this.Close();
         }

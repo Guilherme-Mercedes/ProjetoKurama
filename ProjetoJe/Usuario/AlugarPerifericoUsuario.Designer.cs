@@ -1,6 +1,6 @@
 ﻿namespace ProjetoJe
 {
-    partial class aluguelUsuario
+    partial class AlugarPerifericoUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(aluguelUsuario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlugarPerifericoUsuario));
             this.btdata = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.labelResposta = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
@@ -41,13 +41,13 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbidperiferico = new System.Windows.Forms.TextBox();
-            this.tbdaluguel = new System.Windows.Forms.TextBox();
-            this.btenviar = new System.Windows.Forms.Button();
-            this.tbtelefone = new System.Windows.Forms.TextBox();
-            this.tbnascimento = new System.Windows.Forms.TextBox();
-            this.tbcpf = new System.Windows.Forms.TextBox();
-            this.tbnome = new System.Windows.Forms.TextBox();
+            this.tbIdPeriferico = new System.Windows.Forms.TextBox();
+            this.tbDiaAluguel = new System.Windows.Forms.TextBox();
+            this.btEnviar = new System.Windows.Forms.Button();
+            this.tbTelefone = new System.Windows.Forms.TextBox();
+            this.tbDataNascimento = new System.Windows.Forms.TextBox();
+            this.tbCpf = new System.Windows.Forms.TextBox();
+            this.tbNome = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.reaalizarVendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removerAluguelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,17 +70,17 @@
             this.btdata.Size = new System.Drawing.Size(0, 16);
             this.btdata.TabIndex = 46;
             // 
-            // label8
+            // labelResposta
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(65, 459);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 16);
-            this.label8.TabIndex = 45;
+            this.labelResposta.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelResposta.AutoSize = true;
+            this.labelResposta.BackColor = System.Drawing.Color.Transparent;
+            this.labelResposta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelResposta.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelResposta.Location = new System.Drawing.Point(65, 459);
+            this.labelResposta.Name = "labelResposta";
+            this.labelResposta.Size = new System.Drawing.Size(0, 16);
+            this.labelResposta.TabIndex = 45;
             // 
             // dataGridView2
             // 
@@ -114,7 +114,7 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(81, 260);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 16);
+            this.label7.Size = new System.Drawing.Size(125, 16);
             this.label7.TabIndex = 34;
             this.label7.Text = "ID DO PERIFERICO";
             // 
@@ -127,7 +127,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(81, 216);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 16);
+            this.label6.Size = new System.Drawing.Size(124, 16);
             this.label6.TabIndex = 35;
             this.label6.Text = "DIAS DE ALUGUEL";
             // 
@@ -140,7 +140,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(81, 134);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 16);
+            this.label4.Size = new System.Drawing.Size(74, 16);
             this.label4.TabIndex = 37;
             this.label4.Text = "TELEFONE";
             // 
@@ -153,7 +153,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(81, 173);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 16);
+            this.label3.Size = new System.Drawing.Size(151, 16);
             this.label3.TabIndex = 38;
             this.label3.Text = "DATA DE NASCIMENTO";
             // 
@@ -166,7 +166,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(81, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 16);
+            this.label2.Size = new System.Drawing.Size(33, 16);
             this.label2.TabIndex = 39;
             this.label2.Text = "CPF";
             // 
@@ -207,74 +207,75 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(81, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 16);
+            this.label1.Size = new System.Drawing.Size(45, 16);
             this.label1.TabIndex = 42;
             this.label1.Text = "NOME";
             // 
-            // tbidperiferico
+            // tbIdPeriferico
             // 
-            this.tbidperiferico.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tbidperiferico.Location = new System.Drawing.Point(84, 276);
-            this.tbidperiferico.Name = "tbidperiferico";
-            this.tbidperiferico.Size = new System.Drawing.Size(100, 20);
-            this.tbidperiferico.TabIndex = 33;
-            this.tbidperiferico.TextChanged += new System.EventHandler(this.Tbidperiferico_TextChanged);
+            this.tbIdPeriferico.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tbIdPeriferico.Location = new System.Drawing.Point(84, 276);
+            this.tbIdPeriferico.Name = "tbIdPeriferico";
+            this.tbIdPeriferico.Size = new System.Drawing.Size(100, 20);
+            this.tbIdPeriferico.TabIndex = 33;
+            this.tbIdPeriferico.TextChanged += new System.EventHandler(this.tbIdPeriferico_TextChanged);
             // 
-            // tbdaluguel
+            // tbDiaAluguel
             // 
-            this.tbdaluguel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tbdaluguel.Location = new System.Drawing.Point(84, 232);
-            this.tbdaluguel.Name = "tbdaluguel";
-            this.tbdaluguel.Size = new System.Drawing.Size(100, 20);
-            this.tbdaluguel.TabIndex = 32;
+            this.tbDiaAluguel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tbDiaAluguel.Location = new System.Drawing.Point(84, 232);
+            this.tbDiaAluguel.Name = "tbDiaAluguel";
+            this.tbDiaAluguel.Size = new System.Drawing.Size(100, 20);
+            this.tbDiaAluguel.TabIndex = 32;
+            this.tbDiaAluguel.TextChanged += new System.EventHandler(this.tbDiaAluguel_TextChanged);
             // 
-            // btenviar
+            // btEnviar
             // 
-            this.btenviar.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btenviar.BackColor = System.Drawing.Color.White;
-            this.btenviar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btenviar.FlatAppearance.BorderSize = 2;
-            this.btenviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btenviar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btenviar.Location = new System.Drawing.Point(109, 319);
-            this.btenviar.Name = "btenviar";
-            this.btenviar.Size = new System.Drawing.Size(75, 33);
-            this.btenviar.TabIndex = 31;
-            this.btenviar.Text = "Cadastrar";
-            this.btenviar.UseVisualStyleBackColor = false;
-            this.btenviar.Click += new System.EventHandler(this.Btenviar_Click);
+            this.btEnviar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btEnviar.BackColor = System.Drawing.Color.White;
+            this.btEnviar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btEnviar.FlatAppearance.BorderSize = 2;
+            this.btEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEnviar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEnviar.Location = new System.Drawing.Point(109, 319);
+            this.btEnviar.Name = "btEnviar";
+            this.btEnviar.Size = new System.Drawing.Size(75, 33);
+            this.btEnviar.TabIndex = 31;
+            this.btEnviar.Text = "Cadastrar";
+            this.btEnviar.UseVisualStyleBackColor = false;
+            this.btEnviar.Click += new System.EventHandler(this.btEnviar_Click);
             // 
-            // tbtelefone
+            // tbTelefone
             // 
-            this.tbtelefone.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tbtelefone.Location = new System.Drawing.Point(84, 150);
-            this.tbtelefone.Name = "tbtelefone";
-            this.tbtelefone.Size = new System.Drawing.Size(168, 20);
-            this.tbtelefone.TabIndex = 30;
+            this.tbTelefone.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tbTelefone.Location = new System.Drawing.Point(84, 150);
+            this.tbTelefone.Name = "tbTelefone";
+            this.tbTelefone.Size = new System.Drawing.Size(168, 20);
+            this.tbTelefone.TabIndex = 30;
             // 
-            // tbnascimento
+            // tbDataNascimento
             // 
-            this.tbnascimento.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tbnascimento.Location = new System.Drawing.Point(84, 189);
-            this.tbnascimento.Name = "tbnascimento";
-            this.tbnascimento.Size = new System.Drawing.Size(168, 20);
-            this.tbnascimento.TabIndex = 28;
+            this.tbDataNascimento.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tbDataNascimento.Location = new System.Drawing.Point(84, 189);
+            this.tbDataNascimento.Name = "tbDataNascimento";
+            this.tbDataNascimento.Size = new System.Drawing.Size(168, 20);
+            this.tbDataNascimento.TabIndex = 28;
             // 
-            // tbcpf
+            // tbCpf
             // 
-            this.tbcpf.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tbcpf.Location = new System.Drawing.Point(84, 111);
-            this.tbcpf.Name = "tbcpf";
-            this.tbcpf.Size = new System.Drawing.Size(168, 20);
-            this.tbcpf.TabIndex = 27;
+            this.tbCpf.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tbCpf.Location = new System.Drawing.Point(84, 111);
+            this.tbCpf.Name = "tbCpf";
+            this.tbCpf.Size = new System.Drawing.Size(168, 20);
+            this.tbCpf.TabIndex = 27;
             // 
-            // tbnome
+            // tbNome
             // 
-            this.tbnome.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tbnome.Location = new System.Drawing.Point(84, 72);
-            this.tbnome.Name = "tbnome";
-            this.tbnome.Size = new System.Drawing.Size(168, 20);
-            this.tbnome.TabIndex = 26;
+            this.tbNome.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tbNome.Location = new System.Drawing.Point(84, 72);
+            this.tbNome.Name = "tbNome";
+            this.tbNome.Size = new System.Drawing.Size(168, 20);
+            this.tbNome.TabIndex = 26;
             // 
             // menuStrip1
             // 
@@ -298,7 +299,7 @@
             this.reaalizarVendaToolStripMenuItem.Name = "reaalizarVendaToolStripMenuItem";
             this.reaalizarVendaToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.reaalizarVendaToolStripMenuItem.Text = "Comprar";
-            this.reaalizarVendaToolStripMenuItem.Click += new System.EventHandler(this.ReaalizarVendaToolStripMenuItem_Click);
+            this.reaalizarVendaToolStripMenuItem.Click += new System.EventHandler(this.btComprarPeriferico_Click);
             // 
             // removerAluguelToolStripMenuItem
             // 
@@ -306,7 +307,7 @@
             this.removerAluguelToolStripMenuItem.Name = "removerAluguelToolStripMenuItem";
             this.removerAluguelToolStripMenuItem.Size = new System.Drawing.Size(232, 24);
             this.removerAluguelToolStripMenuItem.Text = "Mostrar Periféricos Disponiveis";
-            this.removerAluguelToolStripMenuItem.Click += new System.EventHandler(this.RemoverAluguelToolStripMenuItem_Click);
+            this.removerAluguelToolStripMenuItem.Click += new System.EventHandler(this.btnMostrarPeriferico_Click);
             // 
             // voltarmenusuario
             // 
@@ -314,7 +315,7 @@
             this.voltarmenusuario.Name = "voltarmenusuario";
             this.voltarmenusuario.Size = new System.Drawing.Size(127, 24);
             this.voltarmenusuario.Text = "Voltar ao Menu";
-            this.voltarmenusuario.Click += new System.EventHandler(this.Voltarmenusuario_Click);
+            this.voltarmenusuario.Click += new System.EventHandler(this.btnVoltarMenu_Click);
             // 
             // sairusuario
             // 
@@ -322,9 +323,9 @@
             this.sairusuario.Name = "sairusuario";
             this.sairusuario.Size = new System.Drawing.Size(47, 24);
             this.sairusuario.Text = "Sair";
-            this.sairusuario.Click += new System.EventHandler(this.Sairusuario_Click);
+            this.sairusuario.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // aluguelUsuario
+            // AlugarPerifericoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -332,7 +333,7 @@
             this.ClientSize = new System.Drawing.Size(886, 564);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btdata);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.labelResposta);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label7);
@@ -343,15 +344,15 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbidperiferico);
-            this.Controls.Add(this.tbdaluguel);
-            this.Controls.Add(this.btenviar);
-            this.Controls.Add(this.tbtelefone);
-            this.Controls.Add(this.tbnascimento);
-            this.Controls.Add(this.tbcpf);
-            this.Controls.Add(this.tbnome);
+            this.Controls.Add(this.tbIdPeriferico);
+            this.Controls.Add(this.tbDiaAluguel);
+            this.Controls.Add(this.btEnviar);
+            this.Controls.Add(this.tbTelefone);
+            this.Controls.Add(this.tbDataNascimento);
+            this.Controls.Add(this.tbCpf);
+            this.Controls.Add(this.tbNome);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "aluguelUsuario";
+            this.Name = "AlugarPerifericoUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kurama®";
             this.Load += new System.EventHandler(this.AluguelUsuario_Load);
@@ -367,7 +368,7 @@
         #endregion
 
         private System.Windows.Forms.Label btdata;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label labelResposta;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label7;
@@ -378,13 +379,13 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbidperiferico;
-        private System.Windows.Forms.TextBox tbdaluguel;
-        private System.Windows.Forms.Button btenviar;
-        private System.Windows.Forms.TextBox tbtelefone;
-        private System.Windows.Forms.TextBox tbnascimento;
-        private System.Windows.Forms.TextBox tbcpf;
-        private System.Windows.Forms.TextBox tbnome;
+        private System.Windows.Forms.TextBox tbIdPeriferico;
+        private System.Windows.Forms.TextBox tbDiaAluguel;
+        private System.Windows.Forms.Button btEnviar;
+        private System.Windows.Forms.TextBox tbTelefone;
+        private System.Windows.Forms.TextBox tbDataNascimento;
+        private System.Windows.Forms.TextBox tbCpf;
+        private System.Windows.Forms.TextBox tbNome;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem reaalizarVendaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removerAluguelToolStripMenuItem;

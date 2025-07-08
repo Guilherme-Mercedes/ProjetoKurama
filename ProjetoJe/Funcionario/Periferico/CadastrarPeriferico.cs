@@ -79,7 +79,7 @@ namespace ProjetoJe
 
             try
             {
-                bool sucesso = DAO.InserirPeriferico(tbtipo.Text, tbModelo.Text, tbMarca.Text, tbGarantia.Text, tbFabricação.Text, tbValorVenda.Text, tbValorAluguel.Text);
+                bool sucesso = DAO.CadastrarPeriferico(tbtipo.Text, tbModelo.Text, tbMarca.Text, tbGarantia.Text, tbFabricação.Text, tbValorVenda.Text, tbValorAluguel.Text, "Disponivel");
 
                 if (sucesso)
                 {

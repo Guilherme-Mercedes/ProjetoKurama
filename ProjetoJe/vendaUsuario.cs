@@ -195,14 +195,14 @@ namespace ProjetoJe
 
         private void ReaalizarVendaToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            aluguelUsuario au = new aluguelUsuario();
+            AlugarPerifericoUsuario au = new AlugarPerifericoUsuario();
             au.Show();
             this.Hide();
         }
 
         private void reaalizarVendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            aluguelUsuario au = new aluguelUsuario();
+            AlugarPerifericoUsuario au = new AlugarPerifericoUsuario();
             au.Show();
             this.Hide();
         }

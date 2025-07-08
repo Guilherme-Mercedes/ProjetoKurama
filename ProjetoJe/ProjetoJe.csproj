@@ -67,17 +67,17 @@
     <Compile Include="Funcionario\Periferico\AlterarPeriferico.Designer.cs">
       <DependentUpon>AlterarPeriferico.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabelaAluguelVendas.cs">
+    <Compile Include="Funcionario\Periferico\TabelaAluguelVendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TabelaAluguelVendas.Designer.cs">
+    <Compile Include="Funcionario\Periferico\TabelaAluguelVendas.Designer.cs">
       <DependentUpon>TabelaAluguelVendas.cs</DependentUpon>
     </Compile>
-    <Compile Include="aluguelUsuario.cs">
+    <Compile Include="Usuario\AlugarPerifericoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="aluguelUsuario.Designer.cs">
-      <DependentUpon>aluguelUsuario.cs</DependentUpon>
+    <Compile Include="Usuario\AlugarPerifericoUsuario.Designer.cs">
+      <DependentUpon>AlugarPerifericoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="atualizarFuncionario.cs">
       <SubType>Form</SubType>
@@ -178,11 +178,11 @@
     <EmbeddedResource Include="Funcionario\Periferico\AlterarPeriferico.resx">
       <DependentUpon>AlterarPeriferico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabelaAluguelVendas.resx">
+    <EmbeddedResource Include="Funcionario\Periferico\TabelaAluguelVendas.resx">
       <DependentUpon>TabelaAluguelVendas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="aluguelUsuario.resx">
-      <DependentUpon>aluguelUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="Usuario\AlugarPerifericoUsuario.resx">
+      <DependentUpon>AlugarPerifericoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="atualizarFuncionario.resx">
       <DependentUpon>atualizarFuncionario.cs</DependentUpon>

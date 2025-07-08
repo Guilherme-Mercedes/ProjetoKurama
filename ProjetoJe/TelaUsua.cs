@@ -21,7 +21,7 @@ namespace ProjetoJe
 
         private void button2_Click(object sender, EventArgs e)
         {
-            aluguelUsuario au = new aluguelUsuario();
+            AlugarPerifericoUsuario au = new AlugarPerifericoUsuario();
             au.Show();
             this.Hide();
         }
