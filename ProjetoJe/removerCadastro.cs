@@ -87,7 +87,7 @@ namespace ProjetoJe
 
         private void RemoverCadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            atualizarFuncionario af = new atualizarFuncionario();
+            AlterarFuncionario af = new AlterarFuncionario();
             af.Show();
             this.Hide();
         }

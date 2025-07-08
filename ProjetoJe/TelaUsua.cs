@@ -51,7 +51,7 @@ namespace ProjetoJe
 
         private void voltarmenusuario_Click(object sender, EventArgs e)
         {
-            Form1 sair = new Form1();
+            MainForm sair = new MainForm();
             sair.Show();
             this.Hide();
         }

@@ -79,11 +79,11 @@
     <Compile Include="Usuario\AlugarPerifericoUsuario.Designer.cs">
       <DependentUpon>AlugarPerifericoUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="atualizarFuncionario.cs">
+    <Compile Include="Funcionario\AlterarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="atualizarFuncionario.Designer.cs">
-      <DependentUpon>atualizarFuncionario.cs</DependentUpon>
+    <Compile Include="Funcionario\AlterarFuncionario.Designer.cs">
+      <DependentUpon>AlterarFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="Funcionario\Periferico\CadastrarPeriferico.cs">
       <SubType>Form</SubType>
@@ -91,11 +91,11 @@
     <Compile Include="Funcionario\Periferico\CadastrarPeriferico.Designer.cs">
       <DependentUpon>CadastrarPeriferico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FuncMenu.cs">
       <SubType>Form</SubType>
@@ -184,14 +184,14 @@
     <EmbeddedResource Include="Usuario\AlugarPerifericoUsuario.resx">
       <DependentUpon>AlugarPerifericoUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="atualizarFuncionario.resx">
-      <DependentUpon>atualizarFuncionario.cs</DependentUpon>
+    <EmbeddedResource Include="Funcionario\AlterarFuncionario.resx">
+      <DependentUpon>AlterarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Funcionario\Periferico\CadastrarPeriferico.resx">
       <DependentUpon>CadastrarPeriferico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FuncMenu.resx">
       <DependentUpon>FuncMenu.cs</DependentUpon>

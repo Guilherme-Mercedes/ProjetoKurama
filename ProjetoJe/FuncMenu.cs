@@ -32,7 +32,7 @@ namespace ProjetoJe
 
         private void btvoltarmenu_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
+            MainForm f = new MainForm();
             f.Show();
             this.Hide();
         }
@@ -51,7 +51,7 @@ namespace ProjetoJe
 
         private void AlterarCadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            atualizarFuncionario af = new atualizarFuncionario();
+            AlterarFuncionario af = new AlterarFuncionario();
             af.Show();
             this.Hide();
         }

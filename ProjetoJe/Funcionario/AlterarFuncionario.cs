@@ -1,57 +1,55 @@
-﻿using System;
+﻿//ALTERAR
+using System;
 using System.Windows.Forms;
 
 namespace ProjetoJe
 {
-    public partial class AdicionarFuncionario : Form
+    public partial class AlterarFuncionario : Form
     {
         private DAOMysql.DAOMysql DAO = new DAOMysql.DAOMysql();
-
-        public AdicionarFuncionario()
+        public AlterarFuncionario()
         {
             InitializeComponent();
         }
+        private void AtualizarFuncionario_Load(object sender, EventArgs e)
+        {
+        }
+        private void Tbid_TextChanged(object sender, EventArgs e)
+        {
+        }
         private void btEnviar_Click(object sender, EventArgs e)
         {
-            AddFuncionario();
+            AtualizarFuncionario();
         }
-        private void VoltarAoMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        private void adicionarCadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FuncMenu fm = new FuncMenu();
-            fm.Show();
-            this.Close();
-        }
-        private void SairToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-        }
-        private void Label3_Click(object sender, EventArgs e)
-        {
-        }
-        private void AdicionarFuncionario_Load(object sender, EventArgs e)
-        {
-        }
-        private void AtualizarCadastroToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AlterarFuncionario af = new AlterarFuncionario();
+            AdicionarFuncionario af = new AdicionarFuncionario();
             af.Show();
             this.Close();
         }
-        private void RemoverCadastroToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            removerCadastro rc = new removerCadastro();
-            rc.Show();
-            this.Close();
-        }
-        private void ListaDeFuncionariosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void listaDeFuncionariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ListaDeFuncionarios lf = new ListaDeFuncionarios();
             lf.Show();
             this.Close();
         }
-        // funcao para adicionar um novo funcionário
-        // futuramente posso separar em outra classe
-        private void AddFuncionario()
+        private void removerCadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            removerCadastro rc = new removerCadastro();
+            rc.Show();
+            this.Close();
+        }
+        private void voltarAoMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FuncMenu fm = new FuncMenu();
+            fm.Show();
+            this.Close();
+        }
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+        private void AtualizarFuncionario()
         {
             if (tbSenha.Text != tbSenha2.Text)
             {
@@ -62,25 +60,25 @@ namespace ProjetoJe
             }
             if (string.IsNullOrWhiteSpace(tbNome.Text) || string.IsNullOrWhiteSpace(tbCpf.Text) ||
                 string.IsNullOrWhiteSpace(tbNascimento.Text) || string.IsNullOrWhiteSpace(tbUsuario.Text) ||
-                string.IsNullOrWhiteSpace(tbSenha.Text))
+                string.IsNullOrWhiteSpace(tbSenha.Text) || string.IsNullOrEmpty(tbId.Text))
             {
                 MessageBox.Show("Não deixe nenhum espaço em branco!");
                 return;
             }
             try
             {
-                bool sucesso = DAO.InserirFuncionario(tbNome.Text, tbCpf.Text, tbNascimento.Text, tbUsuario.Text, tbSenha.Text);
+                bool sucesso = DAO.AlterarFuncionario(tbId.Text, tbNome.Text, tbCpf.Text, tbNascimento.Text, tbUsuario.Text, tbSenha.Text);
 
                 if (sucesso)
                 {
-                    MessageBox.Show("Funcionário cadastrado!");
+                    MessageBox.Show($"Cadastro do Funcionário: {tbNome.Text} alterado com sucesso!");
                     dataGridView1.DataSource = DAO.SelectLogin();
                     Utilitarios.LimparTodosTextBox(this); // Limpa todos os TextBoxes do formulário após o cadastro
                     tbNome.Focus(); // Foca no campo de nome
                 }
                 else
                 {
-                    MessageBox.Show("Erro ao cadastrar. Tente novamente.");
+                    MessageBox.Show("Erro ao alterar. Tente novamente.");
                 }
 
             }
@@ -88,6 +86,7 @@ namespace ProjetoJe
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
+
         }
     }
 }
