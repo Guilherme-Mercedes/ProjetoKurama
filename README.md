@@ -109,7 +109,7 @@ docker exec -i mysql-dev mysql -u root -p1234 < BancoPeriferico.sql
 
 ## Histórico
 
-Este projeto foi originalmente desenvolvido como trabalho final de Lógica de Programação no meu curso de Tecnico de Desenvolvimento de Sistemas na ETEC. Na época, utilizei conceitos que aprendi durante as aulas e também busquei referências na internet para complementar o desenvolvimento. Por conta do prazo curto e da minha experiência limitada naquele momento, o código não seguiu uma estrutura muito limpa — algo que hoje consigo identificar com mais clareza.
+Este projeto foi originalmente desenvolvido como trabalho final de Lógica de Programação no meu curso de Tecnico de Desenvolvimento de Sistemas na ETEC. Na época, utilizei conceitos que aprendi durante as aulas e também busquei referências na internet para complementar o desenvolvimento. Por conta do prazo curto e da minha experiência limitada naquele momento, o código não seguiu uma estrutura muito limpa, algo que hoje consigo identificar com mais clareza.
 
 Ao revisitar o projeto, percebi que seria necessário refatorá-lo para torná-lo mais organizado, legível e de fácil manutenção. Confesso que quebrei um pouco a cabeça para entender a lógica que eu mesmo havia feito, mas com paciência e os conhecimentos adquiridos ao longo da minha formação, consegui reestruturá-lo de forma mais sólida.
 
@@ -119,6 +119,6 @@ Hoje, o projeto está reformulado, com aplicação de boas práticas, o que faci
 ## 📬 Contato
 
 Feito com 💻 por Guilherme Mercedes.  
-[LinkedIn](https://www.linkedin.com/in/seu-usuario-aqui) • [GitHub](https://github.com/Guilherme-Mercedes)
+[LinkedIn](https://www.linkedin.com/in/guilhermemercedes/) • [GitHub](https://github.com/Guilherme-Mercedes)
 
 
