@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29209.62
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoJe", "ProjetoJe\ProjetoJe.csproj", "{21FB8369-E09F-4668-9E69-087E5B06C442}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoKurama", "ProjetoJe\ProjetoKurama.csproj", "{21FB8369-E09F-4668-9E69-087E5B06C442}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

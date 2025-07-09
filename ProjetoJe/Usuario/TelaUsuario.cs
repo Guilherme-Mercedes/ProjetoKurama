@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace ProjetoJe
+namespace ProjetoKurama
 {
     public partial class TelaUsuario : Form
     {

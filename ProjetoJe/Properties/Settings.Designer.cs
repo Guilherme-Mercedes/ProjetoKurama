@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProjetoJe.Properties {
+namespace ProjetoKurama.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

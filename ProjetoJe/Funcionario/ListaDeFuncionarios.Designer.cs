@@ -1,4 +1,4 @@
-﻿namespace ProjetoJe
+﻿namespace ProjetoKurama
 {
     partial class ListaDeFuncionarios
     {

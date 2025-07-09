@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace ProjetoJe
+namespace ProjetoKurama
 {
     public static class Utilitarios
     {

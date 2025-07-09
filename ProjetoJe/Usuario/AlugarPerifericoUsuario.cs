@@ -4,7 +4,7 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
 
-namespace ProjetoJe
+namespace ProjetoKurama
 {
     public partial class AlugarPerifericoUsuario : Form
     {
@@ -135,7 +135,7 @@ namespace ProjetoJe
                         //Calcular valor total e data de devolução
                         int dias = int.Parse(tbDiaAluguel.Text);
                         var (valorTotal, dataDevolucao) = CalcularValorAluguel(dias, precoDiario);
-                        string horarioAgora = DateTime.Now.ToString();
+                        string horarioAgora = DateTime.Now.ToString("dd-MM-yyyy HH:mm");
 
                         //Realizar o aluguel
                         bool sucesso = DAO.AlugarPeriferico(tbNome.Text, tbCpf.Text, tbTelefone.Text, tbDataNascimento.Text, tbDiaAluguel.Text,

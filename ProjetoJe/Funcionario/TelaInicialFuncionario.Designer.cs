@@ -1,4 +1,4 @@
-﻿namespace ProjetoJe
+﻿namespace ProjetoKurama
 {
     partial class TelaInicialFuncionario
     {
@@ -45,7 +45,7 @@
             this.txbSenha.Location = new System.Drawing.Point(345, 281);
             this.txbSenha.Name = "txbSenha";
             this.txbSenha.Size = new System.Drawing.Size(213, 31);
-            this.txbSenha.TabIndex = 1;
+            this.txbSenha.TabIndex = 2;
             this.txbSenha.UseSystemPasswordChar = true;
             // 
             // btFazerLogin
@@ -59,7 +59,7 @@
             this.btFazerLogin.Location = new System.Drawing.Point(409, 326);
             this.btFazerLogin.Name = "btFazerLogin";
             this.btFazerLogin.Size = new System.Drawing.Size(75, 28);
-            this.btFazerLogin.TabIndex = 2;
+            this.btFazerLogin.TabIndex = 3;
             this.btFazerLogin.Text = "Login";
             this.btFazerLogin.UseVisualStyleBackColor = false;
             this.btFazerLogin.Click += new System.EventHandler(this.btnLogin);
@@ -98,7 +98,7 @@
             this.txbUsuario.Location = new System.Drawing.Point(345, 209);
             this.txbUsuario.Name = "txbUsuario";
             this.txbUsuario.Size = new System.Drawing.Size(213, 29);
-            this.txbUsuario.TabIndex = 4;
+            this.txbUsuario.TabIndex = 1;
             // 
             // txtlogin
             // 
@@ -123,7 +123,7 @@
             this.lbVoltarInicio.Location = new System.Drawing.Point(383, 380);
             this.lbVoltarInicio.Name = "lbVoltarInicio";
             this.lbVoltarInicio.Size = new System.Drawing.Size(125, 16);
-            this.lbVoltarInicio.TabIndex = 7;
+            this.lbVoltarInicio.TabIndex = 4;
             this.lbVoltarInicio.Text = "VOLTAR AO INICIO";
             this.lbVoltarInicio.Click += new System.EventHandler(this.Label1_Click);
             // 

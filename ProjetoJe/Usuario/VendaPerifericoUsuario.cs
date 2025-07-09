@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace ProjetoJe
+namespace ProjetoKurama
 {
     public partial class VendaPerifericoUsuario : Form
     {
@@ -114,7 +114,7 @@ namespace ProjetoJe
                         decimal precoVenda = Convert.ToDecimal(reader["preco_venda"]);
                         reader.Close();
 
-                        string dataVenda = DateTime.Now.ToString();
+                        string dataVenda = DateTime.Now.ToString("dd-MM-yyyy");
 
                         bool sucesso = DAO.VenderPeriferico(tbNome.Text, tbCpf.Text, tbTelefone.Text, tbDataNascimento.Text, precoVenda, dataVenda, tbIdPeriferico.Text);
 

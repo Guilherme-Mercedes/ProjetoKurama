@@ -7,12 +7,27 @@
     <ProjectGuid>{21FB8369-E09F-4668-9E69-087E5B06C442}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProjetoJe</RootNamespace>
+    <RootNamespace>ProjetoKurama</RootNamespace>
     <AssemblyName>ProjetoJe</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -259,28 +274,25 @@
     <None Include="Resources\fundofunc.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pai-de-familia-sucodelaranja.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\cinza.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\zueikk.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\zueikk1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\zueikkkk.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\laranjo.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\meajudadeus.jpg" />
+    <None Include="Resources\fundo1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\fundo1.jpg" />
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

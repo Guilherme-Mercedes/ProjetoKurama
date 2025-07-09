@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace ProjetoJe
+namespace ProjetoKurama
 {
     public partial class ListaPerifericosFuncionario : Form
     {
@@ -10,6 +10,7 @@ namespace ProjetoJe
         public ListaPerifericosFuncionario()
         {
             InitializeComponent();
+            dataGridView1.DataSource = DAO.SelectPeriferico();
         }
         private void mostrarPerifericos_Load(object sender, EventArgs e)
         {

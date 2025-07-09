@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProjetoJe.Properties {
+namespace ProjetoKurama.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ProjetoJe.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ProjetoJe.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ProjetoKurama.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -146,66 +146,6 @@ namespace ProjetoJe.Properties {
         internal static System.Drawing.Bitmap fundofunc {
             get {
                 object obj = ResourceManager.GetObject("fundofunc", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap laranjo {
-            get {
-                object obj = ResourceManager.GetObject("laranjo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap meajudadeus {
-            get {
-                object obj = ResourceManager.GetObject("meajudadeus", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pai_de_familia_sucodelaranja {
-            get {
-                object obj = ResourceManager.GetObject("pai-de-familia-sucodelaranja", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap zueikk {
-            get {
-                object obj = ResourceManager.GetObject("zueikk", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap zueikk1 {
-            get {
-                object obj = ResourceManager.GetObject("zueikk1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap zueikkkk {
-            get {
-                object obj = ResourceManager.GetObject("zueikkkk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
