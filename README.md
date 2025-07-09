@@ -98,12 +98,12 @@ docker exec -i mysql-dev mysql -u root -p1234 < BancoPeriferico.sql
 
 ## Propostas Futuras
 
+- Restruturar o codigo e passar para o UserControl melhorando o fluxo das janelas e evitar janelas ocultas que consumam memória.(Prioridade alta)
 - Continuar a evoluir e melhorar o codigo.
 - Mudar o layout e deixar mais bonito.
 - Transformar a DLL local em uma verdadeira API REST para comunicação via rede, facilitando a expansão do sistema.  
 - Implementar controle de acesso mais granular (separando funcionalidades de funcionário e usuário).  
 - Melhorar a interface, adotando componentes modernos e responsivos.  
-- Organizar o fluxo de navegação dos formulários para evitar janelas ocultas que consumam memória.  
 - Refatorar o código para seguir boas práticas de engenharia de software, como SOLID, injeção de dependências e tratamento de exceções.  
 - Adicionar testes unitários e de integração.
 
