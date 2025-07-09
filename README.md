@@ -1,65 +1,100 @@
-# README do Projeto Kurama
+# 🖥️ Projeto Kurama - Sistema de Gestão de Periféricos
 
----
+**Kurama** é um sistema de gerenciamento de aluguel de periféricos criado durante meu curso técnico em Desenvolvimento de Sistemas na Etec em 2019. Este projeto é um sistema desktop em C# com Windows Forms voltado para o gerenciamento de periféricos de informática, com funcionalidades de cadastro, alteração, remoção, aluguel e venda de itens. O sistema também possui controle de funcionários, login seguro e persistência de dados em banco MySQL, enquanto os usuários têm acesso restrito apenas para alugar os itens.
 
-## Sobre o Projeto
+## 📁 Estrutura do Projeto
 
-**Kurama** é um sistema de gerenciamento de aluguel de periféricos criado durante meu curso técnico em Desenvolvimento de Sistemas na Etec.  
-O projeto foi desenvolvido em C# com banco de dados MySQL e tem como objetivo permitir que funcionários façam o cadastro, gerenciamento e aluguel de periféricos, enquanto os usuários têm acesso restrito apenas para alugar os itens.
+- `ProjetoJe/` – Aplicação principal Windows Forms
+- `DAOMysql/` – Projeto de biblioteca de acesso a dados (DLL)
+- `BancoPeriferico.sql` – Script de criação das tabelas no banco de dados
 
----
+## 🔧 Tecnologias Utilizadas
 
-## Contexto e Funcionalidades
+- C# (.NET Framework)
+- Windows Forms
+- MySQL
+- MySql.Data Connector (API)
+- Docker (opcional, para rodar banco MySQL localmente)
+- Programação Orientada a Objetos (POO)
+- Arquitetura em camadas (Interface + DLL de acesso a dados)
 
-- Funcionários podem cadastrar novos usuários, cadastrar periféricos, realizar vendas e aluguéis.  
-- Usuários comuns podem acessar o sistema para realizar o aluguel dos periféricos disponíveis.  
-- Autenticação por usuário e senha para controlar acessos.  
-- Interface desktop construída com Windows Forms (WinForms).  
-- Banco de dados MySQL para armazenamento dos dados.  
+## 📦 Funcionalidades Principais
 
----
+### 🧑‍💼 Funcionalidades para Funcionário
+- Login de funcionários com verificação no banco
+- Cadastro de novos funcionários
+- Edição e remoção de funcionários
+- Listagem de usuários em DataGridView
 
-## Estrutura do Projeto
+### 🖱️ Periféricos
+- Cadastro com nome, modelo, marca, ano, valores de venda/aluguel e garantia
+- Alteração e remoção
+- Atualização automática de status (disponível/indisponível)
+- Visualização geral dos periféricos cadastrados
 
-- **Kurama (Projeto Principal):**  
-  Código principal do sistema com formulários WinForms para interação do usuário.
+### 🛒 Vendas
+- Realização de vendas com valor do periférico puxado do banco
+- Armazenamento de dados do cliente e do periférico
+- Histórico de vendas
 
-- **DAOMysql.dll (DLL criada por mim):**  
-  Biblioteca que encapsula toda a conexão com o banco de dados MySQL, abstraindo os comandos SQL e facilitando as operações CRUD.
+### 📆 Aluguel
+- Cálculo automático de valor total com base em dias alugados
+- Exibição da data prevista para devolução
+- Histórico de aluguéis
+- Atualização automática do status do periférico
 
-- Utilização da API oficial do MySQL para .NET (`MySql.Data.MySqlClient`).
+## 🗂️ DLL: `DAOMysql`
 
----
+A DLL foi criada por mim com o objetivo de isolar a camada de acesso a dados da lógica da interface e fazer a conexao com a API do Mysql.
 
-## Tecnologias Utilizadas
+## 🗂️ API: `MySQL API OFICIAL`
 
-- Linguagem: C#  
-- Banco de Dados: MySQL  
-- Interface: Windows Forms (WinForms)  
-- Biblioteca de acesso a dados: DLL própria usando API MySQL oficial
+Utilização da API oficial do MySQL para .NET (`MySql.Data.MySqlClient`).
 
----
+Principais métodos:
 
-## Estrutura da DLL DAOMysql
+- `InserirFuncionario(...)`
+- `AlterarFuncionario(...)`
+- `CadastrarPeriferico(...)`
+- `AlterarPeriferico(...)`
+- `AtualizarStatusPeriferico(...)`
+- `AlugarPeriferico(...)`
+- `VenderPeriferico(...)`
+- `FazerLogin(...)`
+- Métodos de remoção e seleção (`Select*` e `Remover*PorId`)
 
-- A DLL contém uma classe `DAOMysql` que gerencia:  
-  - A conexão com o banco via `MySqlConnection`.  
-  - Métodos para executar queries de seleção (`SelectLogin`, `SelectPeriferico`, etc.).  
-  - Tratamento básico de exceções.
+Todas as operações usam `MySqlCommand` com parâmetros para evitar SQL Injection.
 
-- Essa DLL não é uma API web, mas sim uma biblioteca local para ser usada dentro do projeto.
+## 🗃️ Banco de Dados
 
----
+**Nome:** `BancoPeriferico`
 
-## Considerações Técnicas e de Evolução
+Contém as seguintes tabelas:
 
-- Atualmente, o sistema abre formulários usando `Show()` e oculta (`Hide()`) o formulário atual.  
-- Para melhorar a gestão de janelas e consumo de memória, a estratégia será migrar para usar `Show()` seguido de `Close()` para fechar janelas antigas que não são mais necessárias.  
-- A nomenclatura dos controles foi alinhada ao padrão da comunidade: prefixo em minúsculo (`btnAdicionar`, `txtNome`, etc.) e métodos em PascalCase (`BtnAdicionar_Click`).  
-- A arquitetura será aprimorada para separar camadas e modularizar o código, por exemplo, transferindo funções de negócio para classes específicas.  
-- Planejo criar documentação e comentários mais detalhados para facilitar manutenção e expansão do sistema.
+- `funcionarios`
+- `perifericos`
+- `alugueis`
+- `vendas`
 
----
+Todas com chaves primárias e estrangeiras corretamente definidas. Campos de valor monetário utilizam `DECIMAL(10,2)` para evitar erros com formatação numérica.
+
+## 🐳 Usando com Docker (Banco MySQL)
+
+```bash
+docker run -d --name mysql-dev -e MYSQL_ROOT_PASSWORD=1234 -p 3306:3306 mysql:8.0
+```
+
+Depois, use o script SQL disponível no projeto para criar as tabelas:
+
+```bash
+docker exec -i mysql-dev mysql -u root -p1234 < BancoPeriferico.sql
+```
+
+## 📌 Observações
+
+- O sistema usa `decimal.Parse` com `CultureInfo.InvariantCulture` para valores monetários.
+- Foram criadas funções utilitárias para validação de campos e limpeza de formulário.
+- O código foi modularizado para facilitar manutenção e reuso.
 
 ## Propostas Futuras
 
@@ -72,26 +107,18 @@ O projeto foi desenvolvido em C# com banco de dados MySQL e tem como objetivo pe
 - Refatorar o código para seguir boas práticas de engenharia de software, como SOLID, injeção de dependências e tratamento de exceções.  
 - Adicionar testes unitários e de integração.
 
----
-
 ## Histórico
 
-- Projeto originalmente desenvolvido em 2019 para o curso técnico na Etec.  
-- Baseado no uso de DLL para abstração do banco e WinForms para interface.  
-- Projeto está em fase de reestruturação e melhoria contínua.
+Este projeto foi originalmente desenvolvido como trabalho final de Lógica de Programação no meu curso de Tecnico de Desenvolvimento de Sistemas na ETEC. Na época, utilizei conceitos que aprendi durante as aulas e também busquei referências na internet para complementar o desenvolvimento. Por conta do prazo curto e da minha experiência limitada naquele momento, o código não seguiu uma estrutura muito limpa, algo que hoje consigo identificar com mais clareza.
 
----
+Ao revisitar o projeto, percebi que seria necessário refatorá-lo para torná-lo mais organizado, legível e de fácil manutenção. Confesso que quebrei um pouco a cabeça para entender a lógica que eu mesmo havia feito, mas com paciência e os conhecimentos adquiridos ao longo da minha formação, consegui reestruturá-lo de forma mais sólida.
 
-## Como Rodar
+Hoje, o projeto está reformulado, com aplicação de boas práticas, o que facilita futuras melhorias e manutenções. Ainda vejo espaço para evolução e pretendo continuar aprimorando este código com o tempo conforme novas ideias e aprendizados forem surgindo.
 
-1. Configurar banco MySQL local ou via container Docker.  
-2. Atualizar string de conexão na DLL DAOMysql conforme ambiente (exemplo: localhost, usuário e senha).  
-3. Abrir solução no Visual Studio e compilar os projetos.  
-4. Executar o projeto Kurama, que referencia a DLL para manipular os dados.
 
----
+## 📬 Contato
 
-## Contato
+Feito com 💻 por Guilherme Mercedes.  
+[LinkedIn](https://www.linkedin.com/in/guilhermemercedes/) • [GitHub](https://github.com/Guilherme-Mercedes)
 
-Desenvolvido por Guilherme Souza Mercedes — buscando sempre evolução e aprendizado constante.
 
