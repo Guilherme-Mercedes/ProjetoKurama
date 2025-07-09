@@ -4,21 +4,16 @@ using System.Windows.Forms;
 
 namespace ProjetoKurama
 {
-    public partial class TelaInicialFuncionario : Form
+    public partial class TelaInicial : Form
     {
         private DAOMysql.DAOMysql DAO = new DAOMysql.DAOMysql();
 
-        public TelaInicialFuncionario()
+        public TelaInicial()
         {
             InitializeComponent();
         }
         private void TelaFunc_Load(object sender, EventArgs e)
         {
-        }
-        private void Label1_Click(object sender, EventArgs e)
-        {
-            new MainForm().Show();
-            this.Close();
         }
         private void btnLogin(object sender, EventArgs e)
         {
@@ -40,7 +35,7 @@ namespace ProjetoKurama
                 {
                     MessageBox.Show("Funcionário logado com sucesso!");
                     new MenuFuncionario().Show();
-                    this.Close();
+                    this.Hide();
                 }
                 else
                 {
@@ -51,6 +46,11 @@ namespace ProjetoKurama
             {
                 MessageBox.Show("Erro ao tentar fazer login: " + ex.Message);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

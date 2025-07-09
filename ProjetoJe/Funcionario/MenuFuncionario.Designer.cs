@@ -40,7 +40,6 @@
             this.alterarPerifericoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarPerifericosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removerPerifericoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btVoltarMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btAlugar = new System.Windows.Forms.Button();
             this.btMostrarAluguelVenda = new System.Windows.Forms.Button();
@@ -57,7 +56,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroFuncionarioToolStripMenuItem,
             this.cadastrarPerifericoToolStripMenuItem,
-            this.btVoltarMenu,
             this.sairToolStripMenuItem});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -150,15 +148,6 @@
             this.removerPerifericoToolStripMenuItem.Size = new System.Drawing.Size(212, 24);
             this.removerPerifericoToolStripMenuItem.Text = "Remover Periferico";
             this.removerPerifericoToolStripMenuItem.Click += new System.EventHandler(this.RemoverPerifericoToolStripMenuItem_Click);
-            // 
-            // btVoltarMenu
-            // 
-            this.btVoltarMenu.BackColor = System.Drawing.Color.Transparent;
-            this.btVoltarMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btVoltarMenu.Name = "btVoltarMenu";
-            this.btVoltarMenu.Size = new System.Drawing.Size(124, 24);
-            this.btVoltarMenu.Text = "Voltar ao Ínicio";
-            this.btVoltarMenu.Click += new System.EventHandler(this.btvoltarmenu_Click);
             // 
             // sairToolStripMenuItem
             // 
@@ -277,6 +266,5 @@
         private System.Windows.Forms.Button btMostrarAluguelVenda;
         private System.Windows.Forms.Button btRemoverAluguel;
         private System.Windows.Forms.Button btVender;
-        private System.Windows.Forms.ToolStripMenuItem btVoltarMenu;
     }
 }

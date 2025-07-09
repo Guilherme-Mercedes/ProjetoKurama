@@ -132,6 +132,7 @@
             this.tbDiaAluguel.Size = new System.Drawing.Size(100, 20);
             this.tbDiaAluguel.TabIndex = 16;
             this.tbDiaAluguel.TextChanged += new System.EventHandler(this.tbDiaAluguel_TextChanged);
+            this.tbDiaAluguel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDiaAluguel_KeyPress);
             // 
             // btenviar
             // 

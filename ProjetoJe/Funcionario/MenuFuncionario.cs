@@ -13,11 +13,6 @@ namespace ProjetoKurama
         private void FuncMenu_Load(object sender, EventArgs e)
         { 
         }
-        private void btvoltarmenu_Click(object sender, EventArgs e)
-        {
-            new MainForm().Show();
-            this.Close();
-        }
         private void AdicionarCadastroToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             new AdicionarFuncionario().Show();

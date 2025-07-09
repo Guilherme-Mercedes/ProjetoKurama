@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Globalization;
+using System.Windows.Forms;
 
 namespace ProjetoKurama
 {
@@ -15,7 +16,10 @@ namespace ProjetoKurama
 
         public static bool CampoDecimalValido(string texto)
         {
-            return decimal.TryParse(texto, out _);
+            var culturaBR = new CultureInfo("pt-BR");
+            string textoFormatado = texto.Replace('.', ','); // Troca ponto por vírgula
+
+            return decimal.TryParse(textoFormatado, NumberStyles.Number, culturaBR, out _);
         }
 
         public static bool CampoInteiroValido(string texto)

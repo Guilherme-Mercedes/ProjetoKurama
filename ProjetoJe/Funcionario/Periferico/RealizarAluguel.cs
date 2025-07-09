@@ -1,6 +1,7 @@
 ﻿//ok
 using MySql.Data.MySqlClient;
 using System;
+using System.Globalization;
 using System.Net.NetworkInformation;
 using System.Windows.Forms;
 
@@ -123,13 +124,15 @@ namespace ProjetoKurama
                 MessageBox.Show("Preencha todos os campos antes de continuar.");
                 return;
             }
+
             try
             {
-                //Buscar o preço do aluguel do periférico
+                // Buscar o preço do aluguel do periférico
                 string query = "SELECT preco_aluguel, status FROM perifericos WHERE id_periferico = @id";
                 using (MySqlCommand cmd = new MySqlCommand(query, DAO.mConn))
                 {
                     cmd.Parameters.AddWithValue("@id", tbIdPeriferico.Text);
+
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
                         if (!reader.Read())
@@ -138,26 +141,38 @@ namespace ProjetoKurama
                             return;
                         }
 
+                        // Lê os dados ANTES de fechar o reader
                         string status = reader["status"].ToString();
+
+                        if (!decimal.TryParse(reader["preco_aluguel"].ToString(), out decimal precoDiario))
+                        {
+                            MessageBox.Show("Erro ao ler o preço do aluguel.");
+                            return;
+                        }
+
+                        reader.Close(); // Fecha o reader somente depois de ler tudo
+
                         if (status == "Indisponivel")
                         {
                             MessageBox.Show("Este periférico está indisponível.");
                             return;
                         }
 
-                        decimal precoDiario = Convert.ToDecimal(reader["preco_aluguel"]); //pega o preço do aluguel do periférico
-                        reader.Close();
+                        // Calcular valor total e data de devolução
+                        if (!int.TryParse(tbDiaAluguel.Text, out int dias))
+                        {
+                            MessageBox.Show("Informe um número válido de dias para o aluguel.");
+                            return;
+                        }
 
-                        //Calcular valor total e data de devolução
-                        int dias = int.Parse(tbDiaAluguel.Text);
                         var (valorTotal, dataDevolucao) = CalcularValorAluguel(dias, precoDiario);
                         string horarioAgora = DateTime.Now.ToString("dd-MM-yyyy HH:mm");
 
-                        //Realizar o aluguel
+                        // Realizar o aluguel
                         bool sucesso = DAO.AlugarPeriferico(tbNome.Text, tbCpf.Text, tbTelefone.Text, tbDataNascimento.Text, tbDiaAluguel.Text,
-                                                            valorTotal.ToString("F2"), dataDevolucao, horarioAgora, tbIdPeriferico.Text);
+                                                            valorTotal.ToString("F2", CultureInfo.InvariantCulture), dataDevolucao, horarioAgora, tbIdPeriferico.Text);
 
-                        //Atualizar status e exibir resultado
+                        // Atualizar status e exibir resultado
                         if (sucesso)
                         {
                             DAO.AtualizarStatusPeriferico(tbIdPeriferico.Text, "Indisponivel");
@@ -182,6 +197,7 @@ namespace ProjetoKurama
             }
         }
 
+
         private void tbIdPeriferico_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utilitarios.BloquearCaractere(e);
@@ -193,6 +209,11 @@ namespace ProjetoKurama
         }
 
         private void tbCpf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utilitarios.BloquearCaractere(e);
+        }
+
+        private void tbDiaAluguel_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utilitarios.BloquearCaractere(e);
         }

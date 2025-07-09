@@ -88,12 +88,6 @@
     <Compile Include="Funcionario\Periferico\TabelaAluguelVendas.Designer.cs">
       <DependentUpon>TabelaAluguelVendas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuario\AlugarPerifericoUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Usuario\AlugarPerifericoUsuario.Designer.cs">
-      <DependentUpon>AlugarPerifericoUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Funcionario\AlterarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,12 +100,6 @@
     <Compile Include="Funcionario\Periferico\CadastrarPeriferico.Designer.cs">
       <DependentUpon>CadastrarPeriferico.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Funcionario\MenuFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,12 +111,6 @@
     </Compile>
     <Compile Include="Funcionario\ListaDeFuncionarios.Designer.cs">
       <DependentUpon>ListaDeFuncionarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Usuario\ListaPerifericoDisponivel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Usuario\ListaPerifericoDisponivel.Designer.cs">
-      <DependentUpon>ListaPerifericoDisponivel.cs</DependentUpon>
     </Compile>
     <Compile Include="Funcionario\Periferico\ListaPerifericosFuncionario.cs">
       <SubType>Form</SubType>
@@ -168,25 +150,13 @@
     <Compile Include="Funcionario\Periferico\RemoverPeriferico.Designer.cs">
       <DependentUpon>RemoverPeriferico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Funcionario\TelaInicialFuncionario.cs">
+    <Compile Include="TelaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Funcionario\TelaInicialFuncionario.Designer.cs">
-      <DependentUpon>TelaInicialFuncionario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Usuario\TelaUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Usuario\TelaUsuario.Designer.cs">
-      <DependentUpon>TelaUsuario.cs</DependentUpon>
+    <Compile Include="TelaInicial.Designer.cs">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Utilitarios.cs" />
-    <Compile Include="Usuario\VendaPerifericoUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Usuario\VendaPerifericoUsuario.Designer.cs">
-      <DependentUpon>VendaPerifericoUsuario.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Funcionario\AdicionarFuncionario.resx">
       <DependentUpon>AdicionarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,26 +166,17 @@
     <EmbeddedResource Include="Funcionario\Periferico\TabelaAluguelVendas.resx">
       <DependentUpon>TabelaAluguelVendas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usuario\AlugarPerifericoUsuario.resx">
-      <DependentUpon>AlugarPerifericoUsuario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Funcionario\AlterarFuncionario.resx">
       <DependentUpon>AlterarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Funcionario\Periferico\CadastrarPeriferico.resx">
       <DependentUpon>CadastrarPeriferico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Funcionario\MenuFuncionario.resx">
       <DependentUpon>MenuFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Funcionario\ListaDeFuncionarios.resx">
       <DependentUpon>ListaDeFuncionarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Usuario\ListaPerifericoDisponivel.resx">
-      <DependentUpon>ListaPerifericoDisponivel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Funcionario\Periferico\ListaPerifericosFuncionario.resx">
       <DependentUpon>ListaPerifericosFuncionario.cs</DependentUpon>
@@ -245,14 +206,8 @@
     <EmbeddedResource Include="Funcionario\Periferico\RemoverPeriferico.resx">
       <DependentUpon>RemoverPeriferico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Funcionario\TelaInicialFuncionario.resx">
-      <DependentUpon>TelaInicialFuncionario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Usuario\TelaUsuario.resx">
-      <DependentUpon>TelaUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Usuario\VendaPerifericoUsuario.resx">
-      <DependentUpon>VendaPerifericoUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="TelaInicial.resx">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

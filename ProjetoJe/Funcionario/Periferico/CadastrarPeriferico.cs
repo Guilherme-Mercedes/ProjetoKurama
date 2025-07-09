@@ -1,5 +1,6 @@
 ﻿//ok
 using System;
+using System.Globalization;
 using System.Windows.Forms;
 namespace ProjetoKurama
 {
@@ -62,13 +63,17 @@ namespace ProjetoKurama
             // Verifica se os valores de venda e aluguel são números válidos, algo superficial mas resolve.
             if (!Utilitarios.CampoDecimalValido(tbValorVenda.Text) || !Utilitarios.CampoDecimalValido(tbValorAluguel.Text))
             {
-                MessageBox.Show("Preencha os campos de valor com números válidos. exemplo: 200.50");
+                MessageBox.Show("Preencha os campos de valor com números válidos. exemplo: 200,50");
                 return;
             }
+
             try
             {
-                decimal precoVenda = decimal.Parse(tbValorVenda.Text);//Converte o valor de venda para decimal
-                decimal precoAluguel = decimal.Parse(tbValorAluguel.Text);//Converte o aluguel de venda para decimal
+                string valorFormatado = tbValorVenda.Text.Replace('.', ',');
+                decimal precoVenda = decimal.Parse(valorFormatado, new CultureInfo("pt-BR"));
+                valorFormatado = tbValorAluguel.Text.Replace('.', ',');
+                decimal precoAluguel = decimal.Parse(valorFormatado, new CultureInfo("pt-BR"));
+
                 bool sucesso = DAO.CadastrarPeriferico(tbTipo.Text, tbModelo.Text, tbMarca.Text, tbGarantia.Text, tbFabricacao.Text, precoVenda, precoAluguel, "Disponivel");
 
                 if (sucesso)
